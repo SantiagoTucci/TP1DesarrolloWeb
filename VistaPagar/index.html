@@ -9,18 +9,33 @@
 <body>
     <header>
 
-        <h2 id="NombrePlan">Elegiste el plan ........</h2>
+        <article>
+            <h3 >NombreUsuario</h3>
+            <img src="" alt="imagenPerfil">
+            <a href="">Cerrar sesión</a>
+        </article>
 
     </header>
 
     <main>
-
-        <img src="" alt="Imagen del plan">
+        <section>
+            <article>
+                <h2 id="NombrePlan">Elegiste el plan Individual</h2>
+                <img src="" alt="ImagenPlan">
+                <p>Informacion sobre el plan</p>
+            </article>
     
-        <div id="TextoImagen">
-            <p>texto informativo del plan</p>
-        </div>
-    
+            <article>
+                <label for="campoTarjeta"> Tarjeta </label><input type="number" name="" id="campoTarjeta">
+                <label for="campoVencimiento"> Vto </label><input type="date" name="" id="campoVencimiento">
+                <br>
+                <label for="campoPassword"> CVC </label><input type="password" name="" id="campoPassword">       
+                <label for="campoNombreApellido"> Nombre y apellido </label><input type="text" name="" id="campoNombreApellido">
+                <br>
+                <button id="boton">Cancelar</button>
+                <button id="boton">Pagar</button>
+             </article>
+        </section>
     </main>
 
     <footer>
