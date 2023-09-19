@@ -15,40 +15,52 @@
 
     <title>Vista Pagar</title>
     <link rel="icon" type="image/png" href="img/logo.png">
+
 <body class="cuerpo">
     <header class="encabezado">
         <article class="tituloEncabezado">
             <h1>Vox</h1>
         </article>
         <article class="usuario">
-            <h3>NombreUsuario</h3>
-            <img class="imagenUsuario" src="img/imagenUsuario.webp" alt="imagenPerfil">
-            <a class="cierreUsuario" href="">Cerrar sesión</a>
+            <div class="usuarioSubdibiciones"><h3 class="textoUsuario">NombreUsuario</h3></div>
+            <div class="usuarioSubdibiciones"><img class="imagenUsuario" src="img/imagenUsuario.webp" alt="imagenPerfil"></div>
         </article>
     </header>
 
     <main>
         <section class="contenedorMayor">
-            <article>
-                <h2 class="nombrePlan">Elegiste el plan Individual</h2>
-                <img src="" alt="ImagenPlan">
-                <p>Informacion sobre el plan</p>
+            <article class="contenedorPlan">
+                <div>
+                    <h2 class="nombrePlan">Elegiste el plan Individual</h2>
+                </div>
+                <div class="imgTextoPlan">
+                    <img src="img/logo.png" alt="ImagenPlan">
+                    <p>Informacion sobre el plan</p>
+                </div>
             </article>
     
-            <article>
-                <label for="campoTarjeta"> Tarjeta </label><input type="number" name="" id="campoTarjeta">
-                <label for="campoVencimiento"> Vto </label><input type="date" name="" id="campoVencimiento">
-                <br>
-                <label for="campoPassword"> CVC </label><input type="password" name="" id="campoPassword">       
-                <label for="campoNombreApellido"> Nombre y apellido </label><input type="text" name="" id="campoNombreApellido">
-                <br>
+            <article class="contenedorFormulario">
+                <div class="camposUno">
+                    <label for="campoTarjeta"> Tarjeta </label><input type="number" name="" id="campoTarjeta">
+                </div>
+                <div class="camposUno">
+                    <label for="campoVencimiento"> Vto </label><input type="date" name="" id="campoVencimiento">
+                </div>
+                <div class="camposUno">
+                    <label for="campoPassword"> CVC </label><input type="password" name="" id="campoPassword">       
+                </div>
+                <div class="camposUno">
+                    <label for="campoNombreApellido"> Nombre y apellido </label><input type="text" name="" id="campoNombreApellido">
+                </div>
+             </article>
+             <article>
                 <button id="boton">Cancelar</button>
                 <button id="boton">Pagar</button>
              </article>
         </section>
     </main>
 
-    <footer>
+    <footer class="final">
 
 
     </footer>
