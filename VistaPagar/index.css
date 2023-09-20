@@ -1,22 +1,22 @@
 .cuerpo{
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(29, 29, 29);
     font-family: 'Lato', sans-serif;
     margin: 0px;
 }
 
 .encabezado{
-    background-color:#375e72;
+    background-color:#43565f;
     display: flex;
     align-items: center;
-    height: 130px;
-    border: 1px solid black;
+    height: 100px;
 }
 
 .tituloEncabezado{
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     text-align: left;
     margin-left: 2%;
+    color: rgb(235, 235, 235);
 }
 
 .usuario{
@@ -24,12 +24,13 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 1%;
-    margin-left: 60%;
-    margin-right: 1%;
-    margin-bottom: 1%;
+    margin-top: 1px;
+    margin-left: 870px;
+    margin-right: 1px;
+    margin-bottom: 3px;
     font-family: 'Alegreya Sans', sans-serif;
-    
+    color: rgb(235, 235, 235);;
+    position: absolute;
 }
 
 .usuarioSubdibiciones{
@@ -41,15 +42,16 @@
 }
 
 .textoUsuario{
-    margin-left: 40px;
+    margin-left: 60px;
     margin-right: 0px;
     
 }
 
 .imagenUsuario{
-    width: 75%;
-    height: 75%;
-    margin-right: 40px;
+    width: 100px;
+    height: 60px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .contenedorMayor{
@@ -57,6 +59,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: grey;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 50px;
 }
 
 .contenedorPlan{
@@ -65,8 +72,8 @@
 
 .nombrePlan{
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 400%;
-    color: #404259;
+    font-size: 350%;
+    color: #000000;
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -83,18 +90,19 @@
 
 .imgTextoPlan img{
     width: 350px;
-    margin-left: 20px;
+    
 }
 
 .imgTextoPlan p{
-    margin-right: 50px;
+    
 }
 
 .contenedorFormulario{
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 12px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.837);
 }
 
 .camposUno{
@@ -102,8 +110,29 @@
     border: solid 1px rgb(0, 0, 0);
 }
 
+.contenedorBoton{
+    margin-bottom: 30px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
 
+.botonUno{
+    background-color: rgba(255, 255, 255, 0.837);
+    border-radius: 15px;
+    border: solid 1px black;
+    cursor: pointer;
+    position: relative;
+}
 
+.botonDos{
+    background-color: rgba(255, 255, 255, 0.837);
+    border-radius: 15px;
+    border: solid 1px black;
+    cursor: pointer;
+    position: relative;
+}
 
 .final{
     margin: 40px;
