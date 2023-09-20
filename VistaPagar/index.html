@@ -1,70 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Lato&family=Mukta+Vaani:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Lato&family=Mukta+Vaani:wght@200&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Vista Pagar</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
 
-<body class="cuerpo">
+  <body class="cuerpo">
     <header class="encabezado">
-        <article class="tituloEncabezado">
-            <h1>Vox</h1>
-        </article>
-        <article class="usuario">
-            <div class="usuarioSubdibiciones"><h3 class="textoUsuario">NombreUsuario</h3></div>
-            <div class="usuarioSubdibiciones"><img class="imagenUsuario" src="img/imagenUsuario.webp" alt="imagenPerfil"></div>
-        </article>
+      <article class="tituloEncabezado">
+        <h2><img src="img/disco-de-vinilo.png" alt="discoDeVinilo"> Vox</h2>
+      </article>
+      <article class="usuario">
+        <div class="usuarioSubdibiciones">
+          <h3 class="textoUsuario">Iniciar sesion</h3>
+        </div>
+        <div class="usuarioSubdibiciones">
+          <img
+            class="imagenUsuario"
+            src="img/parausuario-removebg-preview.png"
+            alt="imagenPerfil"
+          />
+        </div>
+      </article>
     </header>
 
     <main>
-        <section class="contenedorMayor">
-            <article class="contenedorPlan">
-                <div>
-                    <h2 class="nombrePlan">Elegiste el plan Individual</h2>
-                </div>
-                <div class="imgTextoPlan">
-                    <img src="img/logo.png" alt="ImagenPlan">
-                    <p>Informacion sobre el plan</p>
-                </div>
-            </article>
-    
-            <article class="contenedorFormulario">
-                <div class="camposUno">
-                    <label for="campoTarjeta"> Tarjeta </label><input type="number" name="" id="campoTarjeta">
-                </div>
-                <div class="camposUno">
-                    <label for="campoVencimiento"> Vto </label><input type="date" name="" id="campoVencimiento">
-                </div>
-                <div class="camposUno">
-                    <label for="campoPassword"> CVC </label><input type="password" name="" id="campoPassword">       
-                </div>
-                <div class="camposUno">
-                    <label for="campoNombreApellido"> Nombre y apellido </label><input type="text" name="" id="campoNombreApellido">
-                </div>
-             </article>
-             <article class="contenedorBoton">
-                <button class="botonUno">Cancelar</button>
-                <button class="botonDos">Pagar</button>
-             </article>
-        </section>
+      <section class="contenedorMayor">
+        <div class="nombrePlan">
+          <h2>Elegiste el plan Mensual</h2>
+        </div>
+        <article class="contenedorPlan">
+          <div class="imgPlan">
+            <img src="img/escucharmusicaweb.jpg" alt="ImagenPlan" />
+          </div>
+          <div class="TextoPlan">
+            <h3>100<sup>$</sup></h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi laborum neque quia, nostrum molestiae, quasi pariatur adipisci aspernatur enim, ratione impedit! Necessitatibus voluptatem perferendis, nam magnam vitae provident molestias sunt.</p>
+          </div>
+        </article>
+
+        <article class="contenedorFormulario">
+          <div class="camposUno">
+            <label for="campoTarjeta"> Tarjeta </label
+            ><input type="number" name="" id="campoTarjeta" />
+          </div>
+          <div class="camposUno">
+            <label for="campoVencimiento"> Vto </label
+            ><input type="date" name="" id="campoVencimiento" />
+          </div>
+          <div class="camposUno">
+            <label for="campoPassword"> CVC </label
+            ><input type="password" name="" id="campoPassword" />
+          </div>
+          <div class="camposUno">
+            <label for="campoNombreApellido"> Nombre y apellido </label
+            ><input type="text" name="" id="campoNombreApellido" />
+          </div>
+        </article>
+        <article class="contenedorBoton">
+          <button class="botonUno">Cancelar</button>
+          <button class="botonDos">Pagar</button>
+        </article>
+      </section>
     </main>
 
-    <footer class="final">
-
-
-    </footer>
-
-</body>
+    <footer class="final"></footer>
+  </body>
 </html>
