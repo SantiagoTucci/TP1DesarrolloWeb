@@ -124,6 +124,8 @@
     border: solid 1px black;
     cursor: pointer;
     position: relative;
+    padding: 10px;
+    margin: 10px;
 }
 
 .botonDos{
@@ -132,6 +134,8 @@
     border: solid 1px black;
     cursor: pointer;
     position: relative;
+    padding: 10px;
+    margin: 10px;
 }
 
 .final{
