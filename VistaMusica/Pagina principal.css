@@ -190,14 +190,14 @@ a {
 .main-card-start {
   display: flex;
   align-items: center;
-  width: calc(50% - 10px);
+  width: calc(33.33% - 1%);
   background-color: rgba(42, 42, 42, 0.5);
   margin-bottom: 10px;
   border-radius: 10px;
 }
 
 .main-card-start-image {
-  width: 15%;
+  width: 20%;
   height: auto;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -210,12 +210,27 @@ a {
   color: white;
 }
 
+@media screen and (max-width: 1200px) {
+  .main-card-start {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 2%);
+    background-color: rgba(42, 42, 42, 0.5);
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .main-card-start-image{
+    width: 15%;
+  }
+}
+
 /* Cards de los álbumes */
 
 .main-flex-albums {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 2%;
 }
 
@@ -224,11 +239,11 @@ a {
   flex-direction: column;
   align-items: center;
   width: calc(20% - 2%);
-
   background-color: rgba(42, 42, 42, 0.5);
   border-radius: 5%;
   padding: 10px;
-  margin-bottom: 2%;
+  margin: 1%;
+  margin-bottom: 1.5%;
 }
 
 .main-card-album-image {
@@ -263,6 +278,18 @@ main-card-album-subtext:hover {
 .album-container {
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-card-album {
+    width: calc(25% - 2%);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-card-album {
+    width: calc(16.66% - 2%);
+  }
 }
 
 /* Estrella */
