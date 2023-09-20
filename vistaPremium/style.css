@@ -1,0 +1,206 @@
+:root{
+    --color-blanco: white;
+    --color-negro: black;
+    --color-A: #79D0DB;
+    --color-B: #6DA6C2;
+    --color-C: #637BC2;
+    --color-D: #7AA5D6;
+    --color-E: #404259;
+ 
+ }
+ 
+ /* GLOBALES*/
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ body{
+     background-image: (black,#404259);
+     font-family: 'Alegreya Sans', sans-serif;
+     font-family: 'Hind Vadodara', sans-serif;
+     font-family: 'Mukta Vaani', sans-serif;
+ }
+ 
+ 
+ 
+ 
+ /*NAVEGACION*/
+ .Hero{
+     background-color: var(--color-E);
+     text-align: center;
+     
+     
+ }
+ .contain{
+     margin: 0 auto;
+     width: 90%;
+     max-width: 1200px;
+     overflow: hidden;
+ }
+ 
+ 
+ .nav{
+     --state-close:scale(0);
+     --state-hambur:scale(1);
+     --state-menu:translate(-100%);
+ 
+     padding: 40px 0;
+     display: grid;
+     justify-content: space-between;
+     align-items: center;
+     grid-template-columns: repeat(2,max-content);
+ }
+ .nav_logo{
+ color: aliceblue;
+ font-size: 2.5rem;
+ z-index: 1;
+ }
+ .nav_links{
+     transform: var(--state-menu);
+     transition: .3s transform;
+     position: absolute;
+     top:0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     padding: 0;
+ 
+     display: grid;
+     align-content: center;
+     gap: 2em;
+     padding-left: 5%;
+     
+ }
+ 
+ .nav:target{
+     --state-menu:translate(0);
+     --state-close:scale(1);
+     --state-hambur:scale(0);
+ }
+ .nav_hambur, .nav_close{
+     cursor: pointer;
+     grid-column: -2/-1;
+     grid-row: 1/2;
+     transition: .4s transform;
+ }
+ .nav_hambur{
+     transform: var(--state-hambur);
+ }
+ 
+ .nav_close{
+     width: 40px;
+     transform: var(--state-close);
+ }
+ .nav_icon{
+     width: 40px;
+ }
+ 
+ .nav_item{
+     list-style: none;
+ }
+ 
+ .nav_link{
+     color: #404259;
+     text-decoration: none;
+     font-size: 1.2rem;
+     letter-spacing: 2px;
+ }
+ 
+ 
+ 
+ 
+ 
+ /* MAIN*/ /* TABLA DE PRECIOS*/
+ .titulo{
+     text-align: center;
+     font-size: 40px;
+     font-family:'Alegreya Sans';
+     padding: 40px;
+     margin: auto;
+ }
+ .contenedor{
+     width: 90%;
+     max-width: 900px;
+     margin: auto;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+ 
+ .tabla{
+     width: 33%;
+     height: 550px;
+     margin: auto;
+     border: 1px solid var(--color-E);
+     border-radius: 10px;
+     box-shadow: 10px 0px 15px 0px var(--color-E);
+     padding: 60px;
+     text-align: center;
+     flex-grow: 1;
+     color: var(--color-E);
+ }
+ 
+ .tabla h2{
+     font-size: 30px;
+     margin-bottom: 35px;
+     font-family: 'Hind Vadodara'
+ }
+ 
+ .tabla img{
+     width: 64px;
+     margin-bottom: 35px;
+ }
+ .tabla h3{
+     font-size: 30px;
+     margin-bottom: 20px;
+ }
+ 
+ .tabla p {
+ display: block;
+ margin-bottom: 20px;
+ font-family: 'Mukta Vaani';
+ }
+ 
+ .boton{
+     display: inline-block;
+     width: 150px;
+     padding: 12px;
+     background: var(--color-B);
+     text-decoration: none;
+     color: var(--color-E);
+     border-radius: 100px;
+     text-align: center;
+     font-size: 14px;
+     font-weight: 600;
+     margin: auto;
+ }
+ 
+ .tabla:hover{
+     background: #7AA5D6;
+     color: white;
+     transition: .5s all;
+     transform: scale(1.1);
+     cursor: pointer;
+ }
+ 
+ 
+ 
+ @media screen and (max-width:700px){
+ .tabla{
+     width: 45%;
+     padding: 30px;
+ }
+ .tabla h2{
+     margin-top: 40px;
+ }
+ }
+ 
+ @media screen and (max-width:550px){
+     .tabla{
+         width: 85%;
+         padding: 20px;
+     }
+ }
