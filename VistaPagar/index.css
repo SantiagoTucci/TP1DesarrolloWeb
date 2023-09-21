@@ -11,6 +11,8 @@
     height: 120px;
     padding-top: 15px;
     padding-bottom: 10px;
+    
+    
 }
 
 .tituloEncabezado{
@@ -73,6 +75,7 @@
     margin-right: 15%;
     margin-bottom: 5%;
     border-radius: 4%;
+    box-shadow: 10px 5px rgb(172, 172, 172);
 }
 
 .contenedorPlan{
