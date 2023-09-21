@@ -104,7 +104,7 @@ a {
 .nav-link {
   margin-left: 20px;
   text-decoration: none;
-  color: rgb(179, 179, 179);
+  color: rgb(231, 231, 231);
   transition: transform .2s, font-weight .2s;
 }
 
