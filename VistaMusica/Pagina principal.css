@@ -105,12 +105,13 @@ a {
   margin-left: 20px;
   text-decoration: none;
   color: rgb(179, 179, 179);
-  transition: transform .2s;
+  transition: transform .2s, font-weight .2s;
 }
 
 .nav-link:hover {
   color: rgb(255, 255, 255);
   transform: scale(1.1);
+  font-weight: bold;
 }
 
 .logo-container {
@@ -347,13 +348,6 @@ main-card-album-subtext:hover {
   margin-bottom: 1%;
 }
 
-.progress-container {
-  width: 60%;
-  height: 5px;
-  background-color: #555;
-}
-
-.progress-bar {
-  height: 1%;
-  background-color: #777;
+.audio-player {
+  width: 60%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
 }
