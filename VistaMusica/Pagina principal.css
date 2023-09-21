@@ -104,11 +104,13 @@ a {
 .nav-link {
   margin-left: 20px;
   text-decoration: none;
-  color: white;
+  color: rgb(179, 179, 179);
+  transition: transform .2s;
 }
 
 .nav-link:hover {
-  color: green;
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
 }
 
 .logo-container {
@@ -127,6 +129,7 @@ a {
   font-weight: bold;
   font-family: "Alegreya Sans", sans-serif;
   margin-left: 15%;
+  margin-top: 8%;
 }
 
 .user-info {
@@ -194,6 +197,11 @@ a {
   background-color: rgba(42, 42, 42, 0.5);
   margin-bottom: 10px;
   border-radius: 10px;
+  transition: transform .2s;
+}
+
+.main-card-start:hover {
+  transform: scale(1.1); /* Agrandar el elemento */
 }
 
 .main-card-start-image {
@@ -244,6 +252,11 @@ a {
   padding: 10px;
   margin: 1%;
   margin-bottom: 1.5%;
+  transition: transform .2s; /* Animación suave */
+}
+
+.main-card-album:hover {
+  transform: scale(1.1); /* Agrandar el elemento */
 }
 
 .main-card-album-image {
