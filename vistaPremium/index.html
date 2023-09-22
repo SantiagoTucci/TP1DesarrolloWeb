@@ -13,65 +13,86 @@
     <link rel="stylesheet" href="https://csstools.github.io/normalize.css/11.0.0/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menu.css">
+    
 </head>
 
 <body>
 
-    <!--BARRA DE NAVEGACION CON MENU HAMBURGUESA-->
+    <!--BARRA DE NAVEGACION-->
     <header class="Hero">
         <nav class="nav contain" id="nav"> 
+
+            <!-- LOGO-->
             <h2 class="nav_logo"> <img src="/vistaPremium/media/disco-de-vinilo.png" alt=""> VOX</h2>
             
-            <ul class="nav_link">
-                <li class="nav_item">
-                    <a href="#" class="nav_links">Cuenta</a>
-                </li>
+            <div class="user-info">
+                <div class="text-info">
+                    <a href="#" class="nav-link">Nombre de usuario</a>
+                    <a href="#" class="nav-link">Cerrar sesión</a>
+                </div>
+                <a href="#">
+                    <img
+                        src="/vistaPremium/media/usuario.png"
+                        alt="Imagen de perfil" class="profile-image">
+                </a>
+            </div>
 
-                <li class="nav_item">
-                    <a href="#" class="nav_links">Cerrar Sesion</a>
-                </li>
-
-            </ul>
-
-            <a href="#nav" class="nav_hambur">
-                <img src="/vistaPremium/mycollection/png/2.png" class="nav_icon">
-            </a>
-
-            <a href="#" class="nav_close">
-                <img src="/media/cerrar-simbolo-de-boton-circular (1).png" class="nav_close">
-            </a>
+           
         </nav>
     </header>
 
 
 <!-- MAIN TABLA DE PRECIOS -->
     <main>
+
         <h2 class="titulo">ELEGí TU PLAN PREMIUM</h2>
 <div class="contenedor">
-    <div class="tabla">
+    
+    <div class="tabla"> 
         <h2>MENSUAL</h2>
-        <img src="/mycollection/png/1.png" alt="">
+        <img src="/vistaPremium/mycollection/png/1.png" alt="">
         <h3>100 <sup>$</sup></h3>
         <p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) </p>
-        <input type="radio">
+        <input type="radio" name="kk" id="radios">
+        
     </div>
+
+
+    
     <div class="tabla">
+        
         <h2>ANUAL</h2>
-        <img src="/mycollection/png/2.png" alt="">
+        <img src="/vistaPremium/mycollection/png/2.png" alt="">
         <h3>1000 <sup>$</sup></h3>
         <p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) </p>
-        <input type="radio">
+        <input type="radio" name="kk" id="radios">
+            
     </div>
+
+    
     <div class="tabla">
+        
         <h2>INFINITO</h2>
-        <img src="/mycollection/png/3.png" alt="">
+        <img src="/vistaPremium/mycollection/png/3.png" alt="" class="infinito">
         <h3>2000 <sup>$</sup></h3>
         <p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) </p>
-        <input type="radio">
+        <input type="radio" name="kk" id="radios">
+        
+    
     </div>
+
+    <article class="contenedorBoton">
+        <a href="#" target="_blank" class="botones">cancelar</a>
+        <a href="#" target="_blank" class="botones">avanzar</a>
+      </article>
 </div>
 </main>
+
+<footer>
+    <p class="footer">Integrante 1 (nombre,apellido,dni),Integrante 2 (nombre,apellido,dni),Integrante 3 (nombre,apellido,dni)
+        Integrante 4 (nombre,apellido,dni)
+    </p>
+</footer>
 </body>
 
 </html>
