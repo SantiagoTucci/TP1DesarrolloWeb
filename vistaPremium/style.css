@@ -16,7 +16,7 @@
      box-sizing: border-box;
  }
  body{
-     background-color: var(--color-negro);
+    background: linear-gradient(to bottom, #637bc2 0%, #0f0f0f 50%);
      font-family: 'Alegreya Sans', sans-serif;
      font-family: 'Hind Vadodara', sans-serif;
      font-family: 'Mukta Vaani', sans-serif;
@@ -28,7 +28,7 @@
  
  /*NAVEGACION*/
  .Hero{
-     background-color: var(--color-negro);
+     background-color: transparent;
      text-align: center;
      
      
@@ -85,7 +85,6 @@
   }
   
   .profile-image {
-    background-color: aliceblue;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -196,13 +195,13 @@
 .comprar__titulo{
     text-align: center;
     font-size: 3.2rem;
-    color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 70px;
 
 }
  .beneficios_premium{
     height: 400px;
-    background-color: var(--color-blanco);
+    background-color: #0f0f0f;
  }
  .bloques{
     
@@ -219,12 +218,12 @@
 
 .bloque{
     text-align: center;
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 .bloque__titulo{
     margin: 0;
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 /*FOOTER*/
