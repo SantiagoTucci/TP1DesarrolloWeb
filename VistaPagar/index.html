@@ -24,28 +24,30 @@
   </head>
 
   <body class="cuerpo">
-    <header class="encabezado">
-      <article class="tituloEncabezado">
-        <h2><img src="img/disco-de-vinilo.png" alt="discoDeVinilo"> Vox</h2>
-      </article>
-      <article class="usuario">
-        <div class="usuarioSubdibiciones">
-          <h3 class="textoUsuario">Iniciar sesion</h3>
+    <!--BARRA DE NAVEGACION-->
+    <header class="Hero">
+      <nav class="nav contain" id="nav"> 
+          <!-- LOGO-->
+          <a href="/VistaMusica/Pagina Principal.html">
+          <h2 class="nav_logo"> <img src="/vistaPremium/media/disco-de-vinilo.png" alt=""> VOX</h2>
+      </a>
+        <div class="user-info">
+        <div class="text-info">
+            <a href="#" class="nav-link">Nombre de usuario</a>
+            <a href="#" class="nav-link">Cerrar sesión</a>
         </div>
-        <div class="usuarioSubdibiciones">
-          <img
-            class="imagenUsuario"
-            src="img/parausuario-removebg-preview.png"
-            alt="imagenPerfil"
-          />
+        <a href="#">
+            <img
+                src="img/usuarioBlanco.png"
+                alt="Imagen de perfil" class="profile-image">
+         </a>
         </div>
-      </article>
     </header>
 
     <main>
       <section class="contenedorMayor">
         <div class="nombrePlan">
-          <h2>Elegiste el plan Mensual</h2>
+          <h2>ELEGISTE EL PLAN MENSUAL</h2>
         </div>
         <article class="contenedorPlan">
           <div class="imgPlan">
@@ -60,7 +62,7 @@
         <article class="contenedorFormulario">
           <div class="camposUno">
             <label for="campoTarjeta">Tarjeta </label
-            ><input class="relleno" type="number" name="" id="campoTarjeta" />
+            ><input class="relleno" type="text" name="" id="campoTarjeta" placeholder="1234 5678 9012 3456" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16"/>
           </div>
           <div class="camposUno">
             <label for="campoVencimiento"> Vencimiento </label
