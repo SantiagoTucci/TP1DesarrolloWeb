@@ -43,22 +43,22 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 20px);
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
   height: calc(25% - 20px); /* Esta es la altura de la primera card */
+  width: calc(100% - 20px);
 }
 
 .sidebar-card-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 20px);
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
   height: calc(75% - 20px); /* Esta es la altura de la segunda card */
+  width: calc(100% - 20px);
 }
 
 .sidebar-menu {
@@ -151,6 +151,25 @@ a {
   margin-left: 20px;
   margin-top: 10%;
 }
+
+.search-bar {
+  width: 30%; /* Ajusta este valor para cambiar el tamaño de la barra de búsqueda */
+  height: 50px;
+  padding: 5px;
+  border-radius: 50px; /* Esto hará que los bordes de la barra de búsqueda sean totalmente redondeados */
+  background-color: #282828; /* Esto hará que el fondo sea oscuro */
+  color: white; /* Esto hará que el texto sea blanco */
+  border: none; /* Esto eliminará el borde predeterminado del navegador */
+  margin-right: auto; /* Esto empujará todos los demás elementos a la derecha */
+  padding-left: 2%;
+}
+
+/* Esto cambiará el color del texto del marcador de posición a blanco */
+.search-bar::placeholder {
+  color: rgb(128, 128, 128);
+}
+
+
 
 /* Parte principal */
 
