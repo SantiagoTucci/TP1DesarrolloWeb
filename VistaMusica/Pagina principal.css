@@ -13,8 +13,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 8% 1fr;
-  grid-template-rows: 80px 1fr 90px;
+  grid-template-columns: 2fr auto; /* Ajusta las proporciones de las columnas */
+  grid-template-rows: 80px 1fr 90px; /* Ajusta las proporciones de las filas */
   height: 100vh;
 }
 
@@ -29,11 +29,8 @@ a {
   background-color: #000000;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
-  position: fixed;
   height: 86%;
-  width: 8%;
   margin: 0.5%;
-
   border-radius: 15px;
   font-size: 20px;
   text-align: center;
@@ -47,7 +44,7 @@ a {
   margin: 10px;
   border-radius: 10px;
   height: calc(25% - 20px); /* Esta es la altura de la primera card */
-  width: calc(100% - 20px);
+  width: 90%;
 }
 
 .sidebar-card-bottom {
@@ -58,7 +55,7 @@ a {
   margin: 10px;
   border-radius: 10px;
   height: calc(75% - 20px); /* Esta es la altura de la segunda card */
-  width: calc(100% - 20px);
+  width: 90%;
 }
 
 .sidebar-menu {
@@ -81,7 +78,7 @@ a {
   color: white;
   font-size: 14px;
   font-weight: bold;
-  padding-top: 30px;
+  padding-top: 50%;
   cursor: pointer;
 }
 
@@ -89,15 +86,16 @@ a {
 
 .nav {
   position: fixed;
-  width: 90%;
-  right: 3%;
+  grid-column: 2 / -1; /* Hace que nav abarque desde la segunda columna hasta el final */
+  width: calc(92% - 80px);
+  margin-left: 80px;
+  right: 4%;
   z-index: 1;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 2%;
-  padding-left: 4%;
   font-family: "Mukta Vaani", sans-serif;
 }
 
@@ -151,25 +149,6 @@ a {
   margin-left: 20px;
   margin-top: 10%;
 }
-
-.search-bar {
-  width: 30%; /* Ajusta este valor para cambiar el tamaño de la barra de búsqueda */
-  height: 50px;
-  padding: 5px;
-  border-radius: 50px; /* Esto hará que los bordes de la barra de búsqueda sean totalmente redondeados */
-  background-color: #282828; /* Esto hará que el fondo sea oscuro */
-  color: white; /* Esto hará que el texto sea blanco */
-  border: none; /* Esto eliminará el borde predeterminado del navegador */
-  margin-right: auto; /* Esto empujará todos los demás elementos a la derecha */
-  padding-left: 2%;
-}
-
-/* Esto cambiará el color del texto del marcador de posición a blanco */
-.search-bar::placeholder {
-  color: rgb(128, 128, 128);
-}
-
-
 
 /* Parte principal */
 
@@ -290,7 +269,7 @@ a {
 .main-card-album-text {
   font-size: 14px;
   font-weight: bold;
-  margin-top: 10px;
+  
   color: white;
   font-size-adjust: 0.5;
 }
@@ -322,6 +301,11 @@ main-card-album-subtext:hover {
 @media screen and (min-width: 1600px) {
   .main-card-album {
     width: calc(16.66% - 2%);
+  }
+}
+@media screen and (min-resolution: 150dpi) {
+  .main-card-album {
+    width: calc(33.33% - 2%);
   }
 }
 

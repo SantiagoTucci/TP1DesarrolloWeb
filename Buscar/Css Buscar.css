@@ -1,0 +1,28 @@
+.main {
+  background: #0f0f0f;
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  border-radius: 15px;
+  margin: 1%;
+  padding-top: 7%;
+  overflow: auto;
+  margin-bottom: 8%;
+}
+
+/* Nav */
+
+.search-bar {
+  width: 40%;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #282828;
+  color: white;
+  border: none;
+  margin-right: auto;
+  padding-left: 2%;
+}
+
+.search-bar::placeholder {
+  color: rgb(128, 128, 128);
+}
