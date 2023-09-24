@@ -1,68 +1,83 @@
-.cuerpo{
-    background-color: rgb(0, 0, 0);
-    font-family: 'Lato', sans-serif;
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.encabezado{
-    background-color:#404259;
+.cuerpo{
+    background: linear-gradient(to top, #637bc2 0%, #0f0f0f 80%);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+a{
+    text-decoration: none;
+ }
+
+.Hero{
+    background-color: transparent;
+    text-align: center;
+
+}
+
+.contain{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.nav{
+    width: 90%;
+    right: 3%;
+    z-index: 1;
+    background: transparent;
     display: flex;
     align-items: center;
-    height: 120px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    
-    
-}
+    justify-content: space-between;
+    margin-top: 2%;
+    padding-left: 4%;
+    font-family: "Mukta Vaani", sans-serif;
+ }
 
-.tituloEncabezado{
-    font-family: 'Mukta Vaani', sans-serif;
-    text-align: left;
-    margin-left: 4%;
-    color: aliceblue
-}
+ .nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(231, 231, 231);
+    transition: transform 0.2s, font-weight 0.2s;
+  }
 
-.tituloEncabezado h2{
+  .nav-link:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+
+ .nav_logo{
     color: aliceblue;
     font-size: 2.5rem;
     z-index: 1;
-    margin: 10px;
-    font-size: 50px;
-}
-
-.usuario{
+ }
+ 
+ .user-info {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-top: 1px;
-    margin-left: 850px;
-    margin-right: 3px;
-    margin-bottom: 10px;
-    font-family: 'Mukta Vaani', sans-serif;
-    color: rgb(235, 235, 235);;
-    position: absolute;
-}
-
-.usuarioSubdibiciones{
+  }
+  
+  .text-info {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    text-align: right;
-}
-
-.textoUsuario{
-    margin-left: 60px;
-    margin-right: 0px;
-    
-}
-
-.imagenUsuario{
-    width: 100px;
-    height: 60px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 10%;
+  }
 
 .contenedorMayor{
     display: flex;

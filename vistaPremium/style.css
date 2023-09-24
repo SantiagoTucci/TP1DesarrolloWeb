@@ -15,6 +15,7 @@
      padding: 0;
      box-sizing: border-box;
  }
+ 
  body{
     background: linear-gradient(to bottom, #637bc2 0%, #0f0f0f 50%);
      font-family: 'Alegreya Sans', sans-serif;
@@ -30,9 +31,9 @@
  .Hero{
      background-color: transparent;
      text-align: center;
-     
-     
+
  }
+
  .contain{
      margin: 0 auto;
      width: 90%;
