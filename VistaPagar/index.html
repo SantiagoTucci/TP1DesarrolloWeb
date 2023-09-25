@@ -55,27 +55,28 @@
           </div>
           <div class="TextoPlan">
             <h3>100<sup>$</sup></h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi laborum neque quia, nostrum molestiae, quasi pariatur adipisci aspernatur enim, ratione impedit! Necessitatibus voluptatem perferendis, nam magnam vitae provident molestias sunt.</p>
+            <p>El plan mensual de $100 para escuchar música ofrece a los suscriptores una experiencia de música completa y conveniente. A cambio de una tarifa mensual, pueden acceder a una amplia variedad de canciones sin anuncios, con la posibilidad de descargar música para escuchar sin conexión y disfrutar de una calidad de audio excepcional. </p>
           </div>
         </article>
 
         <article class="contenedorFormulario">
           <div class="camposUno">
             <label for="campoTarjeta">Tarjeta </label
-            ><input class="relleno" type="text" name="" id="campoTarjeta" placeholder="1234 5678 9012 3456" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16"/>
+            ><input class="relleno" type="text" name="" id="campoTarjeta" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16"/>
           </div>
           <div class="camposUno">
             <label for="campoVencimiento"> Vencimiento </label
-            ><input class="relleno" type="date" name="" id="campoVencimiento"/>
+            ><input class="relleno" type="date" name="" id="campoVencimiento" maxlength="8"/>
           </div>
           <div class="camposUno">
             <label for="campoPassword"> CVC </label>
-            <input class="relleno" type="password" name="" id="campoPassword"/>
+            <input class="relleno" type="password" name="" id="campoPassword" maxlength="3"/>
           </div>
           <div class="camposUno">
             <label for="campoNombreApellido">Nombre completo</label
-            ><input class="relleno" type="text" name="" id="campoNombreApellido"/>
+            ><input class="relleno" type="text" name="" id="campoNombreApellido" maxlength="30"/>
           </div>
+          <p>Estoy de acuerdo con Terminos y Condiciones</p>
         </article>
         <article class="contenedorBoton">
           <button class="botonUno">Cancelar</button>
