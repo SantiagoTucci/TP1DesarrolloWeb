@@ -269,7 +269,7 @@ a {
 .main-card-album-text {
   font-size: 14px;
   font-weight: bold;
-  
+  margin-top: 10px;
   color: white;
   font-size-adjust: 0.5;
 }
