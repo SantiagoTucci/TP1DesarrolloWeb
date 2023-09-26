@@ -10,6 +10,7 @@
  }
  
  /* GLOBALES*/
+ 
  *{
      margin: 0;
      padding: 0;
@@ -113,7 +114,6 @@
      width: 90%;
      max-width: 900px;
      margin: auto;
-     height: 100vh;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -174,12 +174,16 @@
  }
 
 
- 
+ .contenedorBoton{
+    display: flex;
+    flex-direction: row;
+    
+ }
  .botones{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 100%;
+    margin-bottom: 100%;
     margin: 10px 50px;
-    width: 50px;
+    width: 100px;
     padding:15px 15px;
     font-family: 'Hind Vadodara' ;
     font-weight: 700;
@@ -194,24 +198,15 @@
 
  /* BLOQUES */
  
+/* Bloques*/
 .comprar__titulo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: aliceblue;
+    font-size: 50px;
     text-align: center;
-    font-size: 3.2rem;
-    color: var(--color-blanco);
-    padding: 70px;
-
 }
- .beneficios_premium{
-    height: 400px;
-    background-color: transparent;
- }
-
- .bloque__imagenes{
-    color: var(--color-blanco);
-    border-radius:10px;
- }
- .bloques{
-    
+.bloques{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:2rem;
@@ -225,26 +220,25 @@
 
 .bloque{
     text-align: center;
-    color: var(--color-blanco);
 }
 
 .bloque__titulo{
     margin: 0;
-    color: var(--color-blanco);
+   
 }
 
-/*FOOTER*/
- 
- .footer{
+/* Footer */
+.footer{
+    background-color:transparent;
     padding: 1rem 0;
-    margin-top: 1rem;
+    margin-top: 70px;
   
  }
  
- .footer_texto{
-    text-align: center;
-    color: aliceblue;
-    font-size: 'Mukta Vaani';
+ .footer__texto{
+     font-family:'Mukta Vaani' ;
+     text-align: center;
+     
  }
  
  /* MEDIA QUERY*/ 
@@ -263,7 +257,7 @@
     display: inline;
     text-align: center;
     width: 100px;
-    margin: 50px 50px;
+    margin: 10px 10px;
     font-family:'Hind Vadodara' ;
     padding: 15px 15px;
     font-weight: 700;
@@ -274,13 +268,28 @@
 
  }
 
- footer{
-    display: flex;
-    position: absolute;
- }
+ 
 }
 
-@media screen and (max-width:300px){
-   
+@media screen and (max-width:500px){
+    .tabla{
+        width: 85%;
+        padding: 30px;
+        margin-bottom: 10%;
+    }
+
+    .botones{
+        display: inline;
+        text-align: center;
+        font-family:'Hind Vadodara' ;
+        font-weight: 700;
+        border-radius: 10px;
+        color: var(--color-blanco);
+        background-color: #637BC2;
+        box-shadow: 0px 0px 20px 0px var(--color-E);
+    
+     }
+
+     
 }
  
