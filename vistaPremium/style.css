@@ -180,9 +180,7 @@
     
  }
  .botones{
-    margin-top: 100%;
-    margin-bottom: 100%;
-    margin: 10px 50px;
+    margin: 50px 50px;
     width: 100px;
     padding:15px 15px;
     font-family: 'Hind Vadodara' ;
@@ -223,7 +221,7 @@
 }
 
 .bloque__titulo{
-    margin: 0;
+    margin: 5px;
    
 }
 
@@ -238,6 +236,7 @@
  .footer__texto{
      font-family:'Mukta Vaani' ;
      text-align: center;
+     color: var(--color-blanco);
      
  }
  
@@ -245,7 +244,7 @@
  
  @media screen and (max-width:700px){
  .tabla{
-     width: 45%;
+     width: 85%;
      padding: 30px;
      margin-bottom: 10%;
  }
