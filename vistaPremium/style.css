@@ -176,8 +176,6 @@
 
  
  .botones{
-    margin-top: 100%;
-    margin-bottom: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
     margin: 10px 50px;
@@ -236,15 +234,12 @@
 }
 
 /*FOOTER*/
- footer{
  
  .footer{
     padding: 1rem 0;
-   margin-top: 1rem;
     margin-top: 1rem;
   
  }
- .footer{
  
  .footer_texto{
     text-align: center;
@@ -261,7 +256,6 @@
      margin-bottom: 10%;
  }
  .tabla h2{
-     margin-top: 40px;
      margin-top: 20px;
  }
 
@@ -279,7 +273,6 @@
     box-shadow: 0px 0px 20px 0px var(--color-E);
 
  }
-
 
  footer{
     display: flex;
