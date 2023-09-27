@@ -192,7 +192,7 @@
 
 .g{
     border: 1px solid #1121b8;
-    height: 30px;
+    height: 40px;
     width: 225px;
     padding: 11px 10px;
     margin-left: 120px;
@@ -217,6 +217,53 @@
     width: 300px;
     position: relative;
     top: 1px;
+}
+
+.link-premium{
+    padding: 11px 10px;
+    margin-left: 135px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration:dashed;
+}
+
+.link-eliminar{
+    padding: 11px 10px;
+    margin-left: 135px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration:dashed;
+}
+
+.botones-perfil{
+    display: flex;
+}
+
+.link-home{
+    background-color:#637BC2;
+	border-radius:2px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Mukta Vaani", sans-serif;
+	font-size:16px;
+	padding:13px 20px;
+	text-decoration:none;
+
+}
+.link-home:hover {
+	background-color:#3e4e7e;
+}
+.lnik-home:active {
+	position:relative;
+	top:1px;
+}
+
+.boton-guardar{
+    display: inline-block;
+    background-color: whitesmoke;
+    text-decoration: none;
 }
 
 /*FOOTER*/
@@ -264,9 +311,4 @@
  }
 }
  
- @media screen and (max-width:550px){
-     .tabla{
-         width: 85%;
-         padding: 20px;
-     }
- }
+ 
