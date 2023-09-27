@@ -157,7 +157,7 @@ a{
     align-items: flex-start;
     margin-top: 25px;
     padding: 10px;
-    background-color: #4b4d68;
+    background: linear-gradient(to top, #637bc2 0%, #0f0f0f 80%);
     border-radius: 6px;
     box-shadow: 7px 13px 37px #000;
 }
