@@ -122,6 +122,7 @@
 }
 
 .a{
+    color: white;
     font-size: 30px;
     width: 300px;
     position: relative;
@@ -131,10 +132,10 @@
 .b{
     
     border: 1px solid #1121b8;
-    height: 30px;
+    height: 50px;
     width: 225px;
     padding: 11px 10px;
-    margin-left: 110px;
+    margin-left: 120px;
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
@@ -142,6 +143,7 @@
 }
 
 .c{
+    color: white;
     font-size: 30px;
     width: 300px;
     position: relative;
@@ -150,16 +152,17 @@
 
 .d{
     border: 1px solid #1121b8;
-    height: 30px;
+    height: 50px;
     width: 225px;
     padding: 11px 10px;
-    margin-left: 110px;
+    margin-left: 120px;
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
 }
 
 .e{
+    color: white;
     font-size: 30px;
     width: 300px;
     position: relative;
@@ -168,10 +171,10 @@
 
 .f{
     border: 1px solid #1121b8;
-    height: 30px;
+    height: 50px;
     width: 225px;
     padding: 11px 10px;
-    margin-left: 110px;
+    margin-left: 120px;
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
@@ -189,30 +192,31 @@
 
 .g{
     border: 1px solid #1121b8;
-    height: 10px;
+    height: 30px;
     width: 225px;
     padding: 11px 10px;
-    margin-left: 110px;
+    margin-left: 120px;
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
 }
 .h{
     border: 1px solid #1121b8;
-    height: 30px;
+    height: 50px;
     width: 225px;
     padding: 11px 10px;
-    margin-left: 110px;
+    margin-left: 120px;
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
 }
 
 .i{
+    color: white;
     font-size: 30px;
     width: 300px;
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 /*FOOTER*/
