@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesion</title>
+    <title>Vox</title>
+    <link rel="stylesheet" href="/vistaPremium/media/disco-de-vinilo.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <section class="inicio-caja">
-    <form method="get">
-        <article class="imagen">
-             <img src="logo.png" alt="" >
-        </article>
-        <article class="login">
-            <label>Usuario</label>
+    <div class="contenedor">
+    <!--CONTENEDOR DE FORMULARIO-->
+    <div class="login-box">
+        <img src="/vistaPremium/media/disco-de-vinilo.png" alt="logo vox" class="logo">
+        <h1>Long in</h1>
+        <form>
+            <!--NOMBRE USUARIO-->
+            <label for="username">Usuario</label>
             <input type="text" placeholder="Ingrese el usuario" required>
+
+            <!-- Contrasenia-->
             <label>Contraseña</label>
             <input type="password" placeholder="Ingrese la contraseña" required>
-            <button type="submit">Iniciar sesion</button>
-        </article>
-        <article class="extra">
-            <a href="registro.html">Registrarme</a>
-        </article>
-    </form>
-    </section>
+
+            <input type="submit" value="Inicio sesion"></input>
+            <a href="#">Registrate</a>
+        </form>
+    </div>
+</div>
 </body>
+
 <footer>
     <div>
         <p>Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI</p>
