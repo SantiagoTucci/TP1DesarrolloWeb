@@ -22,9 +22,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/* Barra lateral */
-  
 .sidebar {
   background-color: #000000;
   grid-column: 1 / 2;
@@ -46,8 +43,6 @@ a {
   height: calc(25% - 20px); /* Esta es la altura de la primera card */
   width: 90%;
 }
-
-
 
 .sidebar-card-bottom {
   display: flex;
@@ -76,9 +71,8 @@ a {
   transition-duration: 0.2s;
 }
 
-.sidebar-menu-text-one{
+.sidebar-menu-text-one {
   color: white;
-  transition-duration: 0.2s;
   font-size: 14px;
   font-weight: bold;
   padding-top: 50%;
@@ -394,16 +388,7 @@ p {
 
 
 @media screen and (max-width: 700px) {
-  .sidebar-card-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #282828;
-    margin: 10px;
-    border-radius: 10px;
-    height: calc(25% - 20px); /* Esta es la altura de la primera card */
-    width: 90%;
-  }
+  
 
   .container {
     display: grid;
