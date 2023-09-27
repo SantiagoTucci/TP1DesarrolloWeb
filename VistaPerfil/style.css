@@ -121,7 +121,7 @@
     
 }
 
-.a{
+.a, .c, .e, .i{
     color: white;
     font-size: 30px;
     width: 300px;
@@ -139,22 +139,6 @@
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     
-}
-
-.c{
-    color: white;
-    font-size: 30px;
-    width: 300px;
-    position: relative;
-    top: 12px;
-}
-
-.e{
-    color: white;
-    font-size: 30px;
-    width: 300px;
-    position: relative;
-    top: 15px;
 }
 
 .fecha-mail{
@@ -176,14 +160,6 @@
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
-}
-
-.i{
-    color: white;
-    font-size: 30px;
-    width: 300px;
-    position: relative;
-    top: 15px;
 }
 
 .link-premium{
@@ -233,9 +209,11 @@
     box-shadow: 0px 0px 20px 0px var(--color-E);
     text-transform: uppercase;
 }
+
 .link-home:hover {
 	background-color:#3e4e7e;
 }
+
 .lnik-home:active {
 	position:relative;
 	top:1px;
@@ -263,6 +241,7 @@
 .boton-guardar:hover {
 	background-color:#3e4e7e;
 }
+
 .boton-guardar:active {
 	position:relative;
 	top:1px;
@@ -271,7 +250,7 @@
 /*FOOTER*/
  footer{
     padding: 1rem 0;
-   margin-top: 1rem;
+    margin-top: 1rem;
  }
  .footer{
     text-align: center;
@@ -282,14 +261,6 @@
  /* MEDIA QUERY*/ 
  
  @media screen and (max-width:700px){
- .tabla{
-     width: 45%;
-     padding: 30px;
-     margin-bottom: 10%;
- }
- .tabla h2{
-     margin-top: 40px;
- }
 
  .botones{
     display: inline;
@@ -305,7 +276,6 @@
     box-shadow: 0px 0px 20px 0px var(--color-E);
 
  }
-
 
  footer{
     display: flex;
