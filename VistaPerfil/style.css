@@ -195,6 +195,10 @@
     text-decoration:dashed;
 }
 
+.link-premium:hover, .link-eliminar:hover{
+    color: blue;
+}
+
 .link-eliminar{
     color: #6DA6C2;
     padding: 11px 10px;
