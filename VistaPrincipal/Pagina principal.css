@@ -338,7 +338,7 @@ main-card-album-subtext:hover {
   background-color: #000000;
   display: flex;
   align-items: center;
-  justify-content: center; /* Esto centrará todos los elementos en la barra de música */
+  justify-content: center;
 }
 .album-container {
   position: relative;
@@ -348,8 +348,8 @@ main-card-album-subtext:hover {
   display: flex;
   align-items: center;
   height: 100%;
-  position: absolute; /* Esto sacará el div de la normalidad del flujo del documento */
-  left: 0; /* Esto moverá el div a la izquierda */
+  position: absolute;
+  left: 0;
 }
 
 .album-image {
@@ -374,9 +374,17 @@ main-card-album-subtext:hover {
 .artist-name {
   color: rgb(128, 128, 128);
   font-size: smaller;
-  white-space: nowrap; /* Esto evitará que el texto se ajuste a la siguiente línea */
+  white-space: nowrap;
 }
 
 .audio-player {
-  width: 50%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+  width: 50%;
+  
+}
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  
 }
