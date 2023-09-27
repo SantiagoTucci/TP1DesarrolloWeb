@@ -278,8 +278,10 @@ a {
 
 }
 
-.cancion1:hover {
-  cursor: pointer;
+.cancion1:hover  {
+  background: #4e4e4e9e;
+  width: 100%;
+  
 }
 
 .imagen-boton {
@@ -301,21 +303,21 @@ a {
   margin-right: 15px;
 }
 
+.album-container {
+  position: relative;
+}
 /* Estrella */
-
+  
 .star-icon {
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(100deg)
-    brightness(115%) contrast(106%); /* Blanco */
+  position: absolute;
+
+   filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg)
+    brightness(103%) contrast(105%); /* amarillo */
 
   /* filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%); Amarillo */
   top: 10px;
   right: 10px;
   height: 20%;
-}
-
-.star-icon:hover {
-  filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg)
-    brightness(103%) contrast(105%);
 }
 
 p {
@@ -388,7 +390,6 @@ p {
 
 
 @media screen and (max-width: 700px) {
-  
 
   .container {
     display: grid;
