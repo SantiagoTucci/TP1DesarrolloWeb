@@ -387,7 +387,7 @@ p {
 
 
 
-@media screen and (max-width: 700px) {
+@media  (max-width: 700px) {
   .sidebar{
     margin-right: 5px;
   }
@@ -395,8 +395,7 @@ p {
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 80px 1fr 90px;
-    height: 100vh;
-    margin-right: 10px;
+    height: 850px;
   }
   
   .logo-image {
