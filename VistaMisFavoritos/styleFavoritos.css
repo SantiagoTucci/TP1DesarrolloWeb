@@ -24,16 +24,13 @@ a {
 }
 
 /* Barra lateral */
-
+  
 .sidebar {
   background-color: #000000;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
-  position: fixed;
   height: 86%;
-  width: 8%;
   margin: 0.5%;
-
   border-radius: 15px;
   font-size: 20px;
   text-align: center;
@@ -43,24 +40,24 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 20px);
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
-  height: calc(25% - 20px);
-  /* Esta es la altura de la primera card */
+  height: calc(25% - 20px); /* Esta es la altura de la primera card */
+  width: 90%;
 }
+
+
 
 .sidebar-card-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 20px);
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
-  height: calc(75% - 20px);
-  /* Esta es la altura de la segunda card */
+  height: calc(75% - 20px); /* Esta es la altura de la segunda card */
+  width: 90%;
 }
 
 .sidebar-menu {
@@ -74,19 +71,22 @@ a {
   padding-top: 30px;
   cursor: pointer;
 }
-
 .sidebar-menu-text:hover {
   color: white;
   transition-duration: 0.2s;
 }
 
-.sidebar-menu-text-one {
+.sidebar-menu-text-one{
   color: white;
+  transition-duration: 0.2s;
   font-size: 14px;
   font-weight: bold;
-  padding-top: 30px;
+  padding-top: 50%;
   cursor: pointer;
 }
+
+
+
 
 /* Barra superior */
 
@@ -166,11 +166,11 @@ a {
   min-height: 340px;
 }
 
-.image {
+.imagen {
   display: flex;
-  height: inherit;
+  height: 250px;
   position: relative;
-  width: inherit;
+  width: 250px;
   align-items: flex-end;
   align-self: flex-end;
   z-index: 0;
@@ -310,8 +310,6 @@ a {
 /* Estrella */
 
 .star-icon {
-  
-
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(100deg)
     brightness(115%) contrast(106%); /* Blanco */
 
@@ -390,4 +388,75 @@ p {
   margin-left: 15%;
   width: 50%;
   /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+  .sidebar-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282828;
+    margin: 10px;
+    border-radius: 10px;
+    height: calc(25% - 20px); /* Esta es la altura de la primera card */
+    width: 90%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 80px 1fr 90px;
+    height: 100vh;
+  }
+  
+  .logo-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 80px;
+  }
+  
+  .logo-info {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Alegreya Sans", sans-serif;
+    margin-left: 15px;
+    margin-top: 8%;
+  }
+
+
+  .principio {
+    display: flex;
+    height: 30vh;
+    max-height: 400px;
+    min-height: 340px;
+  }
+  
+  .imagen {
+    display: flex;
+    height: 150px;
+    position: relative;
+    width: 150px;
+    align-items: flex-end;
+    align-self: flex-end;
+    z-index: 0;
+    
+  }
+  
+  .titulo {
+    display: flex;
+    flex-flow:column;
+    justify-content: end;
+    z-index: 0;
+    padding-left: 10px;
+    margin-top: 100px;
+  }
+  
+  .main-title{
+    font-size: 36px;
+  }
+  
 }
