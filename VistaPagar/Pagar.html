@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="..\VistaPremium\media\disco-de-vinilo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Lato&family=Mukta+Vaani:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Pagar</title>
+    <link rel="icon" type="image/png" href="img/disco-de-vinilo.png" />
+  </head>
+
+  <body class="cuerpo">
+    <!--BARRA DE NAVEGACION-->
+    <header class="Hero">
+      <nav class="nav contain" id="nav"> 
+          <!--LOGO-->
+          <a href="/VistaMusica/Pagina Principal.html">
+          <h2 class="nav_logo"> <img src="/vistaPremium/media/disco-de-vinilo.png" alt=""> VOX</h2>
+      </a>
+        <div class="user-info">
+        <div class="text-info">
+            <a href="#" class="nav-link">Nombre de usuario</a>
+            <a href="#" class="nav-link">Cerrar sesión</a>
+        </div>
+        <a href="#">
+            <img
+                src="img/usuarioBlanco.png"
+                alt="Imagen de perfil" class="profile-image">
+         </a>
+        </div>
+    </header>
+
+    <main>
+      <!--CARD PLAN-->
+      <section class="contenedorMayor">
+        <article class="contenedorPlan">
+          <div class="nombrePlan">
+            <h2>ELEGISTE EL PLAN MENSUAL</h2>
+          </div>
+          <div class="imgPlan">
+            <img src="img/30-dias.png" alt="30dias">
+            <div class="textoPlan">
+              <h3>100<sup>$</sup></h3>
+            </div>
+            <div class="textoPlan">
+              <p>Ofrece a los suscriptores una experiencia de música completa y conveniente. A cambio de una tarifa mensual, pueden acceder a una amplia variedad de canciones sin anuncios, con la posibilidad de descargar música para escuchar sin conexión y disfrutar de una calidad de audio excepcional. </p>
+            </div>
+          </div>
+        </article>
+        <!--FORMULARIO-->
+        <article class="contenedorFormulario">
+          <div class="camposUno">
+            <label for="campoTarjeta">Tarjeta </label
+            ><input class="relleno" type="text" name="" id="campoTarjeta" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16"/>
+          </div>
+          <div class="camposUno">
+            <label for="campoVencimiento"> Vencimiento </label
+            ><input class="relleno" type="date" name="" id="campoVencimiento" maxlength="8"/>
+          </div>
+          <div class="camposUno">
+            <label for="campoPassword"> CVC</label>
+            <input class="relleno" type="password" name="" id="campoPassword" maxlength="3"/>
+          </div>
+          <div class="camposUno">
+            <label for="campoNombreApellido">Nombre completo</label
+            ><input class="relleno" type="text" name="" id="campoNombreApellido" maxlength="30"/>
+          </div>
+          <div class="condiciones">
+          <p>Estoy de acuerdo con Terminos y Condiciones</p>
+          <label class="checkbox-container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </div>
+        </label>
+        </article>
+        <!--BOTONES-->
+        <article class="contenedorBoton">
+          <button class="botonUno">Atras</button>
+          <button class="botonDos">Pagar</button>
+        </article>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+      <p class="footer__texto">  Santiago Tucci 45318077,  Milagros Pessino 43408374,
+            Ignacio Lopez Cabanillas 46573502,  Duré Diego Uriel 45.286.104
+      </p>
+  </footer>
+  </body>
+</html>
