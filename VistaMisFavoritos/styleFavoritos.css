@@ -33,6 +33,7 @@ a {
   border-radius: 15px;
   font-size: 20px;
   text-align: center;
+  width: 120%;
 }
 
 .sidebar-card-top {
@@ -43,18 +44,19 @@ a {
   margin: 10px;
   border-radius: 10px;
   height: calc(25% - 20px); /* Esta es la altura de la primera card */
-  width: 90%;
+  
 }
 
 .sidebar-card-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: calc(100% -20px);
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
   height: calc(75% - 20px); /* Esta es la altura de la segunda card */
-  width: 90%;
+  
 }
 
 .sidebar-menu {
@@ -184,7 +186,7 @@ a {
 /* Parte principal */
 
 .main {
-  background: linear-gradient(to bottom, #637bc2 0%, #0f0f0f 50%);
+  background: linear-gradient(to bottom, #637bc2 0%, #0f0f0f 60%);
   grid-column: 2 / -1;
   grid-row: 1 / -1;
   border-radius: 15px;
@@ -192,6 +194,7 @@ a {
   padding-top: 7%;
   overflow: auto;
   margin-bottom: 8%;
+ 
 }
 
 .main-content {
@@ -335,7 +338,8 @@ p {
   background-color: #000000;
   display: flex;
   align-items: center;
-  justify-content: center; /* Esto centrará todos los elementos en la barra de música */
+  justify-content: center;
+/* Esto centrará todos los elementos en la barra de música */
 }
 .album-container {
   position: relative;
@@ -375,6 +379,7 @@ p {
 }
 
 .audio-player {
+  margin-left: 200px;
   width: 50%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
 }
 
@@ -382,7 +387,7 @@ p {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .sidebar{
     margin-right: 5px;
   }
@@ -417,23 +422,16 @@ p {
   }
   
   .imagen {
-    display: flex;
     height: 150px;
-    position: relative;
-    width: 150px;
-    align-items: flex-end;
-    align-self: flex-end;
-    z-index: 0;
-    
+    width: 150px; 
   }
   
   .titulo {
     display: flex;
     flex-flow:column;
     justify-content: end;
-    z-index: 0;
-    padding-left: 10px;
-    margin-top: 100px;
+    padding-left: 1px;
+    
   }
   
   .main-title{
@@ -442,21 +440,43 @@ p {
   .album-image {
     height: 100px;
   } 
-  
+
+  .music-bar {
+    display: flex;
+    justify-content:right;
+    
+   }
+
+   .album-text{
+    margin-left: 10px;
+    margin-right: 150px;
+  }
+
+   .audio-player {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 40%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+  }
 }
 
-@media screen and (max-width: 500px) {
- 
+@media screen and (max-width: 600px) {
+  /* barra costado*/
   .sidebar{
     padding-right: 8px;
   }
 
+  /*barra musica*/
   .album-image {
-    height: 90px;
+    height: 70px;
+    margin-right: 0;
+    margin-left: 2px;
   }
 
+  .artist-name{
+    margin-top: 0;
+  }
   .audio-player {
-    width: 20%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+    width: 30%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
   }
 
   .music-bar {
@@ -465,8 +485,33 @@ p {
    
   }
 
-  .album-name{
+  .album-text{
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 150px;
+    margin-top: 0;
+  }
+
+  /* barra navegacion*/
+ 
+  
+  .nav {
+    margin-right: 80px;
     display: flex;
-    flex-wrap: wrap;
+    margin-top: 0;
+    
+  }
+  
+  
+
+  .user-info{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 70px;
+    align-items: center;
+  }
+ 
+  .barra-Info{
+    margin-top: 20px;
   }
 }
