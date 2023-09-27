@@ -1,299 +1,277 @@
 :root {
-    --color-blanco: white;
-    --color-negro: black;
-    --color-A: #79D0DB;
-    --color-B: #6DA6C2;
-    --color-C: #637BC2;
-    --color-D: #7AA5D6;
-    --color-E: #404259;
-
+  --color-blanco: white;
+  --color-negro: black;
+  --color-A: #79d0db;
+  --color-B: #6da6c2;
+  --color-C: #637bc2;
+  --color-D: #7aa5d6;
+  --color-E: #404259;
 }
 
 /* GLOBALES*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(to top, #637bc2 0%, #0f0f0f 80%);
-    font-family: 'Alegreya Sans', sans-serif;
-    font-family: 'Hind Vadodara', sans-serif;
-    font-family: 'Mukta Vaani', sans-serif;
+  background: linear-gradient(to top, #637bc2 0%, #0f0f0f 80%);
+  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Hind Vadodara", sans-serif;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*NAVEGACION*/
 .Hero {
-    background-color: transparent;
-    text-align: center;
-
+  background-color: transparent;
+  text-align: center;
 }
 
 .contain {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px;
-    overflow: hidden;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
 }
 
-
 .nav {
-    width: 90%;
-    right: 3%;
-    z-index: 1;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2%;
-    padding-left: 4%;
-    font-family: "Mukta Vaani", sans-serif;
+  width: 90%;
+  right: 3%;
+  z-index: 1;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
+  padding-left: 4%;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .nav-link {
-    margin-left: 20px;
-    text-decoration: none;
-    color: rgb(231, 231, 231);
-    transition: transform 0.2s, font-weight 0.2s;
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgb(231, 231, 231);
+  transition: transform 0.2s, font-weight 0.2s;
 }
 
 .nav-link:hover {
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
-    font-weight: bold;
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
-
 .nav_logo {
-    color: aliceblue;
-    font-size: 2.5rem;
-    z-index: 1;
+  color: aliceblue;
+  font-size: 2.5rem;
+  z-index: 1;
 }
 
 .user-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .text-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .profile-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-left: 20px;
-    margin-top: 10%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 10%;
 }
-
-
 
 /* MAIN*/
 
 /*TITULO*/
 
 .titulo {
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Alegreya Sans';
-    padding: 40px;
-    margin: auto;
-    color: aliceblue;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Alegreya Sans";
+  padding: 40px;
+  margin: auto;
+  color: aliceblue;
 }
 
 /* TABLA DE PRECIOS*/
 .contenedor {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tabla {
-    width: 33%;
-    height: 500px;
-    margin: auto;
-    border: 1px solid var(--color-E);
-    border-radius: 10px;
-    box-shadow: 10px 0px 15px 0px var(--color-E);
-    padding: 60px;
-    text-align: center;
-    flex-grow: 1;
-    color: var(--color-negro);
-    background-color: aliceblue;
+  width: 33%;
+  height: 500px;
+  margin: auto;
+  border: 1px solid var(--color-E);
+  border-radius: 10px;
+  box-shadow: 10px 0px 15px 0px var(--color-E);
+  padding: 60px;
+  text-align: center;
+  flex-grow: 1;
+  color: var(--color-negro);
+  background-color: aliceblue;
 }
 
 .tabla h2 {
-    font-size: 30px;
-    margin-bottom: 35px;
-    font-family: 'Hind Vadodara'
-
+  font-size: 30px;
+  margin-bottom: 35px;
+  font-family: "Hind Vadodara";
 }
 
 .tabla img {
-    width: 64px;
-    margin-bottom: 35px;
+  width: 64px;
+  margin-bottom: 35px;
 }
 
 .tabla h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .tabla p {
-    display: block;
-    margin-bottom: 20px;
-    font-family: 'Mukta Vaani';
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Mukta Vaani";
 }
 
 .tabla:hover {
-    background: var(--color-C);
-    color: white;
-    transition: .5s all;
-    transform: scale(1.1);
-    cursor: pointer;
+  background: var(--color-C);
+  color: white;
+  transition: 0.5s all;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* BOTON ELEGIR */
 
 input {
-    height: 30px;
-    width: 100px;
-    cursor: pointer;
-
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
 }
 
-
 .contenedorBoton {
-    display: flex;
-    flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 
 .botones {
-    margin: 50px 50px;
-    width: 100px;
-    padding: 15px 15px;
-    font-family: 'Hind Vadodara';
-    font-weight: 700;
-    color: aliceblue;
-    border-radius: 10px;
-    background-color: #637BC2;
-    box-shadow: 0px 0px 20px 0px var(--color-E);
-    text-transform: uppercase;
-
-
+  margin: 50px 50px;
+  width: 100px;
+  padding: 15px 15px;
+  font-family: "Hind Vadodara";
+  font-weight: 700;
+  color: aliceblue;
+  border-radius: 10px;
+  background-color: #637bc2;
+  box-shadow: 0px 0px 20px 0px var(--color-E);
+  text-transform: uppercase;
 }
 
 /* BLOQUES */
 
 /* Bloques*/
 .comprar__titulo {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: aliceblue;
-    font-size: 50px;
-    text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: aliceblue;
+  font-size: 50px;
+  text-align: center;
 }
 
 .bloques {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .bloques {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
+  .bloques {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .bloque {
-    text-align: center;
+  text-align: center;
 }
 
 .bloque__titulo {
-    margin: 5px;
-
+  margin: 5px;
 }
 
 /* Footer */
 .footer {
-    background-color: transparent;
-    padding: 1rem 0;
-    margin-top: 70px;
-
+  background-color: transparent;
+  padding: 1rem 0;
+  margin-top: 70px;
 }
 
 .footer__texto {
-    font-family: 'Mukta Vaani';
-    text-align: center;
-    color: var(--color-blanco);
-
+  font-family: "Mukta Vaani";
+  text-align: center;
+  color: var(--color-blanco);
 }
 
 /* MEDIA QUERY*/
 
-@media screen and (max-width:700px) {
-    .tabla {
-        width: 85%;
-        padding: 30px;
-        margin-bottom: 10%;
-    }
+@media screen and (max-width: 700px) {
+  .tabla {
+    width: 85%;
+    padding: 30px;
+    margin-bottom: 10%;
+  }
 
-    .tabla h2 {
-        margin-top: 20px;
-    }
+  .tabla h2 {
+    margin-top: 20px;
+  }
 
-    .botones {
-        display: inline;
-        text-align: center;
-        width: 100px;
-        margin: 10px 10px;
-        font-family: 'Hind Vadodara';
-        padding: 15px 15px;
-        font-weight: 700;
-        border-radius: 10px;
-        color: var(--color-blanco);
-        background-color: #637BC2;
-        box-shadow: 0px 0px 20px 0px var(--color-E);
-
-    }
-
-
+  .botones {
+    display: inline;
+    text-align: center;
+    width: 100px;
+    margin: 10px 10px;
+    font-family: "Hind Vadodara";
+    padding: 15px 15px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: var(--color-blanco);
+    background-color: #637bc2;
+    box-shadow: 0px 0px 20px 0px var(--color-E);
+  }
 }
 
-@media screen and (max-width:500px) {
-    .tabla {
-        width: 85%;
-        padding: 30px;
-        margin-bottom: 10%;
-    }
+@media screen and (max-width: 500px) {
+  .tabla {
+    width: 85%;
+    padding: 30px;
+    margin-bottom: 10%;
+  }
 
-    .botones {
-        display: inline;
-        text-align: center;
-        font-family: 'Hind Vadodara';
-        font-weight: 700;
-        border-radius: 10px;
-        color: var(--color-blanco);
-        background-color: #637BC2;
-        box-shadow: 0px 0px 20px 0px var(--color-E);
-
-    }
-
-
+  .botones {
+    display: inline;
+    text-align: center;
+    font-family: "Hind Vadodara";
+    font-weight: 700;
+    border-radius: 10px;
+    color: var(--color-blanco);
+    background-color: #637bc2;
+    box-shadow: 0px 0px 20px 0px var(--color-E);
+  }
 }
