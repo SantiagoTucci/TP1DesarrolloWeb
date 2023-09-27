@@ -27,7 +27,7 @@
     <!--BARRA DE NAVEGACION-->
     <header class="Hero">
       <nav class="nav contain" id="nav"> 
-          <!-- LOGO-->
+          <!--LOGO-->
           <a href="/VistaMusica/Pagina Principal.html">
           <h2 class="nav_logo"> <img src="/vistaPremium/media/disco-de-vinilo.png" alt=""> VOX</h2>
       </a>
@@ -45,20 +45,23 @@
     </header>
 
     <main>
+      <!--CARD PLAN-->
       <section class="contenedorMayor">
         <div class="nombrePlan">
           <h2>ELEGISTE EL PLAN MENSUAL</h2>
         </div>
         <article class="contenedorPlan">
           <div class="imgPlan">
-            <img src="img/escucharmusicaweb.jpg" alt="ImagenPlan" />
-          </div>
-          <div class="TextoPlan">
-            <h3>100<sup>$</sup></h3>
-            <p>El plan mensual de $100 para escuchar música ofrece a los suscriptores una experiencia de música completa y conveniente. A cambio de una tarifa mensual, pueden acceder a una amplia variedad de canciones sin anuncios, con la posibilidad de descargar música para escuchar sin conexión y disfrutar de una calidad de audio excepcional. </p>
+            <img src="img/fondoPlanDibujos.avif" alt="ImagenPlan" />
+            <div class="textoPlan">
+              <h3>100<sup>$</sup></h3>
+            </div>
+            <div class="textoPlan">
+              <p>Ofrece a los suscriptores una experiencia de música completa y conveniente. A cambio de una tarifa mensual, pueden acceder a una amplia variedad de canciones sin anuncios, con la posibilidad de descargar música para escuchar sin conexión y disfrutar de una calidad de audio excepcional. </p>
+            </div>
           </div>
         </article>
-
+        <!--FORMULARIO-->
         <article class="contenedorFormulario">
           <div class="camposUno">
             <label for="campoTarjeta">Tarjeta </label
@@ -69,22 +72,33 @@
             ><input class="relleno" type="date" name="" id="campoVencimiento" maxlength="8"/>
           </div>
           <div class="camposUno">
-            <label for="campoPassword"> CVC </label>
+            <label for="campoPassword"> CVC</label>
             <input class="relleno" type="password" name="" id="campoPassword" maxlength="3"/>
           </div>
           <div class="camposUno">
             <label for="campoNombreApellido">Nombre completo</label
             ><input class="relleno" type="text" name="" id="campoNombreApellido" maxlength="30"/>
           </div>
+          <div class="condiciones">
           <p>Estoy de acuerdo con Terminos y Condiciones</p>
+          <label class="checkbox-container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </div>
+        </label>
         </article>
+        <!--BOTONES-->
         <article class="contenedorBoton">
-          <button class="botonUno">Cancelar</button>
+          <button class="botonUno">Atras</button>
           <button class="botonDos">Pagar</button>
         </article>
       </section>
     </main>
-
-    <footer class="final"></footer>
+    <!--FOOTER-->
+    <footer class="footer">
+      <p class="footer__texto">  Santiago Tucci 45318077,  Milagros Pessino 43408374,
+            Ignacio Lopez Cabanillas 46573502,  Duré Diego Uriel 45.286.104
+      </p>
+  </footer>
   </body>
 </html>
