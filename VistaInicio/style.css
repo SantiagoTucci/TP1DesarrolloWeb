@@ -5,58 +5,54 @@
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
-
-
-
 
 body {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background: url("https://e1.pxfuel.com/desktop-wallpaper/522/136/desktop-wallpaper-rock-roll-data-rock-album.jpg")
+  background: url("../Musica/Fotos/Fondo/desktop-wallpaper-rock-roll-data-rock-album.jpg")
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}  
+}
 
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
 }
 
 h1 {
-    margin: 5%;
+  margin: 5%;
 }
 
 .contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    
-  }
-  
-  .login-box {
-    width: 40%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 30px 0px #b2c0e7;
-    color: white;
-    border-radius: 10px;
-    margin-top: 5%;
-    
-    padding: 60px 60px;
-    z-index: 1;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.login-box {
+  width: 40%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 30px 0px #b2c0e7;
+  color: white;
+  border-radius: 10px;
+  margin-top: 5%;
+
+  padding: 60px 60px;
+  z-index: 1;
+}
 
 .login-box .logo {
   width: 70px;
@@ -106,7 +102,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10%;
-
 }
 
 button:active {
@@ -129,17 +124,16 @@ a {
   color: #fff;
 }
 
-footer{
-    position: relative;
-    z-index: 1;
-    background-color :transparent ;
-    padding :1rem 0 ;
-    margin-top :5% ;
- }
- 
+footer {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  padding: 1rem 0;
+  margin-top: 5%;
+}
+
 .text-footer {
   color: #ffffff;
   font-family: "Mukta Vaani";
   text-align: center;
-  
 }

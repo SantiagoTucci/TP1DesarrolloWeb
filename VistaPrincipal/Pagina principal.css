@@ -379,12 +379,10 @@ main-card-album-subtext:hover {
 
 .audio-player {
   width: 50%;
-  
 }
 .footer-text {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
-  
 }
