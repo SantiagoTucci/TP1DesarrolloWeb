@@ -1,114 +1,143 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  
-    background: linear-gradient(rgb(0, 0, 0) 0%,rgba(63, 51, 51, 0.291) 100%);
-}
-
-.contenedor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.login-box{
-   
-    width: 320px;
-    height: 450px;
-    background-color: black;
-    box-shadow: 0px 0px 30px 0px #b2c0e7;
-    color: white;
-    row-gap: normal;
-    border-radius: 10px;
-    padding: 30px 30px;
-    left: 50%;
-    top: 50%;
-    margin-top: 300px;
-    margin-bottom: 200px;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 
-.login-box .logo{
-    width: 70px;
-    height: 70px;
-    margin-left: 90px;
-    
 
- 
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: url("https://e1.pxfuel.com/desktop-wallpaper/522/136/desktop-wallpaper-rock-roll-data-rock-album.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}  
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 0;
 }
 
-.login-box h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 32px;
-    font-family: 'Alegreya Sans',sans-serif;
-    font-weight: bold;
-}
-.login-box label{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    display: block;
-    
+h1 {
+    margin: 5%;
 }
 
-.login-box input{
-    width: 100%;
-    margin-bottom: 20px;
-    font-family: 'Hind Vadodara';
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  width: 450px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 30px 0px #b2c0e7;
+  color: white;
+  border-radius: 10px;
+  margin-top: 5%;
+  padding: 60px 60px;
+  z-index: 1;
+}
+
+.login-box .logo {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-box h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.login-box label {
+  font-weight: bold;
+  display: block;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .login-box input[type="text"],
-.login-box input[type="password"]
-{
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    font-size: 16px;
-    font-family: 'Mukta Vaani';
+.login-box input[type="password"] {
+  border-radius: 10px;
+  background-color: #333;
+  outline: none;
+  height: 50px;
+  color: #fff;
+  padding-left: 5%;
 }
 
-.login-box input[type="submit"]{
-    height: 40px;
-    font-size: 18px;
-    font-family: 'Hind Vadodara';
-    font-weight: 700;
-    color: aliceblue;
-    border-radius: 10px;
-    background-color: #b4b7c1;
-    
+button {
+  font-size: 1.5rem;
+  color: #fafafa;
+  border-radius: 10px;
+  border: 2px solid #fafafa;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+
 }
 
-.registro{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin-top: 15px;
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
 }
 
-a{
-    text-decoration: underline;
-    margin-left: 8px;
-    box-shadow: none;
-    color: #fff;
+.registro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15px;
 }
-.text-footer{
-    font-family: 'Mukta Vaani';
-    text-align: center;
+
+a {
+  text-decoration: underline;
+  margin-left: 8px;
+  box-shadow: none;
+  color: #fff;
 }
+
 footer{
-    background-color: transparent;
-    padding: 1rem 0;
-    margin-top: 70px;
+    position: relative;
+    z-index: 1;
+    background-color :transparent ;
+    padding :1rem 0 ;
+    margin-top :5% ;
+ }
+ 
+.text-footer {
+  color: #ffffff;
+  font-family: "Mukta Vaani";
+  text-align: center;
+  
 }
-
