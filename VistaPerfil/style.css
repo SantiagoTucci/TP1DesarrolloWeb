@@ -237,6 +237,9 @@
 
 .botones-perfil{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .link-home{
@@ -247,10 +250,12 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family: "Mukta Vaani", sans-serif;
-	font-size:16px;
+	font-size:17px;
+    margin-right: 80px;
 	padding:13px 20px;
+    text-align: center;
 	text-decoration:none;
-
+    width:230px;
 }
 .link-home:hover {
 	background-color:#3e4e7e;
@@ -261,9 +266,27 @@
 }
 
 .boton-guardar{
-    display: inline-block;
-    background-color: whitesmoke;
-    text-decoration: none;
+    background-color:#637BC2;
+	border-radius:2px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Mukta Vaani", sans-serif;
+	font-size:17px;
+    margin-right: 80px;
+	padding:13px 20px;
+    text-align: center;
+	text-decoration:none;
+    width:230px;
+}
+
+.boton-guardar:hover {
+	background-color:#3e4e7e;
+}
+.boton-guardar:active {
+	position:relative;
+	top:1px;
 }
 
 /*FOOTER*/
