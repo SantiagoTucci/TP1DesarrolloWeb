@@ -10,11 +10,11 @@
  }
  
  /* GLOBALES*/
- *{
+/* *{
      margin: 0;
      padding: 0;
      box-sizing: border-box;
- }
+ } */
  
  body{
     background: linear-gradient( #637bc2 -20%, #0f0f0f 80%);
@@ -129,10 +129,9 @@
     top: 12px;
 }
 
-.b{
-    
-    border: 1px solid #1121b8;
-    height: 50px;
+.b, .d, .f, .g{
+    border: 2px solid #637BC2;
+    height: 40px;
     width: 225px;
     padding: 11px 10px;
     margin-left: 120px;
@@ -150,34 +149,12 @@
     top: 12px;
 }
 
-.d{
-    border: 1px solid #1121b8;
-    height: 50px;
-    width: 225px;
-    padding: 11px 10px;
-    margin-left: 120px;
-    border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
-}
-
 .e{
     color: white;
     font-size: 30px;
     width: 300px;
     position: relative;
-    top: 12px;
-}
-
-.f{
-    border: 1px solid #1121b8;
-    height: 50px;
-    width: 225px;
-    padding: 11px 10px;
-    margin-left: 120px;
-    border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
+    top: 15px;
 }
 
 .fecha-mail{
@@ -190,19 +167,9 @@
     margin: 100px 80px 80px 150px;
 }
 
-.g{
-    border: 1px solid #1121b8;
-    height: 40px;
-    width: 225px;
-    padding: 11px 10px;
-    margin-left: 120px;
-    border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
-}
 .h{
-    border: 1px solid #1121b8;
-    height: 50px;
+    border: 2px solid #637BC2;
+    height: 40px;
     width: 225px;
     padding: 11px 10px;
     margin-left: 120px;
@@ -216,26 +183,33 @@
     font-size: 30px;
     width: 300px;
     position: relative;
-    top: 1px;
+    top: 15px;
 }
 
 .link-premium{
+    color: #6DA6C2;
     padding: 11px 10px;
     margin-left: 135px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 30px;
     text-decoration:dashed;
+}
+
+.link-premium:hover, .link-eliminar:hover{
+    color: blue;
 }
 
 .link-eliminar{
+    color: #6DA6C2;
     padding: 11px 10px;
     margin-left: 135px;
     display: inline-block;
-    font-size: 20px;
-    text-decoration:dashed;
+    font-size: 30px;
+    text-decoration: dashed;
 }
 
 .botones-perfil{
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;

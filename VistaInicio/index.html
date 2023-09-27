@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vox</title>
-    <link rel="stylesheet" href="/vistaPremium/media/disco-de-vinilo.png">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vox</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <div class="contenedor">
-    <!--CONTENEDOR DE FORMULARIO-->
-    <div class="login-box">
-        <img src="/vistaPremium/media/disco-de-vinilo.png" alt="logo vox" class="logo">
-        <h1>Login</h1>
-        <form>
-            <!--NOMBRE USUARIO-->
-            <label for="username">Usuario</label>
-            <input type="text" placeholder="Ingrese el usuario" required>
+    <body>
+        <div class="contenedor">
+            <!--CONTENEDOR DE FORMULARIO-->
+            <div class="login-box">
+                <img src="/vistaPremium/media/disco-de-vinilo.png"
+                    alt="logo vox" class="logo">
+                <h1>Inicia sesión</h1>
+                <form action="..\VistaPrincipal\Pagina Principal.html">
+                    <!--NOMBRE USUARIO-->
+                    <label for="username">Usuario</label>
+                    <input type="text" placeholder="Ingrese el usuario" required>
+                
+                    <!-- Contrasenia-->
+                    <label>Contraseña</label>
+                    <input type="password" placeholder="Ingrese la contraseña"
+                        required>
+                
+                    <button type="submit">
+                        Iniciar sesión
+                    </button>            
 
-            <!-- Contrasenia-->
-            <label>Contraseña</label>
-            <input type="password" placeholder="Ingrese la contraseña" required>
+                    <div class="registro">
+                        <p>No tienes cuenta?</p>
+                        <a href="..\VistaRegistro\registro.html">Registrate en Vox</a>
+                    </div>
 
-            <input type="submit" value="Inicio sesion"></input>
-
-            <div class="registro">
-                <p>No tienes cuenta?</p>
-                <a href="#">Registrate en Vox</a>
+                </form>
             </div>
-           
-        </form>
-    </div>
-</div>
-</body>
+        </div>
 
-<footer>
-    <div class="text-footer">
-        <p>Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI</p>
-    </div>
-</footer>
+        <footer>
+            <div class="text-footer">
+                <p>Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI,
+                    Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI</p>
+            </div>
+        </footer>
+    </body>
 </html>

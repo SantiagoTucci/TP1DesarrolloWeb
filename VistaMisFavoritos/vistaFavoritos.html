@@ -13,58 +13,60 @@
 <body>
     <div class="container">
 
-        <!-- Barra lateral -->
+       <!-- Barra lateral -->
 
-        <section class="sidebar">
-            <div class="sidebar-card-top">
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-text">
-                        <a href="/VistaMusica/Pagina Principal.html">
-                            <p>Inicio</p>
-                        </a>
-                    </li>
-                    <li class="sidebar-menu-text">
-                        <a href="/VistaBuscar/Pagina Buscar.html">
-                            <p>Buscar</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-card-bottom">
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-text">
-                        <a href="/VistaMisAlbums/index.html">
-                            <p>Mis Álbumes</p>
-                        </a>
-
-                    </li>
+       <section class="sidebar">
+        <div class="sidebar-card-top">
+            <ul class="sidebar-menu">
+                <div class="menu-item">
                     <li class="sidebar-menu-text-one">
-                        <a href="/VistaMisFavoritos/vistaFavoritos.html">
-                            <p>Mis Favoritos</p>
-                        </a>
+                        <a href="#">Inicio</a>
                     </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Barra de arriba -->
-
-        <nav class="nav">
-            <div class="logo-container">
-                <img src="..\vistaPremium\media\disco-de-vinilo.png" alt="Logo Vox" class="logo-image">
-                <p class="logo-info">Vox</p>
-            </div>
-            <div class="user-info">
-                <div class="text-info">
-                    <a href="#" class="nav-link">Nombre de usuario</a>
-                    <a href="/VistaUsuarioRegistro/index.html" class="nav-link">Cerrar sesión</a>
                 </div>
-                <a href="#">
-                    <img src="..\Musica\Fotos\Álbumes\FotoPerfil.png" alt="Imagen de perfil" class="profile-image">
-                </a>
+                <div class="menu-item">
+                    <li class="sidebar-menu-text">
+                        <a href="..\VistaBuscar\Pagina Buscar.html">Buscar</a>
+                    </li>
+                </div>
+            </ul>
+        </div>                
+
+        <div class="sidebar-card-bottom">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-text">
+                    <a href="..\VistaMisAlbums\index.html">Mis Álbumes</a>
+                </li>
+                <li class="sidebar-menu-text">
+                    <a href="#">Mis Favoritos</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Barra de arriba -->
+
+    <nav class="nav">
+        <div class="logo-container">
+            <img
+                src="..\vistaPremium\media\disco-de-vinilo.png"
+                alt="Logo Vox"
+                class="logo-image" />
+            <p class="logo-info">Vox</p>
+        </div>
+        <div class="user-info">
+            <div class="text-info">
+                <a href="#" class="nav-link">Nombre de usuario</a>
+                <a href="..\VistaUsuarioRegistro\index.html" class="nav-link">Cerrar sesión</a>
             </div>
-        </nav>
+            <a href="#">
+                <img
+                    src="..\Musica\Fotos\Álbumes\FotoPerfil.png"
+                    alt="Imagen de perfil"
+                    class="profile-image" />
+            </a>
+        </div>
+    </nav>
+
 
         <!-- Todo el main -->
 
@@ -116,7 +118,12 @@
                             </div>
 
                             <div class="nombre-cancion">
-                                <img src="OIP.jpeg" class="imagen-cancion" alt="">
+
+                                <div class="album-container">
+                                    <img src="OIP.jpeg" class="imagen-cancion" alt="">
+                                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
+                                </div>
+
                                 <div class="textos">
                                     <link class="nombre"> <a href="/VistaMisFavoritos/vistaFavoritos.html">Hasta que la
                                         muerte nos separe
@@ -144,7 +151,10 @@
                             </div>
 
                             <div class="nombre-cancion">
-                                <img src="/Musica/Fotos/Álbumes/Giros.jpg" class="imagen-cancion" alt="">
+                                <div class="album-container">
+                                    <img src="/Musica/Fotos/Álbumes/Giros.jpg" class="imagen-cancion" alt="">
+                                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
+                                </div>
                                 <div class="textos">
                                     <link> <a href="/VistaMisFavoritos/vistaGiros.html">Giros
                                     </a></link>
@@ -170,7 +180,10 @@
                             </div>
 
                             <div class="nombre-cancion">
-                                <img src="/Musica/Fotos/Álbumes/Fuerza Natural.jpg" class="imagen-cancion" alt="">
+                                <div class="album-container">
+                                    <img src="/Musica/Fotos/Álbumes/Fuerza Natural.jpg" class="imagen-cancion" alt="">
+                                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
+                                </div>
                                 <div class="textos">
                                     <link> <a href="/VistaMisFavoritos/vistaFuerza.html">Fuerza natural
                                     </a></link>
@@ -190,31 +203,35 @@
                         </div>
 
 
+                     
+
                         <div class="cancion1">
                             <div class="espacio">
                                 <img src="006-tocar.png" alt="" class="imagen-boton">
                             </div>
 
                             <div class="nombre-cancion">
-                                <img src="/Musica/Fotos/Álbumes/Canción Animal.jpg" class="imagen-cancion" alt="">
-                                    <div class="textos">
+                                <div class="album-container">
+                                    <img src="/Musica/Fotos/Álbumes/Canción Animal.jpg" class="imagen-cancion" alt="">
+                                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
+                                </div>
+                                <div class="textos">
                                     <link> <a href="/VistaMisFavoritos/vistaEntreC.html"> Entre canibales
                                     </a></link>
                                     <p class="artist-name">Soda Stero</p>
                                 </div>
-                                </div>
-                                <div class="album">
-                                    <p>Cancion Animal</p>
-                                </div>
-    
-                                <div class="duracion">
-                                    <p>4:06</p>
-                                </div>
-                                <div class="reproduccion">6000</div>
+
 
                             </div>
 
-                            
+                            <div class="album">
+                                <p>Cancion Animal</p>
+                            </div>
+
+                            <div class="duracion">
+                                <p>4:06</p>
+                            </div>
+                            <div class="reproduccion">6000</div>
                         </div>
 
 
@@ -233,13 +250,13 @@
             <div class="album-info">
                 <div class="album-container">
                     <img src="OIP.jpeg" alt="Album image" class="album-image">
-
+                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
                 </div>
                 <div class="album-text">
                     <p class="album-name">Hasta que la muerte nos separe</p>
                     <p class="artist-name">Maria Becerra</p>
                 </div>
-                <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
+
             </div>
 
             <audio controls class="audio-player">
