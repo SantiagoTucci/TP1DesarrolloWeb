@@ -7,37 +7,59 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-        <section class="registro-caja">
-            <form method="get">
-                <article class="texto">
-                    <h3>Crea tu cuenta</h3>
-                </article>
-                <article class="username">
-                    <label for="username">Usuario</label>
-                    <input type="text" placeholder="Nombre de usuario" required>
-                </article>
-                <article class="passwords">
-                    <label for="passwords">Contraseña</label>
-                    <input type="password" placeholder="Nueva contraseña" required>
-                    <input type="password" placeholder="Repita la contraseña" required>
-                </article>
-                <article class="email">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Ingrese su email" required>
-                </article>
-                <article class="nacimiento">
-                    <label for="nacimiento">Fecha de nacimiento</label>
-                    <input type="date" required>
-                </article>
-                <article class="boton-continuar">
-                    <button type="submit">Completar registro</button>
-                </article>
+    <!--CONTENEDOR DE FORMULARIO-->
+    <div class="contenedor">
+        <!--FORMULARIO-->
+        <div class="registro-box">
+            <img src="/vistaPremium/media/disco-de-vinilo.png" alt="logo vox" class="logo">
+            <h1 class="titulo">Registrate en Vox</h1>
+            <form class="formulario">
+                <!--PADRE-->
+                <div class="padre">
+                    <!--NOMBRE-->
+                    <div class="nombre">
+                        <label for="">Nombre Usuario</label>
+                        <input type="text">
+                    </div>
+                    <!--CONTRASENIA-->
+                    <div class="contra">
+                        <label for="">Contraseña</label>
+                        <input type="password">
+                    </div>
+                    <!--REPETIR CONTRASENIA-->
+                    <div class="contra">
+                        <label for="">Repetir contraseña</label>
+                        <input type="password">
+                    </div>
+                    <!--EMAIL-->
+                    <div class="email">
+                        <label for="">Email</label>
+                        <input type="email">
+                    </div>
+                    <!--FECHA NACIMIENTO-->
+                    <div class="fecha-nac">
+                        <label for="">Fecha de nacimiento</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="cuenta">
+                        <input type="submit" value="Ver planes premium" class="botones">
+                        <input type="submit" value="Registrarme" class="botones">
+                    </div>
+                    <p class="enlace">Ya tienes cuenta?<a href="#">Entra aquí</a></p>
+                </div>  
             </form>
-        </section>
+        </div>
+    </div>
+
+    <div class="espacio">
+
+    </div>
 </body>
+
 <footer>
     <div>
-        <p>Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI</p>
+        <!--<p>Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI, Nombre Apellido DNI</p>
     </div>
-</footer>
+</footer>-->
 </html>
