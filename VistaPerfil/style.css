@@ -281,17 +281,10 @@ footer {
     position: absolute;
   }
 
-}
-
-@media screen and (max-width: 500px){
-
-  form{
-    height: 100vh;
-  }
-  .botones-perfil{
-    margin-left: 350px;
-    margin-bottom: 300px;
-  }
+  @media screen and (min-width: 320px) and (max-width:425px){
+    .botones-perfil{
+      margin-left: 140%;
+    }
 
   .footer{
     margin-left: 110%;
@@ -315,4 +308,3 @@ footer {
   margin-left: 0px;
 }
 
-}
