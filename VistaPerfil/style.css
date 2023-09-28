@@ -281,16 +281,38 @@ footer {
     position: absolute;
   }
 
-  @media screen and (max-width: 320em){
-    .botones-perfil{
-      margin-left: 140%;
-    }
+}
 
-    .footer{
-      margin-left: 110%;
+@media screen and (max-width: 500px){
 
-      text-align: center;
-    }
+  form{
+    height: 100vh;
   }
+  .botones-perfil{
+    margin-left: 350px;
+    margin-bottom: 300px;
+  }
+
+  .footer{
+    margin-left: 110%;
+    height: 20px;
+    text-align: center;
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+  }
+
+ .section-container {
+  width: 400px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.fecha-mail{
+  margin-right: 0px;
+  margin-left: 0px;
+}
 
 }
