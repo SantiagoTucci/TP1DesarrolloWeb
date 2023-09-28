@@ -64,38 +64,44 @@
           </article>
           <!--FORMULARIO-->
           <article class="contenedorFormulario">
+            <form action="..\VistaPrincipal\Pagina Principal.html">
             <div class="camposUno">
               <label for="campoTarjeta">Tarjeta </label><input class="relleno"
                 type="text" name id="campoTarjeta"
-                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16" />
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16" required/>
             </div>
             <div class="camposUno">
               <label for="campoVencimiento"> Vencimiento </label><input
                 class="relleno" type="date" name
-                id="campoVencimiento" maxlength="8" />
+                id="campoVencimiento" maxlength="8" required/>
             </div>
             <div class="camposUno">
               <label for="campoPassword"> CVC</label>
               <input class="relleno" type="password" name id="campoPassword"
-                maxlength="3" />
+                maxlength="3" required/>
             </div>
             <div class="camposUno">
               <label for="campoNombreApellido">Nombre completo</label><input
                 class="relleno" type="text" name
-                id="campoNombreApellido" maxlength="30" />
+                id="campoNombreApellido" maxlength="30" required/>
             </div>
             <div class="condiciones">
               <p>Estoy de acuerdo con Terminos y Condiciones</p>
               <label class="checkbox-container">
-                <input type="checkbox">
+                <input type="checkbox" required>
                 <span class="checkmark"></span>
               </div>
             </label>
+          </form>
           </article>
           <!--BOTONES-->
           <article class="contenedorBoton">
+            <a href="..\vistaPremium\vistaPremium.html">
             <button class="botonUno">Atras</button>
+            </a>
+            <a href="..\VistaPrincipal\Pagina Principal.html">
             <button class="botonDos">Pagar</button>
+            </a>
           </article>
         </section>
       </main>

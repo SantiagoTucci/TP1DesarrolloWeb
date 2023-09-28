@@ -22,6 +22,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 /* Barra lateral */
 
 .sidebar {
@@ -43,7 +44,9 @@ a {
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
-  height: calc(25% - 20px); /* Esta es la altura de la primera card */
+  height: calc(25% - 20px);
+  /* Esta es la altura de la primera card */
+
 }
 
 .sidebar-card-bottom {
@@ -54,7 +57,9 @@ a {
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
-  height: calc(75% - 20px); /* Esta es la altura de la segunda card */
+  height: calc(75% - 20px);
+  /* Esta es la altura de la segunda card */
+
 }
 
 .sidebar-menu {
@@ -68,6 +73,7 @@ a {
   padding-top: 30px;
   cursor: pointer;
 }
+
 .sidebar-menu-text:hover {
   color: white;
   transition-duration: 0.2s;
@@ -85,7 +91,8 @@ a {
 
 .nav {
   position: fixed;
-  grid-column: 2 / -1; /* Hace que nav abarque desde la segunda columna hasta el final */
+  grid-column: 2 / -1;
+  /* Hace que nav abarque desde la segunda columna hasta el final */
   width: calc(92% - 80px);
   margin-left: 80px;
   right: 4%;
@@ -149,6 +156,7 @@ a {
   margin-top: 10%;
 }
 
+
 /* PRINCIPIO*/
 
 .principio {
@@ -178,6 +186,8 @@ a {
   margin-top: 100px;
 }
 
+
+
 /* Parte principal */
 
 .main {
@@ -189,6 +199,7 @@ a {
   padding-top: 7%;
   overflow: auto;
   margin-bottom: 8%;
+
 }
 
 .main-content {
@@ -202,6 +213,7 @@ a {
   font-family: "Alegreya Sans", sans-serif;
 }
 
+
 /*BARRA INFORMACION*/
 
 .barra-Info {
@@ -214,7 +226,9 @@ a {
   height: 36px;
   border-bottom-style: solid;
   border-bottom-color: rgba(255, 255, 255, 0.1);
+
 }
+
 
 .espacio {
   display: flex;
@@ -224,6 +238,8 @@ a {
 .nombre-cancion {
   display: flex;
   align-items: center;
+
+
 }
 
 .textos {
@@ -237,6 +253,7 @@ a {
   justify-self: start;
   color: rgb(128, 128, 128);
   font-size: 15px;
+
 }
 
 .duracion {
@@ -247,7 +264,9 @@ a {
   justify-self: start;
   color: rgb(128, 128, 128);
   font-size: 15px;
+
 }
+
 
 .reproduccion {
   display: flex;
@@ -256,22 +275,26 @@ a {
   font-size: 15px;
 }
 
+
 /*CANCIONES*/
 .cancion1 {
   display: grid;
   grid-template-columns: 30px 2fr 1fr 1fr 50px;
   grid-gap: 16px;
   margin-top: 2%;
+
 }
 
 .cancion1:hover {
   background: #4e4e4e9e;
   width: 100%;
+
 }
 
 .imagen-boton {
   width: 20px;
   cursor: pointer;
+
 }
 
 .favoritos {
@@ -281,6 +304,7 @@ a {
   cursor: pointer;
 }
 
+
 .imagen-cancion {
   width: 70px;
   margin-right: 15px;
@@ -289,23 +313,29 @@ a {
 .album-container {
   position: relative;
 }
+
 /* Estrella */
 
 .star-icon {
   position: absolute;
 
-  filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg)
-    brightness(103%) contrast(105%); /* amarillo */
+  filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%);
+  /* amarillo */
 
   /* filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%); Amarillo */
-  top: 10px;
-  right: 20px;
-  height: 20%;
+  top: 2px;
+  right: 15px;
+  height: 30%;
+  border-radius: 50%;
 }
+
+
 
 p {
   margin-top: 10px;
+
 }
+
 
 /* Barra inferior de musica */
 
@@ -320,6 +350,7 @@ p {
   justify-content: center;
   /* Esto centrará todos los elementos en la barra de música */
 }
+
 .album-container {
   position: relative;
 }
@@ -328,13 +359,15 @@ p {
   display: flex;
   align-items: center;
   height: 100%;
-  position: absolute; /* Esto sacará el div de la normalidad del flujo del documento */
-  left: 0; /* Esto moverá el div a la izquierda */
+  position: absolute;
+  /* Esto sacará el div de la normalidad del flujo del documento */
+  left: 0;
+  /* Esto moverá el div a la izquierda */
 }
 
 .album-image {
   height: 7vw;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-left: 13%;
   padding: 2%;
   border-radius: 10px;
@@ -354,23 +387,37 @@ p {
 .artist-name {
   color: rgb(128, 128, 128);
   font-size: smaller;
-  white-space: nowrap; /* Esto evitará que el texto se ajuste a la siguiente línea */
+  margin-left: 0;
+  white-space: nowrap;
+  /* Esto evitará que el texto se ajuste a la siguiente línea */
 }
 
 .audio-player {
   margin-left: 200px;
-  width: 50%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+  width: 50%;
+  /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
 }
 
-@media screen and (max-width: 700px) {
+
+/*FOOTER*/
+.footer-text {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+@media (max-width: 700px) {
   .sidebar {
     margin-right: 5px;
   }
+
   .container {
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 80px 1fr 90px;
-    height: 850px;
+    height: 100vh;
   }
 
   .logo-image {
@@ -388,9 +435,11 @@ p {
     margin-top: 8%;
   }
 
+
   .principio {
     display: flex;
     height: 30vh;
+
   }
 
   .imagen {
@@ -403,11 +452,13 @@ p {
     flex-flow: column;
     justify-content: end;
     padding-left: 1px;
+
   }
 
   .main-title {
     font-size: 36px;
   }
+
   .album-image {
     height: 100px;
   }
@@ -415,6 +466,7 @@ p {
   .music-bar {
     display: flex;
     justify-content: right;
+
   }
 
   .album-text {
@@ -425,11 +477,13 @@ p {
   .audio-player {
     margin-left: 20px;
     margin-right: 20px;
-    width: 40%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+    width: 40%;
+    /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
   }
 }
 
 @media screen and (max-width: 600px) {
+
   /* barra costado*/
   .sidebar {
     padding-right: 8px;
@@ -445,13 +499,16 @@ p {
   .artist-name {
     margin-top: 0;
   }
+
   .audio-player {
-    width: 30%; /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+    width: 30%;
+    /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
   }
 
   .music-bar {
     display: flex;
     justify-content: right;
+
   }
 
   .album-text {
@@ -463,11 +520,15 @@ p {
 
   /* barra navegacion*/
 
+
   .nav {
     margin-right: 80px;
     display: flex;
     margin-top: 0;
+
   }
+
+
 
   .user-info {
     display: flex;
@@ -479,11 +540,4 @@ p {
   .barra-Info {
     margin-top: 20px;
   }
-}
-
-.footer-text {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
 }
