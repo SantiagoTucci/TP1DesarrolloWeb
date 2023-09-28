@@ -70,6 +70,7 @@ a {
   font-size: 2.5rem;
   z-index: 1;
 }
+
 .user-info {
   display: flex;
   align-items: center;
@@ -190,7 +191,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .link-home {
@@ -253,6 +254,7 @@ footer {
   padding: 1rem 0;
   margin-top: 1rem;
 }
+
 .footer {
   text-align: center;
   color: aliceblue;
@@ -280,31 +282,40 @@ footer {
     display: flex;
     position: absolute;
   }
+}
 
-  @media screen and (min-width: 320px) and (max-width:425px){
-    .botones-perfil{
-      margin-left: 140%;
-    }
+@media screen and (min-width: 320px) and (max-width:425px) {
+  .botones-perfil {
+    margin-left: 0%;
+  }
 
-  .footer{
-    margin-left: 110%;
+  .footer {
+    margin-left: 10px;
     height: 20px;
     text-align: center;
   }
 
-  .links{
-    display: flex;
-    flex-direction: row;
+  .link-eliminar {
+    margin-left: 40px;
   }
 
- .section-container {
-  width: 400px;
-  margin-right: 0px;
-  margin-left: 0px;
-}
+  .link-premium {
+    margin-left: 40px;
+  }
 
-.fecha-mail{
-  margin-right: 0px;
-  margin-left: 0px;
-}
+  .section-container {
+    width: 400px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 
+  .fecha-mail {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .footer{
+
+  }
+
+}
