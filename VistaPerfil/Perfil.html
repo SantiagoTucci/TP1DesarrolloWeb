@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1">
         <title>Perfil</title>
         <link rel="icon" href="..\VistaPremium\media\disco-de-vinilo.png">
         <link rel="stylesheet" rel="preconnect"
@@ -18,76 +19,77 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="contain">
+            <!--BARRA DE NAVEGACION-->
+            <header class="Hero">
+                <nav class="nav contain" id="nav">
 
-        <!--BARRA DE NAVEGACION-->
-        <header class="Hero">
-            <nav class="nav contain" id="nav">
-
-                <!-- LOGO-->
-                <a href="#">
-                    <h2 class="nav_logo"> <img src="media/disco-de-vinilo.png"
-                            alt> VOX</h2>
-                </a>
-                <div class="user-info">
-                    <div class="text-info">
-                        <a href="#" class="nav-link">Nombre de usuario</a>
-                        <a href="..\VistaInicio\index.html" class="nav-link">Cerrar
-                            sesión</a>
-                    </div>
+                    <!-- LOGO-->
                     <a href="#">
-                        <img
-                            src="..\Musica\Fotos\Álbumes\FotoPerfil.png"
-                            alt="Imagen de perfil" class="profile-image">
+                        <h2 class="nav_logo"> <img
+                                src="media/disco-de-vinilo.png"
+                                alt> VOX</h2>
                     </a>
+                    <div class="user-info">
+                        <div class="text-info">
+                            <a href="#" class="nav-link">Nombre de usuario</a>
+                            <a href="..\VistaInicio\index.html" class="nav-link">Cerrar
+                                sesión</a>
+                        </div>
+                        <a href="#">
+                            <img
+                                src="..\Musica\Fotos\Álbumes\FotoPerfil.png"
+                                alt="Imagen de perfil" class="profile-image">
+                        </a>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main>
+                <form action>
+                    <div class="section-container">
+                        <label for="Nombre" class="a">Usuario</label>
+                        <input type="text" class="b" name="Nombre"
+                            placeholder="Usuario">
+                        <label for="Contraseña" class="c">Contraseña</label>
+                        <input type="password" class="d" name="contraseña"
+                            placeholder="Contraseña">
+                        <label for="Repetir-Contraseña" class="e">Repetir
+                            contraseña</label>
+                        <input type="password" class="f"
+                            name="Repetir-Contraseña"
+                            placeholder="Repetir contraseña">
+                    </div>
+                    <div class="fecha-mail">
+                        <label for="fecha" class="i">Fecha de nacimiento</label>
+                        <input type="date" name="fecha" class="g">
+                        <label for="miemail" class="a">e-mail</label>
+                        <input type=“email” name=“miemail” placeholder="E-mail"
+                            class="h">
+                    </div>
+
+                </form>
+                <div>
+                    <article><a href="..\VistaPremium\vistapremium.html"
+                            class="link-premium">Premium</a></article>
+                    <article><a href="..\VistaInicio\index.html"
+                            class="link-eliminar">Eliminar
+                            usuario</a></article>
                 </div>
-
-            </nav>
-        </header>
-
-        <main>
-            <div class="contenedor">
-            <form action>
-                <div class="section-container">
-                    <label for="Nombre" class="a">Usuario</label>
-                    <input type="text" class="b" name="Nombre"
-                        placeholder="Usuario">
-                    <label for="Contraseña" class="c">Contraseña</label>
-                    <input type="password" class="d" name="contraseña"
-                        placeholder="Contraseña">
-                    <label for="Repetir-Contraseña" class="e">Repetir contraseña</label>
-                    <input type="password" class="f" name="Repetir-Contraseña"
-                        placeholder="Repetir contraseña">
+                <div class="botones-perfil">
+                    <a href="..\VistaPrincipal\Pagina Principal.html"
+                        class="link-home">Volver al Home</a>
+                    <button type="input" class="boton-guardar">Guardar</button>
                 </div>
-                <div class="fecha-mail">
-                    <label for="fecha" class="i">Fecha de nacimiento</label>
-                    <input type="date" name="fecha" class="g">
-                    <label for="miemail" class="a">e-mail</label>
-                    <input type=“email” name=“miemail” placeholder="E-mail"
-                        class="h">
-                </div>
+            </main>
 
-            </form>
-
+            <footer>
+                <p class="footer"> Diego Uriel Duré 45.286.104, Ignacio Lopez
+                    Cabanillas
+                    46.573.502, Milagros Pessino 43.408.374, Santiago Tucci
+                    45.318.077</p>
+            </footer>
         </div>
-            <div class="links">
-                <article><a href="..\VistaPremium\vistapremium.html"
-                        class="link-premium">Premium</a></article>
-                <article><a href="..\VistaInicio\index.html"
-                        class="link-eliminar">Eliminar
-                        usuario</a></article>
-            </div>
-            <div class="botones-perfil">
-                <a href="..\VistaPrincipal\Pagina Principal.html"
-                    class="link-home">Volver al Home</a>
-                <button type="input" class="boton-guardar">Guardar</button>
-            </div>
-        </main>
-
-        <footer>
-            <p class="footer"> Diego Uriel Duré 45.286.104, Ignacio Lopez
-                Cabanillas
-                46.573.502, Milagros Pessino 43.408.374, Santiago Tucci
-                45.318.077</p>
-        </footer>
     </body>
 </html>
