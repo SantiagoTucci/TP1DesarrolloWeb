@@ -190,6 +190,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 }
 
 .link-home {
@@ -279,4 +280,21 @@ footer {
     display: flex;
     position: absolute;
   }
+
+  @media screen and (max-width: 320em){
+    .botones-perfil{
+      margin-left: 140%;
+    }
+
+    .footer{
+      margin-left: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+
+
 }
