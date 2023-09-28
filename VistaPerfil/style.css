@@ -90,12 +90,6 @@ a {
   margin-top: 10%;
 }
 
-@media (min-width: 768px) {
-  .bloques {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .bloque {
   text-align: center;
   color: var(--color-blanco);
@@ -261,61 +255,3 @@ footer {
   font-size: "Mukta Vaani";
 }
 
-/* MEDIA QUERY*/
-
-@media screen and (max-width: 700px) {
-  .botones {
-    display: inline;
-    text-align: center;
-    width: 100px;
-    margin: 50px 50px;
-    font-family: "Hind Vadodara";
-    padding: 15px 15px;
-    font-weight: 700;
-    border-radius: 10px;
-    color: var(--color-blanco);
-    background-color: #637bc2;
-    box-shadow: 0px 0px 20px 0px var(--color-E);
-  }
-
-  footer {
-    display: flex;
-    position: absolute;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width:425px) {
-  .botones-perfil {
-    margin-left: 110%;
-  }
-
-  .footer {
-    margin-left: 10px;
-    height: 20px;
-    text-align: center;
-  }
-
-  .link-eliminar {
-    margin-left: 40px;
-  }
-
-  .link-premium {
-    margin-left: 40px;
-  }
-
-  .section-container {
-    width: 400px;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .fecha-mail {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .footer{
-    margin-left: 20%;
-  }
-
-}
