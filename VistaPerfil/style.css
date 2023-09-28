@@ -287,14 +287,10 @@ footer {
     }
 
     .footer{
-      margin-left: 140%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
+      margin-left: 110%;
+
+      text-align: center;
     }
   }
-
-
 
 }
