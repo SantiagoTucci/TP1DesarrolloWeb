@@ -281,7 +281,7 @@ footer {
     position: absolute;
   }
 
-  @media screen and (max-width: 320em){
+  @media screen and (min-width: 320px) and (max-width:425px){
     .botones-perfil{
       margin-left: 140%;
     }
