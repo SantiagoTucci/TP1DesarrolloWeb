@@ -15,7 +15,7 @@ body {
   display: grid;
   grid-template-columns: 6% 1fr;
   grid-template-rows: 80px 1fr 90px;
-  height: 100vh;
+
 }
 
 a {
@@ -57,7 +57,7 @@ a {
   background-color: #282828;
   margin: 10px;
   border-radius: 10px;
-  height: calc(75% - 20px);
+  height: calc(83% - 20px);
   /* Esta es la altura de la segunda card */
 
 }
@@ -90,7 +90,7 @@ a {
 /* Barra superior */
 
 .nav {
-  position: fixed;
+  position: absolute;
   grid-column: 2 / -1;
   /* Hace que nav abarque desde la segunda columna hasta el final */
   width: calc(92% - 80px);
@@ -205,6 +205,7 @@ a {
 .main-content {
   padding: 20px;
   font-family: "Hind Vadodara", sans-serif;
+
 }
 
 .main-title {
@@ -348,8 +349,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Esto centrará todos los elementos en la barra de música */
 }
+
+/* Esto centrará todos los elementos en la barra de música */
+
 
 .album-container {
   position: relative;
@@ -408,23 +411,45 @@ p {
 }
 
 
-@media (max-width: 700px) {
-  .sidebar {
-    margin-right: 5px;
+
+/*MEDIA QUERY 600PX*/
+
+@media screen and (max-width: 600px) {
+  .main {
+    height: 90%;
   }
 
   .container {
     display: grid;
-    grid-template-columns: 80px 1fr;
-    grid-template-rows: 80px 1fr 90px;
-    height: 100vh;
+    grid-template-columns: 0% 1fr;
+  }
+
+  /* barra costado*/
+  .sidebar {
+    display: none;
+  }
+
+  /* barra navegacion*/
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    right: 0%;
+    left: 0%;
+
+
+  }
+
+  .logo-container {
+    margin-top: 2%;
   }
 
   .logo-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-left: 80px;
   }
 
   .logo-info {
@@ -435,17 +460,32 @@ p {
     margin-top: 8%;
   }
 
-
-  .principio {
+  .user-info {
     display: flex;
-    height: 30vh;
-
+    align-items: center;
+    margin-top: 2%;
   }
 
+  .text-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  /*TUS MEGUSTA*/
   .imagen {
     height: 150px;
     width: 150px;
   }
+
 
   .titulo {
     display: flex;
@@ -459,34 +499,18 @@ p {
     font-size: 36px;
   }
 
-  .album-image {
-    height: 100px;
+  /*MAIN*/
+  .main-content {
+    margin: 0%;
   }
 
-  .music-bar {
-    display: flex;
-    justify-content: right;
-
+  .ContenedordeCanciones {
+    margin-top: 15%;
   }
 
-  .album-text {
-    margin-left: 10px;
-    margin-right: 150px;
-  }
-
-  .audio-player {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 40%;
-    /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  /* barra costado*/
-  .sidebar {
-    padding-right: 8px;
+  .cancion1 {
+    display: grid;
+    grid-template-columns: 30px 2fr;
   }
 
   /*barra musica*/
@@ -518,26 +542,98 @@ p {
     margin-top: 0;
   }
 
-  /* barra navegacion*/
-
-
-  .nav {
-    margin-right: 80px;
-    display: flex;
-    margin-top: 0;
-
-  }
-
-
-
-  .user-info {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-left: 70px;
-    align-items: center;
-  }
-
   .barra-Info {
+    display: none;
     margin-top: 20px;
+  }
+
+
+  .album {
+    display: none;
+
+  }
+
+  .duracion {
+
+    display: none;
+
+
+  }
+
+  .reproduccion {
+    display: none;
+  }
+
+  /*FOOTER*/
+  .footer-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .sidebar {
+    height: 86%;
+    margin: 0.5%;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 120%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px 1fr 90px;
+    height: 100vh;
+  }
+
+  .logo-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+  }
+
+  .logo-info {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Alegreya Sans", sans-serif;
+    margin-left: 15px;
+    margin-top: 8%;
+  }
+
+
+  .principio {
+    display: flex;
+    height: 30vh;
+
+  }
+
+
+
+  .album-image {
+    height: 100px;
+  }
+
+  .music-bar {
+    display: flex;
+    justify-content: right;
+
+  }
+
+  .album-text {
+    margin-left: 10px;
+    margin-right: 150px;
+  }
+
+  .audio-player {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 40%;
+    /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
+  }
+
+  .footer-text {
+    display: none;
   }
 }
