@@ -129,6 +129,9 @@ button:active {
   text-decoration: none;
   color: #b2c0e7 ;
 }
+.registrarme{
+  text-decoration: none;
+}
 
 a {
   text-decoration: underline;

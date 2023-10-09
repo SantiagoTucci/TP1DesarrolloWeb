@@ -257,3 +257,46 @@ footer {
   font-size: "Mukta Vaani";
 }
 
+@media (max-width:800px) {
+  .section-container,.fecha-mail  {
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    align-items: right;
+    height: auto;
+    margin: 80px 80px 80px 30px;
+    
+  }
+
+  .b, .d, .f, .g ,.h{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+
+  .a, .c, .e, .i {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .link-premium,.boton-guardar{
+    margin: 0%;
+  }
+ 
+  .link-home{
+    margin-left: 15px;
+  }
+  
+  .link-eliminar{
+    margin-left: 50px;
+  }
+}
