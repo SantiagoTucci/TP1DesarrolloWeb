@@ -144,7 +144,6 @@ a{
 }
 
 .contenedorFormulario{
-    display: flex;
     flex-direction: column;
     align-items: left;
     width: 75%;
@@ -154,6 +153,12 @@ a{
     box-shadow: 7px 13px 37px #979797;
     text-align: center;
     margin-top: 2%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .relleno{
@@ -175,11 +180,22 @@ a{
     align-items: center;
 }
 
-.camposUno label{
+.camposUno label ,.vencimiento label{
     margin-right: 15px;
     font-size: 18px;
     color: white;
+    flex-basis: 90px;
 }
+
+.vencimiento{
+    padding-left: 7%;
+    font-family: 'Hind Vadodara', sans-serif;
+    display: flex;
+    align-items: center;
+   
+}
+
+
 
 .contenedorFormulario p{
     color: white;
@@ -272,5 +288,58 @@ a{
     .nav_logo{
         margin-top: 0%;
         margin-bottom: 0%;
+    }
+
+    .contenedorMayor{
+        margin-left: 1%;
+        margin-right: 1%;
+        
+    }
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+
+    .contenedorFormulario{
+        width: 95%;
+    }
+
+    .camposUno{
+        
+        padding-left: 0%;
+        font-family: 'Hind Vadodara', sans-serif;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2%;
+        width: 90%;
+        
+        
+    }
+
+    .vencimiento{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2%;
+        width: 90%;
+        padding-left: 0%;
+    }
+    
+    .camposUno label ,.vencimiento label{
+       
+        font-size: 18px;
+        color: white;
+        flex-basis: 0;
+        
+    }
+
+    .relleno{
+        width: 100%;
+        margin-left: 0%;
     }
 }

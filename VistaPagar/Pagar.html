@@ -62,15 +62,19 @@
               </div>
             </div>
           </article>
+
+
           <!--FORMULARIO-->
           <article class="contenedorFormulario">
-            <form action="..\VistaPrincipal\Pagina Principal.html">
+
+            <form action="..\VistaPrincipal\Pagina Principal.html" class="formulario">
+              
             <div class="camposUno">
               <label for="campoTarjeta">Tarjeta </label><input class="relleno"
                 type="text" name id="campoTarjeta"
                 pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16" required/>
             </div>
-            <div class="camposUno">
+            <div class="vencimiento">
               <label for="campoVencimiento"> Vencimiento </label><input
                 class="relleno" type="date" name
                 id="campoVencimiento" maxlength="8" required/>
