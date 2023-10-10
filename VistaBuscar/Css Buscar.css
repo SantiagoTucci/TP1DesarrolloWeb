@@ -26,3 +26,10 @@
 .search-bar::placeholder {
   color: rgb(128, 128, 128);
 }
+
+@media screen and (max-width: 500px) {
+  .search-bar::placeholder{
+    font-size: 0.5rem;
+  }
+  
+}
