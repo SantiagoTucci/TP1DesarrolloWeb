@@ -195,7 +195,7 @@ a {
   grid-column: 2 / -1;
   grid-row: 1 / -1;
   border-radius: 15px;
-  margin: 2%;
+  margin: 1%;
   padding-top: 7%;
   overflow: auto;
   margin-bottom: 8%;
@@ -371,7 +371,7 @@ p {
 .album-image {
   height: 7vw;
   margin-right: 20px;
-  margin-left: 13%;
+  margin-left: 6%;
   padding: 2%;
   border-radius: 10px;
 }
@@ -570,7 +570,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 600px) {
+@media screen and (max-width: 800px) and (min-width: 600px) {
   .sidebar {
     height: 86%;
     margin: 0.5%;
@@ -602,7 +602,9 @@ p {
     margin-top: 8%;
   }
 
-
+  .main{
+    margin: 2%;
+  }
   .principio {
     display: flex;
     height: 30vh;
