@@ -405,6 +405,7 @@ main-card-album-subtext:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 .album-container {
   position: relative;
@@ -460,5 +461,9 @@ main-card-album-subtext:hover {
   }
   .footer-text {
     font-size: 0.5rem;
+  }
+  .audio-player {
+    position: absolute;
+    right: 0;
   }
 }
