@@ -93,15 +93,16 @@ a {
   position: absolute;
   grid-column: 2 / -1;
   /* Hace que nav abarque desde la segunda columna hasta el final */
-  width: calc(92% - 80px);
+  width: calc(99% - 97px);
   margin-left: 80px;
-  right: 4%;
+  right: 1%;
   z-index: 1;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 1%;
+  border-radius: 8px;
   font-family: "Mukta Vaani", sans-serif;
 }
 
@@ -324,7 +325,7 @@ a {
   /* amarillo */
 
   /* filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%); Amarillo */
-  top: 2px;
+  top: 10%;
   right: 15px;
   height: 30%;
   border-radius: 50%;
@@ -369,11 +370,12 @@ p {
 }
 
 .album-image {
-  height: 7vw;
+  height: 6rem;
   margin-right: 20px;
   margin-left: 6%;
   padding: 2%;
   border-radius: 10px;
+  margin-top: 10%;
 }
 
 .album-text {
@@ -438,6 +440,8 @@ p {
     margin: 0;
     right: 0%;
     left: 0%;
+    background: transparent;
+    margin-top: 0;
 
 
   }
@@ -515,9 +519,10 @@ p {
 
   /*barra musica*/
   .album-image {
-    height: 70px;
+    height: 5.5rem;
     margin-right: 0;
     margin-left: 2px;
+    
   }
 
   .artist-name {
@@ -602,6 +607,12 @@ p {
     margin-top: 8%;
   }
 
+  .nav{
+    width:calc(99% - 117px);
+    right: 4%;
+    margin-top: 1%;
+    background: #5468a6;
+  }
   .main{
     margin: 2%;
   }
@@ -613,9 +624,9 @@ p {
 
 
 
-  .album-image {
-    height: 100px;
-  }
+  /*.album-image {
+    height: 6rem;
+  }*/
 
   .music-bar {
     display: flex;
