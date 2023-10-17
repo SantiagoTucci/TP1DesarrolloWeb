@@ -16,7 +16,7 @@
  } */
 
 body {
-  background: linear-gradient(#637bc2 -20%, #0f0f0f 80%);
+  background: linear-gradient(to top, #637bc2 0%, #0f0f0f 90%);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Alegreya Sans", sans-serif;
