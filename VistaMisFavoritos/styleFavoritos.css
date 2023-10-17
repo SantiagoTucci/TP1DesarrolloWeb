@@ -195,7 +195,7 @@ a {
   grid-column: 2 / -1;
   grid-row: 1 / -1;
   border-radius: 15px;
-  margin: 1%;
+  margin: 2%;
   padding-top: 7%;
   overflow: auto;
   margin-bottom: 8%;
@@ -637,3 +637,4 @@ p {
     display: none;
   }
 }
+
