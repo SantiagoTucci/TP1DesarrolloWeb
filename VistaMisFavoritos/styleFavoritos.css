@@ -647,7 +647,7 @@ p {
   }
 
   .footer-text {
-    display: none;
+    font-size: 0.5rem;
   }
 }
 

@@ -91,7 +91,8 @@ a {
   width: calc(99% - 95px);
   height: 4rem;
   right: 1%;
-  padding-left: 10%;
+  padding-left: 3%;
+  padding-right: 2%;
   z-index: 1;
   background: transparent;
   display: flex;
@@ -392,14 +393,7 @@ main-card-album-subtext:hover {
 }
 
 
-
-@media screen and (max-width: 1000px){
-  .nav {
-      padding-left: 15%;
-  }
-  }
-
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) and (min-width: 400px){
     /* barra navegacion*/
 
   .nav {
@@ -467,6 +461,13 @@ main-card-album-subtext:hover {
   .album-image{
     height: 5rem;
   }
+  .audio-player{
+    width: 40%;
+    margin-left: 250px;
+  }
+  .footer-text {
+    font-size: 0.5rem;
+  }
   }
   @media screen and (max-width: 800px) and (min-width: 600px) {
     .nav{
@@ -479,5 +480,39 @@ main-card-album-subtext:hover {
     .album-image{
       height: 5rem;
     }
+
+    .footer-text {
+      font-size: 0.5rem;
+    }
  
+  }
+
+  @media screen and (max-width: 400px){
+    .nav{
+      width: calc(75% - 10px);
+      right: 0%;
+      padding-left: 0;
+      left: 25%;
+    }
+
+    .album-image{
+      height: 5rem;
+    }
+
+    .footer-text {
+      font-size: 0.5rem;
+    }
+    
+    .main-title{
+      margin-top: 20%;
+    }
+    .text-info{
+      margin-left: 20px;
+    }
+
+    .audio-player{
+      width: 40%;
+      margin-left: 250px;
+
+    }
   }
