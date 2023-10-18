@@ -187,7 +187,6 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .link-home {
@@ -243,6 +242,29 @@ a {
 .boton-guardar:active {
   position: relative;
   top: 1px;
+}
+
+@media (max-width:485px){
+  .botones-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .link-home{
+    width: 60px;
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .boton-guardar{
+    width: 100px;
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
 /*FOOTER*/
