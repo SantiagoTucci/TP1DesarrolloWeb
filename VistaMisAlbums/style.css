@@ -34,6 +34,7 @@ a {
   border-radius: 15px;
   font-size: 20px;
   text-align: center;
+  z-index: 100;
 }
 
 .sidebar-card-top {
@@ -76,7 +77,6 @@ a {
 
 .sidebar-menu-text-one {
   color: white;
-  transition-duration: 0.2s;
   font-size: 14px;
   font-weight: bold;
   padding-top: 50%;
@@ -88,11 +88,11 @@ a {
 .nav {
   position: fixed;
   grid-column: 2 / -1; /* Hace que nav abarque desde la segunda columna hasta el final */
-  width: calc(99% - 95px);
+  width:100%;
   height: 4rem;
-  right: 1%;
-  padding-left: 3%;
-  padding-right: 2%;
+  right: 0;
+  padding-right: 4%;
+  padding-left: 10%;
   z-index: 1;
   background: transparent;
   display: flex;
@@ -100,8 +100,7 @@ a {
   justify-content: space-between;
   
   font-family: "Mukta Vaani", sans-serif;
-  background-color: #5468a6;
-  border-radius: 10px;
+  background-color: #000000;
 }
 
 .nav-link {
@@ -123,8 +122,8 @@ a {
 }
 
 .logo-image {
-  width: 50px;
-  height: 50px;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
 }
 
@@ -154,7 +153,34 @@ a {
   margin-left: 20px;
   margin-top: 10%;
 }
+@media screen and (max-width: 1000px) {
+  .nav {
+    padding-left: 15%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav {
+    padding-left: 20%;
+  }
+}
+@media screen and (max-width: 500px) {
+    .text-info {
+    font-size: 2vw;
+  }
 
+  @media  screen and (min-width: 300px){
+    .nav{
+      padding-left: 25%;
+    }
+  }
+  .profile-image, .logo-image {
+    height: 2rem;
+    width: 2rem;
+  }
+  .logo-info {
+    font-size: 1rem;
+  }
+}
 /* Parte principal */
 
 .main {
@@ -163,7 +189,7 @@ a {
   grid-row: 1 / -1;
   border-radius: 15px;
   margin: 1%;
-  padding-top: 7%;
+  padding-top: 4rem;
   overflow: auto;
   margin-bottom: 8%;
 }
@@ -182,6 +208,15 @@ a {
 .main-subtitle {
   font-size: 24px;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 500px ) {
+  .main-title {
+    font-size: 4vw;
+  }
+  .main {
+    padding-top: 4rem;
+  }
 }
 
 /* Primeras cards de listas */
@@ -216,7 +251,7 @@ a {
 }
 
 .main-card-start-text {
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: bold;
   margin-left: 10px;
   color: white;
@@ -230,10 +265,21 @@ a {
     background-color: rgba(42, 42, 42, 0.5);
     margin-bottom: 10px;
     border-radius: 10px;
+    
   }
 
   .main-card-start-image {
     width: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-card-start {
+    width: calc(100% - 2%);
+  }
+  .main-card-start-text{
+      font-size: 4vw;
+    
   }
 }
 
@@ -244,6 +290,7 @@ a {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 2%;
+  
 }
 
 .main-card-album {
@@ -272,15 +319,16 @@ a {
 }
 
 .main-card-album-text {
-  font-size: 14px;
+  font-size: 1.5vw;
   font-weight: bold;
   margin-top: 10px;
   color: white;
   font-size-adjust: 0.5;
+  text-align: center;
 }
 
 .main-card-album-subtext {
-  font-size: 12px;
+  font-size: 1vw;
   color: #b3b3b3;
   margin-top: -5px;
   text-decoration: none;
@@ -301,6 +349,7 @@ main-card-album-subtext:hover {
   .main-card-album {
     width: calc(25% - 2%);
   }
+  
 }
 
 @media screen and (min-width: 1600px) {
@@ -314,6 +363,18 @@ main-card-album-subtext:hover {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .main-card-album {
+    width: calc(50% - 2%);
+  }
+  .main-card-album-text {
+    font-size: 5vw;
+  }
+  .main-card-album-subtext {
+    font-size: 3vw;
+  }
+}
+
 /* Estrella */
 
 .star-icon {
@@ -323,6 +384,14 @@ main-card-album-subtext:hover {
   right: 10px;
   height: 20%;
 }
+
+.star-icon:hover {
+  filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg)
+    brightness(103%) contrast(105%);
+}
+
+/* Barra inferior de musica */
+
 .music-bar {
   position: fixed;
   bottom: 0;
@@ -332,11 +401,8 @@ main-card-album-subtext:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
-
-/* Esto centrará todos los elementos en la barra de música */
-
-
 .album-container {
   position: relative;
 }
@@ -346,14 +412,12 @@ main-card-album-subtext:hover {
   align-items: center;
   height: 100%;
   position: absolute;
-  /* Esto sacará el div de la normalidad del flujo del documento */
   left: 0;
-  /* Esto moverá el div a la izquierda */
 }
 
 .album-image {
   height: 7vw;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-left: 13%;
   padding: 2%;
   border-radius: 10px;
@@ -373,146 +437,29 @@ main-card-album-subtext:hover {
 .artist-name {
   color: rgb(128, 128, 128);
   font-size: smaller;
-  margin-left: 0;
   white-space: nowrap;
-  /* Esto evitará que el texto se ajuste a la siguiente línea */
 }
 
 .audio-player {
-  margin-left: 200px;
   width: 50%;
-  /* Ajusta este valor para cambiar el tamaño del reproductor de audio */
 }
-
-
-/*FOOTER*/
 .footer-text {
-  position: relative;
-  display: block;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
-
-  @media screen and (max-width: 600px) and (min-width: 400px){
-    /* barra navegacion*/
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: calc(100% - 110px);
-    margin: 0;
-    right: 0%;
-    left: 18%;
-    background: transparent;
-    margin-top: 0;
-    padding: 0;
-    background-color: #5468a6;
-
-
-  }
-
-  .nav-link{
-    margin-left: 5px;
-  }
-  .logo-container {
-    margin-top: 2%;
-  }
-
-  .logo-image {
-    margin-left: 40px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-
-  .logo-info {
-    font-size: 25px;
-    font-weight: bold;
-    font-family: "Alegreya Sans", sans-serif;
-    margin-left: 15px;
-    margin-top: 8%;
-  }
-
-  .user-info {
-    display: flex;
-    align-items: center;
-    margin-top: 2%;
-  }
-
-  .text-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .profile-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 10%;
-    margin-left: 10%;
-  }
-
-  .main-title{
-    margin-top: 10%;
-  }
-
-  .album-image{
-    height: 5rem;
-  }
-  .audio-player{
-    width: 40%;
-    margin-left: 250px;
+@media screen and (max-width: 500px) {
+  .album-image {
+    height: 3rem;
   }
   .footer-text {
     font-size: 0.5rem;
   }
+  .audio-player {
+    position: absolute;
+    right: 0;
   }
-  @media screen and (max-width: 800px) and (min-width: 600px) {
-    .nav{
-      width: calc(99% - 105px);
-      right: 2%;
-      padding: 0;
-     background: #5468a6;
-    }
-
-    .album-image{
-      height: 5rem;
-    }
-
-    .footer-text {
-      font-size: 0.5rem;
-    }
- 
-  }
-
-  @media screen and (max-width: 400px){
-    .nav{
-      width: calc(75% - 10px);
-      right: 0%;
-      padding-left: 0;
-      left: 25%;
-    }
-
-    .album-image{
-      height: 5rem;
-    }
-
-    .footer-text {
-      font-size: 0.5rem;
-    }
-    
-    .main-title{
-      margin-top: 20%;
-    }
-    .text-info{
-      margin-left: 20px;
-    }
-
-    .audio-player{
-      width: 40%;
-      margin-left: 250px;
-
-    }
-  }
+}
