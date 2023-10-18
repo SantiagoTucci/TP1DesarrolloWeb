@@ -612,18 +612,21 @@
       margin-top: 8%;
     }
   
-  
+    .nav{
+      width:calc(99% - 117px);
+      right: 4%;
+      margin-top: 1%;
+      background: #5468a6;
+    }
+    .main{
+      margin: 2%;
+    }
     .principio {
       display: flex;
       height: 30vh;
   
     }
   
-  
-  
-    .album-image {
-      height: 100px;
-    }
   
     .music-bar {
       display: flex;
@@ -644,6 +647,12 @@
     }
   
     .footer-text {
-      display: none;
+      font-size: 0.5rem;
+    }
+    .main-title {
+      font-size: 45px;
+    }
+    .titulo{
+      padding-left: 1%;
     }
   }
