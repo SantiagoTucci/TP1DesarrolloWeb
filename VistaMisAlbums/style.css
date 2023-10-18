@@ -89,9 +89,9 @@ a {
 .nav {
   position: fixed;
   grid-column: 2 / -1; /* Hace que nav abarque desde la segunda columna hasta el final */
-  width: 90.79%;
+  width: calc(99% - 110px);
   height: 4rem;
-  right: 2.1%;
+  right: 2%;
   padding-left: 3%;
   padding-right: 2%;
   z-index: 1;
@@ -413,10 +413,9 @@ main-card-album-subtext:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: calc(100% - 110px);
     margin: 0;
     right: 0%;
-    left: 18%;
+    left: 21%;
     background: transparent;
     margin-top: 0;
     padding: 0;
@@ -482,13 +481,9 @@ main-card-album-subtext:hover {
     font-size: 0.5rem;
   }
   }
+
+ 
   @media screen and (max-width: 800px) and (min-width: 600px) {
-    .nav{
-      width: calc(99% - 105px);
-      right: 2%;
-      padding: 0;
-     background: #5468a6;
-    }
 
     .album-image{
       height: 5rem;
