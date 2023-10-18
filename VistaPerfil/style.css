@@ -244,6 +244,25 @@ a {
   top: 1px;
 }
 
+@media (min-width: 300px){
+
+  .user-info{
+    padding: 3%;
+  }
+
+  .text-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+  }
+
+  .profile-image{
+    margin-left: 7%;
+  }
+
+}
+
 @media (max-width:485px){
   .botones-perfil{
     display: flex;

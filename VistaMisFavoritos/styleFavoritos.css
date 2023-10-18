@@ -35,6 +35,7 @@ a {
   font-size: 20px;
   text-align: center;
   width: 120%;
+  z-index: 100;
 }
 
 .sidebar-card-top {
@@ -90,22 +91,21 @@ a {
 /* Barra superior */
 
 .nav {
-  position: absolute;
-  grid-column: 2 / -1;
-  /* Hace que nav abarque desde la segunda columna hasta el final */
-  width: calc(99% - 97px);
-  margin-left: 80px;
-  right: 1%;
+  position: fixed;
+  grid-column: 2 / -1; /* Hace que nav abarque desde la segunda columna hasta el final */
+  width:100%;
+  height: 4rem;
+  right: 0;
+  padding-right: 4%;
+  padding-left: 10%;
   z-index: 1;
-  padding-left: 3%;
-  padding-right: 2%;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1%;
-  border-radius: 8px;
+  
   font-family: "Mukta Vaani", sans-serif;
+  background-color: #000000;
 }
 
 .nav-link {
@@ -127,8 +127,8 @@ a {
 }
 
 .logo-image {
-  width: 50px;
-  height: 50px;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
 }
 
@@ -158,6 +158,7 @@ a {
   margin-left: 20px;
   margin-top: 10%;
 }
+
 
 
 /* PRINCIPIO*/
@@ -360,6 +361,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 200;
 }
 
 /* Esto centrará todos los elementos en la barra de música */
