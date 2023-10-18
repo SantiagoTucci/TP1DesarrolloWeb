@@ -310,15 +310,21 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .link-premium,.boton-guardar{
-    margin: 0%;
+  .link-premium {
+    margin: 0 0.5em 0 0.5em;
+    font-size: 2em;
+    padding: 0.5em;
   }
- 
+  
+  .boton-guardar {
+    margin: 0 0.8em 0 0;
+  }
+
   .link-home{
     margin-left: 15px;
   }
   
   .link-eliminar{
-    margin-left: 50px;
+    margin: 0 0.7em 0 0.5em;
   }
 }
