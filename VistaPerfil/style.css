@@ -244,6 +244,25 @@ a {
   top: 1px;
 }
 
+@media (min-width: 300px){
+
+  .user-info{
+    padding: 3%;
+  }
+
+  .text-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+  }
+
+  .profile-image{
+    margin-left: 7%;
+  }
+
+}
+
 @media (max-width:485px){
   .botones-perfil{
     display: flex;
@@ -310,15 +329,21 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .link-premium,.boton-guardar{
-    margin: 0%;
+  .link-premium {
+    margin: 0 0.5em 0 0.5em;
+    font-size: 2em;
+    padding: 0.5em;
   }
- 
+  
+  .boton-guardar {
+    margin: 0 0.8em 0 0;
+  }
+
   .link-home{
     margin-left: 15px;
   }
   
   .link-eliminar{
-    margin-left: 50px;
+    margin: 0 0.7em 0 0.5em;
   }
 }
