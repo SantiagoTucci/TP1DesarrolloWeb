@@ -10,7 +10,9 @@
 }
 
 /* Nav */
-
+.nav{
+  background-color: #0f0f0f;
+}
 .search-bar {
   width: 40%;
   height: 50px;
