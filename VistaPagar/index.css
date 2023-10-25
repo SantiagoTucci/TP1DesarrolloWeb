@@ -153,12 +153,12 @@ a{
     box-shadow: 7px 13px 37px #979797;
     text-align: center;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .formulario{
     display: flex;
     flex-direction: column;
-
 }
 
 .relleno{
@@ -198,8 +198,6 @@ a{
    
 }
 
-
-
 .contenedorFormulario p{
     color: white;
 }
@@ -217,12 +215,12 @@ a{
 }
 
 .contenedorBoton{
-    margin-bottom: 30px;
+    margin-bottom: 0.4%;
     margin-top: 15px;
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .botonUno{
@@ -246,15 +244,16 @@ a{
 
 .botonDos{
     margin: 10px 10px;
-    width: 100px;
-    padding: 15px 15px;
+    padding: 15px 50px;
     font-family: 'Hind Vadodara', sans-serif;
-    font-weight: 700;
+    font-weight: 780;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     border-radius: 10px;
     background-color: #637BC2;
     text-transform: uppercase;
     cursor: pointer;
+    text-align: center;
 }
 
 .botonDos:hover{

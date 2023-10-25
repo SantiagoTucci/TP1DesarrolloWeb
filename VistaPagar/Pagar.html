@@ -67,12 +67,12 @@
           <!--FORMULARIO-->
           <article class="contenedorFormulario">
 
-            <form action="..\VistaPrincipal\Pagina Principal.html" class="formulario">
+            <form action="..\VistaPrincipal\Pagina Principal.html" class="formulario" id="form">
               
             <div class="camposUno">
               <label for="campoTarjeta">Tarjeta </label><input class="relleno"
                 type="text" name id="campoTarjeta"
-                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="16" required/>
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="20" required/>
             </div>
             <div class="vencimiento">
               <label for="campoVencimiento"> Vencimiento </label><input
@@ -81,7 +81,7 @@
             </div>
             <div class="camposUno">
               <label for="campoPassword"> CVC</label>
-              <input class="relleno" type="password" name id="campoPassword"
+              <input class="relleno" type="password" name id="campoContrasenia"
                 maxlength="3" required/>
             </div>
             <div class="camposUno">
@@ -92,20 +92,20 @@
             <div class="condiciones">
               <p>Estoy de acuerdo con Terminos y Condiciones</p>
               <label class="checkbox-container">
-                <input type="checkbox" required>
+                <input type="checkbox" id="checkbox" required>
                 <span class="checkmark"></span>
               </div>
             </label>
+            <!--BOTONES-->
+            <article class="contenedorBoton">
+              <!--<a href="..\VistaPremium\vistaPremium.html">
+                <button class="botonUno" id="btnAtras">Atras</button>
+                </a>-->
+              <!-- <a href="..\VistaPrincipal\Pagina Principal.html">-->
+              <button class="botonDos" id="btnPagar" type="submit">Pagar</button>
+              </a>
+            </article>
           </form>
-          </article>
-          <!--BOTONES-->
-          <article class="contenedorBoton">
-            <a href="..\VistaPremium\vistaPremium.html">
-            <button class="botonUno">Atras</button>
-            </a>
-            <a href="..\VistaPrincipal\Pagina Principal.html">
-            <button class="botonDos">Pagar</button>
-            </a>
           </article>
         </section>
       </main>
@@ -115,6 +115,7 @@
           46.573.502, Milagros Pessino 43.408.374, Santiago Tucci
           45.318.077</p>
       </footer>
+      <script src="code.js"></script>
     </body>
 
   </html>

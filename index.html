@@ -17,15 +17,15 @@
                 <h1>Inicia sesión</h1>
                 <form action="..\VistaPrincipal\Pagina Principal.html">
                     <!--NOMBRE USUARIO-->
-                    <label for="username">Usuario</label>
-                    <input type="text" placeholder="Ingrese el usuario" required>
+                    <label for="nombreUsuario">Usuario</label>
+                    <input id="nombreUsuario" type="text" placeholder="Ingrese el usuario" required>
 
                     <!-- Contrasenia-->
-                    <label>Contraseña</label>
-                    <input type="password" placeholder="Ingrese la contraseña"
+                    <label for="contrasenia">Contraseña</label>
+                    <input id="contrasenia" type="password" placeholder="Ingrese la contraseña"
                         required>
 
-                    <button type="submit">
+                    <button id="btnIniciarSesion" type="submit">
                         Iniciar sesión
                     </button>
 
@@ -46,5 +46,6 @@
                     45.318.077</p>
             </div>
         </footer>
+        <script src="index.js"></script>
     </body>
 </html>
