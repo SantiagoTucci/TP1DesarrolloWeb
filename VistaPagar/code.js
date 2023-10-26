@@ -10,7 +10,13 @@ const btnPagar = document.getElementById("btnPagar");
 
 form.addEventListener("submit", e=>{
     e.preventDefault()
+    if(numero.value.length < 20) {
+        alert("Numero de tarjeta invalido")
+    }
     if(nombre.value.length < 6) {
-        alert("Nombre muy corto")
+        alert("El nombre no es valido")
+    }
+    if(cvc.value.length < 3) {
+        alert("Contraseña no valida")
     }
 });
