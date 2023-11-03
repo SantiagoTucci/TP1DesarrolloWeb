@@ -31,14 +31,24 @@ window.onload = function() {
         });
     });
 
-    document.querySelector('.audio-player').addEventListener('play', function() {
-        var cancionActual = this.querySelector('source').getAttribute('src');
-        localStorage.setItem("cancionActual", cancionActual);
+    document.querySelector('.search-bar').addEventListener('input', function() {
+        var query = this.value.toLowerCase();
+
+        document.querySelectorAll('.main-card-album').forEach(function(album) {
+            var title = album.querySelector('.main-card-album-text').textContent.toLowerCase();
+
+            if (title.includes(query)) {
+                album.style.display = '';
+            } else {
+                album.style.display = 'none';
+            }
+        });
     });
 
     document.querySelector('.nav-link[href="..\index.html"]').addEventListener('click', function() {
         localStorage.removeItem("usuario");
         window.location.replace("..\index.html");
     });
+    
     
 }

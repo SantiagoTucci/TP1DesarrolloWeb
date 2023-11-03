@@ -14,6 +14,7 @@
             rel="stylesheet">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="buscar.js" defer></script>
     </head>
     <body>
         <div class="container">
@@ -60,8 +61,7 @@
 
                 <div class="user-info">
                     <div class="text-info">
-                        <a href="..\VistaPerfil\Perfil.html" class="nav-link">Nombre
-                            de usuario</a>
+                        <a href="..\VistaPerfil\Perfil.html" class="nav-link"></a>
                         <a href="..\index.html" class="nav-link">Cerrar
                             sesión</a>
                     </div>
@@ -83,16 +83,18 @@
                     <h2 class="main-title">Explorar todo</h2>
 
                     <div class="main-flex-albums">
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="11">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Eterno Amor.jpg"
                                     alt="Abbey Road"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="11" />
 
                             </div>
                             <p class="main-card-album-text">Mejor Que Nunca</p>
@@ -100,149 +102,159 @@
                                 Santiagueños</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="12">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Kiss.jpg"
                                     alt="Canción Animal"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="12" />
 
                             </div>
                             <p class="main-card-album-text">Kiss</p>
                             <p class="main-card-album-subtext">Kiss</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="13">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Paranoid.jpg"
                                     alt="Artaud"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="13" />
 
                             </div>
                             <p class="main-card-album-text">Paranoid</p>
                             <p class="main-card-album-subtext">Black Sabbath</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="14">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Radio Insomnio.jpg"
                                     alt="Radio Insomnio"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="14" />
 
                             </div>
                             <p class="main-card-album-text">Radio Insomnio</p>
                             <p class="main-card-album-subtext">Ataque 77</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="15">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\El cantante.jpg"
                                     alt="El cantante"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="15" />
 
                             </div>
                             <p class="main-card-album-text">El cantante</p>
                             <p class="main-card-album-subtext">Andrés Calamaro</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="16">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Expressions.jpg"
                                     alt="Expressions"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="16" />
 
                             </div>
                             <p class="main-card-album-text">Expressions</p>
                             <p class="main-card-album-subtext">Mariya Takeuchi</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="17">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Glimpse of us.jpg"
                                     alt="Glimpse of us"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="17" />
 
                             </div>
                             <p class="main-card-album-text">Glimpse of us</p>
                             <p class="main-card-album-subtext">Joji</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="18">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Muchacha.jpg"
                                     alt="Almendra"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="18" />
 
                             </div>
                             <p class="main-card-album-text">Almendra</p>
                             <p class="main-card-album-subtext">Almendra</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="19">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Mr. bad guy.jpg"
                                     alt="Mr. bad guy"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="19" />
 
                             </div>
                             <p class="main-card-album-text">Mr. bad guy</p>
                             <p class="main-card-album-subtext">Freddie Mercury</p>
                         </a>
 
-                        <a class="main-card-album" href="..\VistaMusicaSonando\thebeatles.html">
-                            <div class="album-container">
+                        <a class="main-card-album"
+                            href="..\VistaMusicaSonando\thebeatles.html">
+                            <div class="album-container" data-id="20">
                                 <img
                                     src="..\Musica\Fotos\Álbumes\Band on the run.jpg"
                                     alt="Band on the run"
                                     class="main-card-album-image" />
-                                    <img
+                                <img
                                     src="..\Musica\Fotos\Estrella.avif"
                                     alt="Estrella"
-                                    class="star-icon" />
+                                    class="star-icon" data-id="20" />
 
                             </div>
                             <p class="main-card-album-text">Band on the run</p>
                             <p class="main-card-album-subtext">Paul McCartney</p>
                         </a>
+                        
                     </div>
 
                 </div>
@@ -250,7 +262,7 @@
             </main>
             <footer class="music-bar">
                 <div class="album-info">
-                    <div class="album-container">
+                    <div class="album-container" data-id="3">
                         <img
                             src="..\Musica\Fotos\Álbumes\Artaud.jpg"
                             alt="Album image"
@@ -258,7 +270,7 @@
                         <img
                             src="..\Musica\Fotos\Estrella.avif"
                             alt="Estrella"
-                            class="star-icon" />
+                            class="star-icon" data-id="3" />
                     </div>
                     <div class="album-text">
                         <p class="album-name">Bajan</p>
