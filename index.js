@@ -1,37 +1,35 @@
-
 /*ETIQUETAS*/
-const formG = document.getElementById("form");
-const nombreUsuarioG = document.getElementById("nombreUsuario");
-const contraseñaG = document.getElementById("contraseña");
+const formInicio = document.getElementById("form");
+const nombreUsuarioInicio = document.getElementById("nombreUsuario");
+const contraseñaInicio = document.getElementById("contraseña");
 
 const btnIniciarSesion = document.getElementById("btnIniciarSesion");
 
-/*GUARDAR EN LOCAL STORAGE*/
-function guardarSesionEnLocalStorage() {
-    var nombreUsuario = nombreUsuarioG.value;
-    var contraseña = contraseñaG.value;
+/*INICIAR SESION*/
+function iniciarSesion() {
+    var nombreUsuario = nombreUsuarioInicio.value;
+    var contraseña = contraseñaInicio.value; // No aplicamos la fórmula inversa aquí
 
     // Verificar si se han proporcionado valores
     if (nombreUsuario && contraseña) {
-        /*AGREGAR EL OBJETO(tarjeta) A UN ARREGLO(usuarios)*/
-      var usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
-      // Crear un objeto para almacenar los datos
-      var usuario = {
-        nombreUsuario : nombreUsuario,
-        contraseña : contraseña
-      };
-       // Agregar el objeto de datos al arreglo de usuarios
-       usuariosLista.push(usuario);
-    // Convertir el objeto a una cadena JSON y guardarlo en el localStorage
-    localStorage.setItem("usuario", JSON.stringify(usuario));
-    // Guardar el arreglo usuarios en el localStorage
-    localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
-        alert("Datos guardados correctamente en el localStorage.");
+        var usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
+        var usuario = usuariosLista.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.contraseña === invertirMitades(contraseña));
+        if (usuario) {
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            alert("Inicio de sesión exitoso.");
+            window.location.href = '..\\VistaPrincipal\\Pagina Principal.html'; // Reemplaza esto con la ruta a tu página principal
+        } else {
+            alert("El usuario y/o contraseña es incorrecto");
+        }
     } else {
-         alert("Por favor, complete todos los campos del formulario.");
+        alert("Por favor, complete todos los campos del formulario.");
     }
 };
 
-//guardarEnLocalStorage al evento click del botón
-btnIniciarSesion.addEventListener("click", guardarSesionEnLocalStorage);
+function invertirMitades(contraseña) {
+    var mitad = Math.floor(contraseña.length / 2);
+    return contraseña.slice(mitad) + contraseña.slice(0, mitad);
+}
 
+//iniciarSesion al evento click del botón
+btnIniciarSesion.addEventListener("click", iniciarSesion);
