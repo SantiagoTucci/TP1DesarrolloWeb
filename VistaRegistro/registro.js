@@ -12,11 +12,11 @@ function guardarRegistroEnLocalStorage() {
     var email = emailRegistro.value;
     var fechaNacimiento = fechaNacimientoRegistro.value;
 
-    // Verificar si se han proporcionado valores
+    // Verifica si se ha proporcionaron valores
     if (nombreUsuario && contraseña && email && fechaNacimiento) {
         /*AGREGAR EL OBJETO(usuario) A UN ARREGLO(usuarios)*/
         var usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
-        // Crear un objeto para almacenar los datos
+        // Crea un objeto para almacenar los datos
         var usuario = {
             nombreUsuario : nombreUsuario,
             contraseña : invertirMitades(contraseña),
@@ -40,6 +40,6 @@ function invertirMitades(contraseña) {
 
 //guardarEnLocalStorage al evento submit del formulario
 formRegistro.addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita que se recargue la página
+    event.preventDefault();
     guardarRegistroEnLocalStorage();
 });

@@ -8,15 +8,15 @@ const btnIniciarSesion = document.getElementById("btnIniciarSesion");
 /*INICIAR SESION*/
 function iniciarSesion() {
     var nombreUsuario = nombreUsuarioInicio.value;
-    var contraseña = contraseñaInicio.value; // No aplicamos la fórmula inversa aquí
+    var contraseña = contraseñaInicio.value;
 
-    // Verificar si se han proporcionado valores
+    // Verifica si se proporcionaron valores
     if (nombreUsuario && contraseña) {
         var usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
         var usuario = usuariosLista.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.contraseña === invertirMitades(contraseña));
         if (usuario) {
             localStorage.setItem("usuario", JSON.stringify(usuario));
-            window.location.href = '..\\VistaPrincipal\\Pagina Principal.html'; // Reemplaza esto con la ruta a tu página principal
+            window.location.href = '..\\VistaPrincipal\\Pagina Principal.html';
         } else {
             alert("El usuario y/o contraseña es incorrecto");
         }
