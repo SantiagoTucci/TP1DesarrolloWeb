@@ -16,7 +16,6 @@ function iniciarSesion() {
         var usuario = usuariosLista.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.contraseña === invertirMitades(contraseña));
         if (usuario) {
             localStorage.setItem("usuario", JSON.stringify(usuario));
-            alert("Inicio de sesión exitoso.");
             window.location.href = '..\\VistaPrincipal\\Pagina Principal.html'; // Reemplaza esto con la ruta a tu página principal
         } else {
             alert("El usuario y/o contraseña es incorrecto");
