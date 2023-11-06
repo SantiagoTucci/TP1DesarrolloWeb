@@ -5,9 +5,23 @@ const numeroG = document.getElementById("campoTarjeta");
 const vencimientoG = document.getElementById("campoVencimiento");
 const cvcG = document.getElementById("campoContrasenia");
 const nombreG = document.getElementById("campoNombreApellido");
-
 const checkBoxG = document.getElementById("checkBox")
+
 const btnPagar = document.getElementById("btnPagar");
+
+//NOMBRE DE USUARIO
+window.onload = function(){
+  var usuario = JSON.parse(localStorage.getItem("usuario"));
+    document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
+}
+
+//CERRAR SESION
+document.getElementById('cerrarSesion').addEventListener('click', function() {
+  //autenticación como 'false' en el localStorage
+  localStorage.setItem('estadoCuenta', 'Se cerro sesion');
+  // Redirigir a la página de inicio de sesión
+  window.location.href = 'index.html';
+});
 
 // Información del parámetro 'plan' desde la URL------------------------------------
 const urlParamsTitulo = new URLSearchParams(window.location.search);
@@ -28,12 +42,12 @@ if (planSeleccionado === 'planMensual') {
 } else if (planSeleccionado === 'planAnual') {
   tituloElemento.textContent = 'Elegiste el plan Anual';
   imagenElemento.src = 'img/aniversario.png';
-  precioElemento.textContent = '$270';
+  precioElemento.textContent = '$1000';
   descripcionElemento.textContent = 'Nuestro plan Premium anual es la opción ideal para aquellos que buscan una experiencia premium a largo plazo. Al suscribirte por un año completo, disfrutarás de acceso ilimitado y sin interrupciones a todas nuestras características exclusivas.';
 } else if(planSeleccionado === 'planInfinito'){
   tituloElemento.textContent = 'Elegiste el plan Infinito';
   imagenElemento.src = 'img/infinidad.png';
-  precioElemento.textContent = '$750';
+  precioElemento.textContent = '$2000';
   descripcionElemento.textContent = 'Nuestro plan Premium de duración infinita es la elección definitiva para los amantes de nuestro servicio. Con esta suscripción, los usuarios disfrutan de acceso ilimitado y perpetuo a todas nuestras características premium.';
 } else {
   tituloElemento.textContent = 'Plan no válido';
