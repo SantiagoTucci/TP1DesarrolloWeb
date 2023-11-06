@@ -40,10 +40,7 @@ let plan = array[array.length -1];
 
 // Lógica para mostrar la información según el plan seleccionado
 
-if (planSeleccionado === 'plan1') {
-
 if (planSeleccionado == 'planMensual') {
-
   tituloElemento.textContent = 'Elegiste el plan Mensual';
   imagenElemento.src = 'img/30-dias.png';
   precioElemento.textContent = '$100';
@@ -96,7 +93,7 @@ function guardarEnLocalStorage() {
     } else {
          alert("Por favor, complete todos los campos del formulario.");
     }
-}
+};
 
 //guardarEnLocalStorage al evento click del botón
 btnPagar.addEventListener("click", guardarEnLocalStorage);
