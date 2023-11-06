@@ -20,7 +20,7 @@
     <link rel="icon" href="..\VistaPremium\media\disco-de-vinilo.png">
   </head>
 
-  <body class="cuerpo">
+  <body class="cuerpo" onload="cambiarNombrePlan()">
     <!--BARRA DE NAVEGACION-->
     <header class="Hero">
       <nav class="nav contain" id="nav">
@@ -46,15 +46,15 @@
         <section class="contenedorMayor">
           <article class="contenedorPlan">
             <div class="nombrePlan">
-              <h2>ELEGISTE EL PLAN MENSUAL</h2>
+              <h2 id="titulo">ELEGISTE EL PLAN </h2>
             </div>
             <div class="imgPlan">
-              <img src="..\VistaPagar\img\30-dias.png" alt="30dias">
+              <img src="..\VistaPagar\img\30-dias.png" alt="30dias" id="imagenPlan">
               <div class="textoPlan">
-                <h3>100<sup>$</sup></h3>
+                <h3 id="precio">100<sup>$</sup></h3>
               </div>
               <div class="textoPlan">
-                <p>Ofrece a los suscriptores una experiencia de música completa
+                <p id="info">Ofrece a los suscriptores una experiencia de música completa
                   y conveniente. A cambio de una tarifa mensual, pueden acceder
                   a una amplia variedad de canciones sin anuncios, con la
                   posibilidad de descargar música para escuchar sin conexión y

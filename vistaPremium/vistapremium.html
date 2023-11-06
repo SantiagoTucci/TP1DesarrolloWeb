@@ -49,7 +49,7 @@
 
         <!-- MAIN TABLA DE PRECIOS -->
         <main>
-
+        <form action="..\VistaPagar\Pagar.html" method="get">
             <h2 class="titulo">ELEGí TU PLAN PREMIUM</h2>
             <div class="contenedor">
 
@@ -60,19 +60,20 @@
                     <p>The purpose of lorem ipsum is to create a natural looking
                         block of text (sentence, paragraph, page,
                         etc.) </p>
-                    <input type="radio" name="kk" id="radios" class="rbMensual">
+                    <input type="radio" name="plan" id="planMen" value="1">
 
                 </div>
 
+               
                 <div class="tabla">
 
                     <h2>ANUAL</h2>
                     <img src="..\VistaPremium\mycollection\png\2.png" alt>
-                    <h3>1000 <sup>$</sup></h3>
+                    <h3 id="precio">1000 <sup>$</sup></h3>
                     <p>The purpose of lorem ipsum is to create a natural looking
                         block of text (sentence, paragraph, page,
                         etc.) </p>
-                    <input type="radio" name="kk" id="radios" class="rbAnual">
+                    <input type="radio" name="plan" id="planAn" value="2">
 
                 </div>
 
@@ -81,22 +82,24 @@
                     <h2>INFINITO</h2>
                     <img src="..\VistaPremium\mycollection\png\3.png" alt
                         class="infinito">
-                    <h3>2000 <sup>$</sup></h3>
+                    <h3 id="precio">2000 <sup>$</sup></h3>
                     <p>The purpose of lorem ipsum is to create a natural looking
                         block of text (sentence, paragraph, page,
                         etc.) </p>
-                    <input type="radio" name="kk" id="radios" class="rbInfinito">
+                    <input type="radio" name="plan" id="planIn" value="3">
 
                 </div>
 
                 <article class="contenedorBoton">
                     <a href="..\VistaPrincipal\Pagina Principal.html"
                         class="botones">cancelar</a>
-                    <a href="..\VistaPagar\Pagar.html" class="botones" onclick="verificarRB">avanzar</a>
+                    <!-- <a href="..\VistaPagar\Pagar.html" class="botones" disabled>avanzar</a> !-->
+                    <button type="submit" class="botones" id="aPagar">Avanzar</button>
                 </article>
             </div>
+            </form>
         </main>
-
+   
         <section class="contenedor comprar">
             <h2 class="comprar__titulo">Beneficios de premium</h2>
             <div class="bloques">
