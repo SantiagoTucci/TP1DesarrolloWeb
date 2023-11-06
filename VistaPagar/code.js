@@ -24,6 +24,7 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
 });
 
 // Información del parámetro 'plan' desde la URL------------------------------------
+function cambiarNombrePlan() {
 const urlParamsTitulo = new URLSearchParams(window.location.search);
 const planSeleccionado = urlParams.get('plan');
 
@@ -33,18 +34,23 @@ const imagenElemento = document.getElementById('imgPlan');
 const precioElemento = document.getElementById('precioPlan');
 const descripcionElemento = document.getElementById('textoPlan');
 
+const URLAbuscar = window.location.href;
+const array = URLAbuscar.split('?');
+let plan = array[array.length -1];
+
 // Lógica para mostrar la información según el plan seleccionado
-if (planSeleccionado === 'planMensual') {
+
+if (planSeleccionado == 'planMensual') {
   tituloElemento.textContent = 'Elegiste el plan Mensual';
   imagenElemento.src = 'img/30-dias.png';
   precioElemento.textContent = '$100';
   descripcionElemento.textContent = 'Nuestro plan Premium de un mes ofrece a los usuarios una experiencia premium sin compromisos a largo plazo. Con acceso ilimitado durante 30 días, los suscriptores pueden disfrutar de todas las características exclusivas de nuestro servicio.';
-} else if (planSeleccionado === 'planAnual') {
+} else if (planSeleccionado == 'planAnual') {
   tituloElemento.textContent = 'Elegiste el plan Anual';
   imagenElemento.src = 'img/aniversario.png';
   precioElemento.textContent = '$1000';
   descripcionElemento.textContent = 'Nuestro plan Premium anual es la opción ideal para aquellos que buscan una experiencia premium a largo plazo. Al suscribirte por un año completo, disfrutarás de acceso ilimitado y sin interrupciones a todas nuestras características exclusivas.';
-} else if(planSeleccionado === 'planInfinito'){
+} else if(planSeleccionado == 'planInfinito'){
   tituloElemento.textContent = 'Elegiste el plan Infinito';
   imagenElemento.src = 'img/infinidad.png';
   precioElemento.textContent = '$2000';
@@ -54,6 +60,7 @@ if (planSeleccionado === 'planMensual') {
   imagenElemento.src = 'img/disco-de-vinilo.png';
   descripcionElemento.textContent = 'No se ha seleccionado un plan válido.';
 }
+};
 
 //-----------------------------------------------------------------------------------
 
@@ -86,43 +93,7 @@ function guardarEnLocalStorage() {
     } else {
          alert("Por favor, complete todos los campos del formulario.");
     }
-}
+};
 
 //guardarEnLocalStorage al evento click del botón
 btnPagar.addEventListener("click", guardarEnLocalStorage);
-
-
-/*const titulo=document.querySelector("#titulo")
-const URLAbuscar=new URL(window.location.href)
-const nombrePlan=URLAbuscar.searchParams.get("plan")
-titulo.textContent+=nombrePlan*/
-
-
-function cambiarNombrePlan(){
-  const titulo = document.getElementById('titulo');
-  const precio = document.getElementById('precio');
-  const img = document.getElementById('imagenPlan');
-  const URLAbuscar=window.location.href;
-  const array = URLAbuscar.split('?')
-  let plan = array[array.length -1];
-
-  if(plan == "plan=1"){
-      titulo.innerHTML = "Elegiste el plan Mensual";
-      precio.innerHTML = "100$";
-      
-
-  }else if(plan == "plan=2"){
-      titulo.innerHTML = "Elegiste el plan Anual";
-      precio.innerHTML = "1000$";
-      img.innerHTML = '<img src="..\\vistaPremium\\media\\aniversario.png">';
-      
-  }else if(plan == "plan=3"){
-      titulo.innerHTML = "Elegiste el plan Infinito";
-      precio.innerHTML = "2000$";
-      img.innerHTML = '';
-      
-  }
-
-  
-  
-}
