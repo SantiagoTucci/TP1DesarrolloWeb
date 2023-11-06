@@ -24,6 +24,7 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
 });
 
 // Información del parámetro 'plan' desde la URL------------------------------------
+function cambiarNombrePlan() {
 const urlParamsTitulo = new URLSearchParams(window.location.search);
 const planSeleccionado = urlParams.get('plan');
 
@@ -33,8 +34,12 @@ const imagenElemento = document.getElementById('imgPlan');
 const precioElemento = document.getElementById('precioPlan');
 const descripcionElemento = document.getElementById('textoPlan');
 
+const URLAbuscar = window.location.href;
+const array = URLAbuscar.split('?');
+let plan = array[array.length -1];
+
 // Lógica para mostrar la información según el plan seleccionado
-if (planSeleccionado === 'planMensual') {
+if (planSeleccionado === 'plan1') {
   tituloElemento.textContent = 'Elegiste el plan Mensual';
   imagenElemento.src = 'img/30-dias.png';
   precioElemento.textContent = '$100';
@@ -53,6 +58,7 @@ if (planSeleccionado === 'planMensual') {
   tituloElemento.textContent = 'Plan no válido';
   imagenElemento.src = 'img/disco-de-vinilo.png';
   descripcionElemento.textContent = 'No se ha seleccionado un plan válido.';
+}
 }
 
 //-----------------------------------------------------------------------------------
@@ -96,33 +102,3 @@ btnPagar.addEventListener("click", guardarEnLocalStorage);
 const URLAbuscar=new URL(window.location.href)
 const nombrePlan=URLAbuscar.searchParams.get("plan")
 titulo.textContent+=nombrePlan*/
-
-
-function cambiarNombrePlan(){
-  const titulo = document.getElementById('titulo');
-  const precio = document.getElementById('precio');
-  const img = document.getElementById('imagenPlan');
-  const URLAbuscar=window.location.href;
-  const array = URLAbuscar.split('?')
-  let plan = array[array.length -1];
-
-  if(plan == "plan=1"){
-      titulo.innerHTML = "Elegiste el plan Mensual";
-      precio.innerHTML = "100$";
-      
-
-  }else if(plan == "plan=2"){
-      titulo.innerHTML = "Elegiste el plan Anual";
-      precio.innerHTML = "1000$";
-      img.innerHTML = '<img src="..\\vistaPremium\\media\\aniversario.png">';
-      
-  }else if(plan == "plan=3"){
-      titulo.innerHTML = "Elegiste el plan Infinito";
-      precio.innerHTML = "2000$";
-      img.innerHTML = '';
-      
-  }
-
-  
-  
-}
