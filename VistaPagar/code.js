@@ -63,7 +63,7 @@ if (planSeleccionado == 'planMensual') {
   imagenElemento.src = 'img/disco-de-vinilo.png';
   descripcionElemento.textContent = 'No se ha seleccionado un plan válido.';
 }
-}
+};
 
 //-----------------------------------------------------------------------------------
 
