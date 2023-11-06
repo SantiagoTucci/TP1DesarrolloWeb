@@ -3,7 +3,7 @@ var usuarioData = {
     contraseña: "contrasena",
   };
   
-  localStorage.setItem("usuarioData", JSON.stringify(usuarioData));
+  //localStorage.setItem("usuarioData", JSON.stringify(usuarioData));
 
 var usuarioDataGuardada = localStorage.getItem("usuarioData");
 var usuarioData = JSON.parse(usuarioDataGuardada);

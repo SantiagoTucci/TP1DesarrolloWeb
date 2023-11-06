@@ -9,6 +9,40 @@ const nombreG = document.getElementById("campoNombreApellido");
 const checkBoxG = document.getElementById("checkBox")
 const btnPagar = document.getElementById("btnPagar");
 
+// Información del parámetro 'plan' desde la URL------------------------------------
+const urlParamsTitulo = new URLSearchParams(window.location.search);
+const planSeleccionado = urlParams.get('plan');
+
+// Elementos en HTML que muestran la información
+const tituloElemento = document.getElementById('nombrePlan');
+const imagenElemento = document.getElementById('imgPlan');
+const precioElemento = document.getElementById('precioPlan');
+const descripcionElemento = document.getElementById('textoPlan');
+
+// Lógica para mostrar la información según el plan seleccionado
+if (planSeleccionado === 'planMensual') {
+  tituloElemento.textContent = 'Elegiste el plan Mensual';
+  imagenElemento.src = 'img/30-dias.png';
+  precioElemento.textContent = '$100';
+  descripcionElemento.textContent = 'Nuestro plan Premium de un mes ofrece a los usuarios una experiencia premium sin compromisos a largo plazo. Con acceso ilimitado durante 30 días, los suscriptores pueden disfrutar de todas las características exclusivas de nuestro servicio.';
+} else if (planSeleccionado === 'planAnual') {
+  tituloElemento.textContent = 'Elegiste el plan Anual';
+  imagenElemento.src = 'img/aniversario.png';
+  precioElemento.textContent = '$270';
+  descripcionElemento.textContent = 'Nuestro plan Premium anual es la opción ideal para aquellos que buscan una experiencia premium a largo plazo. Al suscribirte por un año completo, disfrutarás de acceso ilimitado y sin interrupciones a todas nuestras características exclusivas.';
+} else if(planSeleccionado === 'planInfinito'){
+  tituloElemento.textContent = 'Elegiste el plan Infinito';
+  imagenElemento.src = 'img/infinidad.png';
+  precioElemento.textContent = '$750';
+  descripcionElemento.textContent = 'Nuestro plan Premium de duración infinita es la elección definitiva para los amantes de nuestro servicio. Con esta suscripción, los usuarios disfrutan de acceso ilimitado y perpetuo a todas nuestras características premium.';
+} else {
+  tituloElemento.textContent = 'Plan no válido';
+  imagenElemento.src = 'img/disco-de-vinilo.png';
+  descripcionElemento.textContent = 'No se ha seleccionado un plan válido.';
+}
+
+//-----------------------------------------------------------------------------------
+
 /*GUARDAR EN LOCAL STORAGE*/
 function guardarEnLocalStorage() {
     var numero = numeroG.value;
@@ -16,7 +50,7 @@ function guardarEnLocalStorage() {
     var cvc = cvcG.value;
     var nombre = nombreG.value;
     var checkBox = checkBoxG.checked;
-    
+
     // Verificar si se han proporcionado valores
     if (numero && vencimiento && cvc && nombre && checkBox) {
         /*AGREGAR EL OBJETO(tarjeta) A UN ARREGLO(usuarios)*/
