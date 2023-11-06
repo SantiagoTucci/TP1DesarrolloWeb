@@ -32,7 +32,7 @@
                     </a>
                     <div class="user-info">
                         <div class="text-info">
-                            <a href="..\VistaPerfil\Perfil.html" class="nav-link">Nombre de usuario</a>
+                            <a href="..\VistaPerfil\Perfil.html" class="nav-link" id="nombreLink">Nombre de usuario</a>
                             <a href="..\index.html" class="nav-link">Cerrar
                                 sesión</a>
                         </div>
@@ -47,44 +47,43 @@
             </header>
 
             <main>
-                <form action>
+                <form id="formPerfil">
                     <div class="section-container">
                         <label for="Nombre" class="a">Usuario</label>
                         <input id= "nombreUsuario" type="text" class="b" name="Nombre"
                             placeholder=" Usuario">
                         <label for="Contraseña" class="c">Contraseña</label>
-                        <input id= "contraseñaUsuario"type="password" class="d" name="contraseña"
+                        <input id= "contraseña"type="password" class="d" name="contraseña"
                             placeholder=" Contraseña">
                         <label for="Repetir-Contraseña" class="e">Repetir
                             contraseña</label>
-                        <input type="password" class="f"
+                        <input id="repetirContraseña"type="password" class="f"
                             name="Repetir-Contraseña"
                             placeholder=" Repetir contraseña">
                     </div>
                     <div class="fecha-mail">
                         <label for="fecha" class="i">Fecha de nacimiento</label>
-                        <input type="date" name="fecha" class="g">
+                        <input id="fechaNacimiento" type="date" name="fecha" class="g">
                         <label for="miemail" class="a">e-mail</label>
-                        <input type=“email” name=“miemail” placeholder=" E-mail"
+                        <input id= "email" type=“email” name=“miemail” placeholder=" E-mail"
                             class="h">
                     </div>
-
+                    <div class="links">
+                        <article><a href="..\VistaPremium\vistapremium.html"
+                                class="link-premium">Premium</a></article>
+                        <article><a href="..\index.html"
+                                class="link-eliminar">Eliminar
+                                usuario</a></article>
+                    </div>
+                    <div class="botones-perfil">
+                        <a href="..\VistaPrincipal\Pagina Principal.html"
+                            class="link-home">Volver al Home</a>
+    
+                         <a href="..\VistaPrincipal/Pagina Principal.html">   
+                        <button id="botonGuardar" type="submit" class="boton-guardar">Guardar</button>
+                        </a>
+                    </div>
                 </form>
-                <div class="links">
-                    <article><a href="..\VistaPremium\vistapremium.html"
-                            class="link-premium">Premium</a></article>
-                    <article><a href="..\index.html"
-                            class="link-eliminar">Eliminar
-                            usuario</a></article>
-                </div>
-                <div class="botones-perfil">
-                    <a href="..\VistaPrincipal\Pagina Principal.html"
-                        class="link-home">Volver al Home</a>
-
-                     <a href="..\VistaPrincipal/Pagina Principal.html">   
-                    <button id="botonGuardar" type="input" class="boton-guardar">Guardar</button>
-                    </a>
-                </div>
             </main>
 
             <footer>
