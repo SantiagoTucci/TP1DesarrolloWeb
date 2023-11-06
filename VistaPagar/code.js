@@ -100,9 +100,3 @@ function guardarEnLocalStorage() {
 
 //guardarEnLocalStorage al evento click del botón
 btnPagar.addEventListener("click", guardarEnLocalStorage);
-
-
-/*const titulo=document.querySelector("#titulo")
-const URLAbuscar=new URL(window.location.href)
-const nombrePlan=URLAbuscar.searchParams.get("plan")
-titulo.textContent+=nombrePlan*/
