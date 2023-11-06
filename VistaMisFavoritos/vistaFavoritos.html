@@ -110,6 +110,7 @@
                     <!--CANCIONES FAVORITAS-->
 
                     <div class="contenedorcancionesfav">
+                        <p id="siNoTengoCanciones"></p>
                         <div class="cancion1">
                             <div class="espacio">
                                 <img src="..\VistaMisFavoritos\006-tocar.png" alt="" class="imagen-boton">
@@ -211,7 +212,7 @@
                             <div class="nombre-cancion">
                                 <div class="album-container">
                                     <img src="..\Musica\Fotos\Álbumes\Canción Animal.jpg" class="imagen-cancion" alt="">
-                                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" />
+                                    <img src="..\Musica\Fotos\Estrella.avif" alt="Estrella" class="star-icon" onclick="aniadirAFavoritos()" />
                                 </div>
                                 <div class="textos">
                                     <link> <a href="..\VistaMisFavoritos\vistaEntreC.html"> Entre canibales
@@ -245,6 +246,8 @@
 
 
     </div>
+    <script src="favoritos.js"> </script>
+    <script src="Album.js"> </script>
 </body>
 
 
