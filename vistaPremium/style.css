@@ -202,6 +202,13 @@ input {
   gap: 2rem;
 }
 
+
+@media screen and (max-width: 899px) and (min-width: 700px){
+  .tabla{
+    height: 900px;
+  }
+}
+
 @media (min-width: 768px) {
   .bloques {
     grid-template-columns: repeat(4, 1fr);
