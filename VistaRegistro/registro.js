@@ -21,7 +21,10 @@ function guardarRegistroEnLocalStorage() {
             nombreUsuario : nombreUsuario,
             contraseña : invertirMitades(contraseña),
             email : email,
-            fechaNacimiento : fechaNacimiento
+            fechaNacimiento : fechaNacimiento,
+            albumesFav: [],
+            cancionesFav:[],
+            
         };
         // Agregar el objeto de datos al arreglo de usuarios
         usuariosLista.push(usuario);
