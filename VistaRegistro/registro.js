@@ -24,7 +24,7 @@ function guardarRegistroEnLocalStorage() {
             fechaNacimiento : fechaNacimiento,
             albumesFav: [],
             cancionesFav:[],
-            estadoEnLinea: false
+            
         };
         // Agregar el objeto de datos al arreglo de usuarios
         usuariosLista.push(usuario);
