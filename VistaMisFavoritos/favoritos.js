@@ -11,7 +11,5 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   }); 
     
 
-
-
     
 
