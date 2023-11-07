@@ -17,6 +17,7 @@ function iniciarSesion() {
         var usuario = usuariosLista.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.contraseña === invertirMitades(contraseña));
         if (usuario) {
             localStorage.setItem("usuario", JSON.stringify(usuario));
+            localStorage.setItem('estadoCuenta', 'Se inicio sesión');
             window.location.href = '..\\VistaPrincipal\\Pagina Principal.html';
             usuario.estadoEnLinea='true';
         } else {
