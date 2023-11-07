@@ -1,7 +1,7 @@
 //NOMBRE DE USUARIO
 var usuario = JSON.parse(localStorage.getItem("usuario"));
     document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
-
+    
 //CERRAR SESION
 document.getElementById('cerrarSesion').addEventListener('click', function() {
     //autenticación como 'false' en el localStorage
@@ -11,7 +11,7 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   }); 
  
     
-  document.addEventListener('DOMContentLoaded', function() {
+ /* document.addEventListener('DOMContentLoaded', function() {
     var listaFavoritos = document.getElementById('lista-favoritos');
     var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFavoritas")) || [];
 
@@ -20,4 +20,19 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
         li.textContent = cancionId;
         listaFavoritos.appendChild(li);
     });
-});
+});*/
+
+var cancionesFavoritas = JSON.parse(localStorage.getItem("dcancionesFavoritas"));
+var albumes = JSON.parse(localStorage.getItem("ALBUMES"));
+
+console.log(cancionesFavoritas)
+albumes.forEach(function(cancionId){
+   //console.log(cancionId);
+}
+)
+console.log(cancionesFavoritas)
+for (let index = 0; index < 4; index++) {
+    const cancion = albumes[0].canciones[index]
+    //console.log(cancion)
+
+};

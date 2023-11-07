@@ -1,5 +1,4 @@
-   
-//NOMBRE DE USUARIO
+ //NOMBRE DE USUARIO
 var usuario = JSON.parse(localStorage.getItem("usuario"));
 document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
 
@@ -12,8 +11,7 @@ window.location.href = 'index.html';
 }); 
 
 //MARCAR CANCIONES COMO FAVORITAS 
-  var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFavoritas")) || [];
-
+var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFavoritas")) || [];
   document.querySelectorAll('.star-icon').forEach(function(estrella) {
       var cancionId = estrella.parentElement.getAttribute('id');
 
@@ -35,8 +33,10 @@ window.location.href = 'index.html';
               // Agregar La Cancion a los favoritos
               cancionesFavoritas.push(cancionId);
               estrella.style.filter = 'invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%)'; // Amarillo
-          }
+                console.log(usuario)
+            }
 
           localStorage.setItem(usuario.nombreUsuario + "cancionesFavoritas", JSON.stringify(cancionesFavoritas));
       });
   });
+
