@@ -1,4 +1,4 @@
- const ALBUMES = [
+const ALBUMES = [
     {   nombre:"Abbey Road",
         artista:"The Beatles",
         Id:"album-01",

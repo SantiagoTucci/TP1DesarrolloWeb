@@ -12,11 +12,8 @@ window.location.href = 'index.html';
 }); 
 
 //MARCAR CANCIONES COMO FAVORITAS 
-
-    //crea un array de favoritas para el usuario
   var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFavoritas")) || [];
 
-    //  
   document.querySelectorAll('.star-icon').forEach(function(estrella) {
       var cancionId = estrella.parentElement.getAttribute('id');
 

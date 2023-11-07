@@ -13,10 +13,12 @@ function iniciarSesion() {
     // Verifica si se proporcionaron valores
     if (nombreUsuario && contraseña) {
         var usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
+        var usuario = JSON.parse(localStorage.getItem('estadoEnLinea'));
         var usuario = usuariosLista.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.contraseña === invertirMitades(contraseña));
         if (usuario) {
             localStorage.setItem("usuario", JSON.stringify(usuario));
             window.location.href = '..\\VistaPrincipal\\Pagina Principal.html';
+            usuario.estadoEnLinea='true';
         } else {
             alert("El usuario y/o contraseña es incorrecto");
         }

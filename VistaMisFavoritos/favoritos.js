@@ -11,4 +11,13 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   }); 
  
     
+  document.addEventListener('DOMContentLoaded', function() {
+    var listaFavoritos = document.getElementById('lista-favoritos');
+    var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFavoritas")) || [];
 
+    cancionesFavoritas.forEach(function(cancionId) {
+        var li = document.createElement('li');
+        li.textContent = cancionId;
+        listaFavoritos.appendChild(li);
+    });
+});
