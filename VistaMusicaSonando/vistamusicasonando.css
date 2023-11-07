@@ -332,8 +332,7 @@
   
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(100deg)
     brightness(115%) contrast(106%);
-    /* amarillo */
-  
+     
     /* filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%); Amarillo */
     top: 2px;
     right: 15px;
@@ -341,10 +340,10 @@
     border-radius: 50%;
   }
   
-  .star-icon:hover {
+  /* .star-icon:hover {
     filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg)
       brightness(103%) contrast(105%);
-  }
+  }*/
   
   p {
     margin-top: 10px;

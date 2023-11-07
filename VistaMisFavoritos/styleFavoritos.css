@@ -326,8 +326,7 @@ a {
 
 
   /* amarillo */
-
-  /* filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%); Amarillo */
+  filter: invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%); 
   top: 10%;
   right: 15px;
   height: 30%;
