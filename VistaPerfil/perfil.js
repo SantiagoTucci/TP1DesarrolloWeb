@@ -5,11 +5,11 @@
     const repetirContraseña = document.getElementById("repetirContraseña");
     const emailInput = document.getElementById("email");
     const fechaNacimientoInput = document.getElementById("fechaNacimiento");
-  
+    const botonGuardar = document.getElementById("botonGuardar");
     // Cargar la información del usuario desde el localStorage
     const usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
     const usuarioActual = usuariosLista[0];
-  
+
     //var usuario = JSON.parse(localStorage.getItem("usuario"));
     //document.getElementById("usuarioLink").textContent = usuario.nombreUsuario;
   
@@ -19,7 +19,7 @@
     emailInput.value = usuarioActual.email;
     fechaNacimientoInput.value = usuarioActual.fechaNacimiento;
   
-    formPerfil.addEventListener("submit", function(event) {
+   /* formPerfil.addEventListener("submit", function(event) {
         event.preventDefault();
         
         // Actualizar la información del usuario con los valores de los campos de entrada
@@ -32,24 +32,33 @@
         localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
 
         alert("Cambios guardados correctamente.");
-    });
+    });*/
   
     function invertirMitades(contraseña) {
         var mitad = Math.floor(contraseña.length / 2);
         return contraseña.slice(mitad) + contraseña.slice(0, mitad);
     }
 
+    function buscarNombreEnArray(nombreBuscar, array) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i].nombreUsuario === nombreBuscar) {
+                return i; // Devuelve la posición si encuentra el nombre en el array
+            }
+        }
+        return -1; // Devuelve -1 si el nombre no se encuentra en el array
+    }
+
     function guardarRegistroEnLocalStorage() {
-        var nombreUsuario = nombreUsuarioInput.value;
-        var contraseña = contraseñaInput.value;
-        var repetirContrasenia = repetirContraseña.value; // Agrega este campo
-        var email = emailInput.value;
-        var fechaNacimiento = fechaNacimientoInput.value;
+        usuarioActual.nombreUsuario = nombreUsuarioInput.value;
+        usuarioActual.contraseña = invertirMitades(contraseñaInput.value);
+        usuarioActual.email = emailInput.value;
+        usuarioActual.fechaNacimiento = fechaNacimientoInput.value;
+        var posicion = buscarNombreEnArray(nombreBuscar, usuariosLista);
     
         // Verifica si se han proporcionado valores
         if (nombreUsuario && contraseña && repetirContrasenia && email && fechaNacimiento) {
-            if (contraseña === repetirContrasenia) { // Compara las contraseñas
-                localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
+            if (contraseña === repetirContrasenia && posicion >= 0 && posicion < usuariosLista.length) { // Compara las contraseñas
+                localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista[posicion]));
                 alert("Datos guardados correctamente");
             } else {
                 alert("Las contraseñas no coinciden. Por favor, asegúrate de que coincidan.");
@@ -58,6 +67,9 @@
             alert("Por favor, completa todos los campos del formulario.");
         }
     }
+
+    //guardarEnLocalStorage al evento click del botón
+    botonGuardar.addEventListener("click", guardarRegistroEnLocalStorage);  
   
     // Nombre de usuario en el nav
     var usuario = JSON.parse(localStorage.getItem("usuario"));
