@@ -13,7 +13,7 @@ window.location.href = 'index.html';
 
 
 
-//MARCAR CANCIONES COMO FAVORITAS 
+//MARCAR CANCIONES COMO FAVORITAS |
 var cancionesFavoritas = JSON.parse(localStorage.getItem(user.nombreUsuario + "cancionesFav")) || [];
   
 document.querySelectorAll('.star-icon').forEach(function(estrella) {
