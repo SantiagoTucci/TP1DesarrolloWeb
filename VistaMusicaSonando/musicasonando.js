@@ -1,7 +1,7 @@
  //NOMBRE DE USUARIO
 var usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosLista"));
-var user = JSON.parse(localStorage.getItem("usuario"));
-document.querySelector('.nav-link').textContent = user.nombreUsuario;
+var usuario = JSON.parse(localStorage.getItem("usuario"));
+document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
 
 //CERRAR SESION
 document.getElementById('cerrarSesion').addEventListener('click', function() {
@@ -14,7 +14,7 @@ window.location.href = 'index.html';
 
 
 //MARCAR CANCIONES COMO FAVORITAS |
- var cancionesFavoritas = JSON.parse(localStorage.getItem(user.nombreUsuario + "cancionesFav")) || [];
+ var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav")) || [];
   
 document.querySelectorAll('.star-icon').forEach(function(estrella) {
       const cancionId = estrella.parentElement.getAttribute('id');
@@ -42,4 +42,87 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
             localStorage.setItem(user.nombreUsuario + "cancionesFav", JSON.stringify(cancionesFavoritas));
       });
   }); 
+
+  window.onload = function(){
+  //MOVIMIENTO DE CANCIONES
+  const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];
+  
+  const contenedorMusicaSonando = document.querySelector('.contenedorcancionesfav');
+
+  const albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
+
+  const albumsSeleccionados = albumsGuardados.filter(album => albumesFavoritos.includes(album.Id));
+
+
+  albumsSeleccionados.forEach(album => {
+          album.canciones.forEach(cancion => {
+              const cancionDiv = document.createElement('div');
+              cancionDiv.className = 'cancion1';
+      
+              const espacioDiv = document.createElement('div');
+              espacioDiv.className = 'espacio';
+              const imagenBoton = document.createElement('img');
+              imagenBoton.src = '..\\VistaMisFavoritos\\006-tocar.png';
+              imagenBoton.alt = '';
+              imagenBoton.className = 'imagen-boton';
+              espacioDiv.appendChild(imagenBoton);
+      
+              const nombreCancionDiv = document.createElement('div');
+              nombreCancionDiv.className = 'nombre-cancion';
+      
+              const albumContainerDiv = document.createElement('div');
+              albumContainerDiv.className = 'album-container';
+              albumContainerDiv.id = cancion.Id;
+              const imagenCancion = document.createElement('img');
+              imagenCancion.src = cancion.img;
+              imagenCancion.alt = '';
+              imagenCancion.className = 'imagen-cancion';
+              albumContainerDiv.appendChild(imagenCancion);
+      
+              const estrella = document.createElement('img');
+              estrella.src = '..\\Musica\\Fotos\\Estrella.avif';
+              estrella.alt = 'Estrella';
+              estrella.className = 'star-icon';
+              estrella.id = cancion.Id;
+              albumContainerDiv.appendChild(estrella);
+      
+              const textosDiv = document.createElement('div');
+              textosDiv.className = 'textos';
+              const nombreLink = document.createElement('a');
+              nombreLink.href = '';
+              nombreLink.textContent = cancion.nombre;
+              textosDiv.appendChild(nombreLink);
+              const artistaP = document.createElement('p');
+              artistaP.className = 'artist-name';
+              artistaP.textContent = cancion.artista;
+              textosDiv.appendChild(artistaP);
+      
+              nombreCancionDiv.appendChild(albumContainerDiv);
+              nombreCancionDiv.appendChild(textosDiv);
+      
+              const albumDiv = document.createElement('div');
+              albumDiv.className = 'album';
+              albumDiv.textContent = cancion.album;
+      
+              const duracionDiv = document.createElement('div');
+              duracionDiv.className = 'duracion';
+              duracionDiv.textContent = cancion.duracion;
+      
+              const reproduccionDiv = document.createElement('div');
+              reproduccionDiv.className = 'reproduccion';
+              reproduccionDiv.textContent = cancion.reproducciones;
+      
+              cancionDiv.appendChild(espacioDiv);
+              cancionDiv.appendChild(nombreCancionDiv);
+              cancionDiv.appendChild(albumDiv);
+              cancionDiv.appendChild(duracionDiv);
+              cancionDiv.appendChild(reproduccionDiv);
+      
+              contenedorMusicaSonando.appendChild(cancionDiv);
+          });
+      }); 
+    } 
+  
+  
+  
 

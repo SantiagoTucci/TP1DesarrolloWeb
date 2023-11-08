@@ -16,6 +16,7 @@ document.querySelector('.audio-player').addEventListener('play', function() {
   localStorage.setItem("cancionActual", cancionActual);
 });
 
+//MOVIMIENTO DE CARDS
 const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];
 const contenedorAlbums = document.querySelector('.main-flex-albums');
 const albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
