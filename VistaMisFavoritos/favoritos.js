@@ -51,6 +51,15 @@ function encontrarAlbum(array, cancionFav) {
     return null; // Manejar el caso en el que no se encuentra la canción
 }
 
+function encontrarId(array, cancionFav) {
+    for (let index = 0; index < array.length; index++) {
+        if (array[index].Id == cancionFav) {
+            return array[index].Id;
+        }
+    }
+    return null; // Manejar el caso en el que no se encuentra la canción
+}
+
 canciones = transformaIdenArrayDeCanciones();
 function agregarAFavoritos(){
     if (cancionesFav) {
@@ -62,7 +71,8 @@ function agregarAFavoritos(){
             const nombreArtista = encontrarArtista(canciones, cancionFav);
             const nombreAlbum = encontrarAlbum(canciones, cancionFav);
             const imagenCancion = encontrarImagenCancion(canciones, cancionFav);
-           
+            const idCancion = encontrarId(canciones, cancionFav);
+           console.log(idCancion)
             if (nombreCancion) {
                 const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
                 const etiquetaCancionDOM = `
@@ -73,7 +83,7 @@ function agregarAFavoritos(){
                         <div class="nombre-cancion">
                             <div class="album-container" >
                                 <img src="${imagenCancion}" class="imagen-cancion" alt="">
-                                <img src="" alt="Estrella" class="star-icon"  />
+                                <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" />
                             </div>
                             <div class="textos">
                                 <link class="nombre"><a href="">${nombreCancion}</a></link>
@@ -121,11 +131,6 @@ agregarAFavoritos();
     }
 
     
-/*function buscarEnArrayDeAlbums (cancionId){
-    let nuevaCancion;
-for (let index = 0; index < arraydecanciones.length; index++) {
-      if(arraydecanciones[index].Id == cancionId){
-            nuevaCancion = arraydecanciones[index];  
-      };        
-} return nuevaCancion;
-};*/
+    
+    
+    
