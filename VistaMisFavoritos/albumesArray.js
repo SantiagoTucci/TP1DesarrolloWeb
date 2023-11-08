@@ -1,5 +1,10 @@
 ALBUM1= 
-    {       canciones : [
+
+    {     
+        Nombre:"Abbey road",
+        artista:"The Beatles",
+        Id:"album-01",
+        canciones : [
             {nombre:"Something",artista:"The Beatles",Id:"cancion01-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
             {nombre:"The end",artista:"The Beatles",Id:"cancion02-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
@@ -11,17 +16,6 @@ ALBUM1=
         ]
     }
 
-    DESCUBRIMIENTOSEMANAL={
-        canciones : [
-            {nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",Id:"cancion01-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
-            ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Giros",artista:"Fito Paez",Id:"cancion02-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
-            ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Scorpion",artista:"drake",Id:"cancion03-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
-            ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Locura",artista:"Virus",Id:"cancion04-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
-            ,duracion:"3:14",reproducciones:"200"},]
-    }
     ALBUM2= 
     {   nombre:"Cancion Animal",
     artista:"Soda Stereo",
@@ -38,6 +32,7 @@ ALBUM1=
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
+
 ALBUM3= 
 {   nombre:"Artud",
     artista:"Pescado Rabioso",
@@ -54,6 +49,7 @@ ALBUM3=
     ,duracion:"3:14",reproducciones:"200"},
 ]
 }
+
 ALBUM4= 
 {   nombre:"Locura",
     artista:"Virus",
@@ -70,6 +66,7 @@ ALBUM4=
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
+
 ALBUM5= 
 {   nombre:"Fuerza Natural",
     artista:"Gustavo Cerati",
@@ -86,6 +83,7 @@ ALBUM5=
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
+
 ALBUM6= 
 {   nombre:"Nevermind",
     artista:"Nirvana",
@@ -102,6 +100,7 @@ ALBUM6=
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
+
 ALBUM7= 
 {   nombre:"Raro",
     artista:"Cuarteto de Nos",
@@ -118,6 +117,7 @@ ALBUM7=
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
+
 ALBUM8= 
 {   nombre:"Whenever You Need Somebody",
     artista:"Rick Astley",
@@ -168,7 +168,21 @@ ALBUM10=
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
+ALBUM11= 
+{
+    Nombre:" Descubrimiento Semanal",
+    artista:"Varios",
+    Id:"album-11",
+    canciones : [
+    {nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",Id:"cancion01-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    ,duracion:"3:14",reproducciones:"200"},
+    {nombre:"Giros",artista:"Fito Paez",Id:"cancion02-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    ,duracion:"3:14",reproducciones:"200"},
+    {nombre:"Scorpion",artista:"drake",Id:"cancion03-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    ,duracion:"3:14",reproducciones:"200"},
+    {nombre:"Locura",artista:"Virus",Id:"cancion04-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    ,duracion:"3:14",reproducciones:"200"},]
+}
 
 
 localStorage.setItem("ALBUMES",JSON.stringify(ALBUM1));
-localStorage.setItem("ALBUMESsemaa",JSON.stringify(DESCUBRIMIENTOSEMANAL));

@@ -38,7 +38,7 @@
 
         <!-- MAIN TABLA DE PRECIOS -->
         <main>
-
+            <form action="..\VistaPagar\pagarpararesgis.html" method="get">
             <h2 class="titulo">ELEGí TU PLAN PREMIUM</h2>
             <div class="contenedor">
 
@@ -49,7 +49,7 @@
                     <p>The purpose of lorem ipsum is to create a natural looking
                         block of text (sentence, paragraph, page,
                         etc.) </p>
-                    <input type="radio" name="kk" id="radios">
+                    <input type="radio" name="plan" id="planMen" value="1">
 
                 </div>
 
@@ -61,7 +61,7 @@
                     <p>The purpose of lorem ipsum is to create a natural looking
                         block of text (sentence, paragraph, page,
                         etc.) </p>
-                    <input type="radio" name="kk" id="radios">
+                        <input type="radio" name="plan" id="planAn" value="2">
 
                 </div>
 
@@ -74,16 +74,17 @@
                     <p>The purpose of lorem ipsum is to create a natural looking
                         block of text (sentence, paragraph, page,
                         etc.) </p>
-                    <input type="radio" name="kk" id="radios">
+                        <input type="radio" name="plan" id="planIn" value="3">
 
                 </div>
 
                 <article class="contenedorBoton">
                     <a href="..\index.html"
                         class="botones">cancelar</a>
-                    <a href="..\VistaPagar\pagarpararesgis.html" class="botones">avanzar</a>
+                        <button type="submit" class="botones" id="btnAvanzar">Avanzar</button>
                 </article>
             </div>
+        </form>
         </main>
 
         <section class="contenedor comprar">
@@ -126,6 +127,7 @@
 
             </div> <!-- BLOQUES-->
         </section>
+        <script src="premium.js"></script>
     </body>
 
     <footer class="footer">

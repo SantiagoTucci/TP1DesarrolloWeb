@@ -11,8 +11,12 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   }); 
  
 
-  var albumes = JSON.parse(localStorage.getItem( "ALBUMES","ALBUMESsemaa"));
+  
+  
+  var albumes = JSON.parse(localStorage.getItem( "ALBUMES"));
+  const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
   var arraydecanciones = albumes.canciones;
+
 
 
 function buscarEnArrayDeAlbums (cancionId){
@@ -24,20 +28,7 @@ for (let index = 0; index < arraydecanciones.length; index++) {
 } return nuevaCancion;
 };
 
-function transformarElArrayEnObjeto(array){
-    let nuevasCanciones = [];
-    for (let index = 0; index < array.length; index++) {
-       nuevasCanciones[index] = buscarEnArrayDeAlbums(array[index]);
-      
-    } return nuevasCanciones;
-}
 
-
-
-
-const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
-let canciones = transformarElArrayEnObjeto(cancionesFav);
-console.log(canciones)
 
 /*function encontrarArtista(array){
     let element;
@@ -48,7 +39,7 @@ for (let index = 0; index < array.length; index++) {
 
 }*/
 
-function encontrarNombreCancion(array){
+/*function encontrarNombreCancion(array){
     let element;
     
 for (let index = 0; index < array.length; index++) {
@@ -58,12 +49,11 @@ for (let index = 0; index < array.length; index++) {
     }
 } return element
     
-}
+}*/
 
 
 function agregarAFavoritos(){
-    if (canciones) {
-
+    if (cancionesFav) {
         // crea la cancion si se marco como favorita
         const contenedorcanciones = document.querySelector(".contenedorcancionesfav") 
         
@@ -93,8 +83,6 @@ function agregarAFavoritos(){
         </div>`
             
           
-     
-
            contenedorcanciones.innerHTML+=etiquetaCancionDOM
           
     })
@@ -106,7 +94,6 @@ function agregarAFavoritos(){
 };
   
 agregarAFavoritos();
-
 
 
         // Si el array de canciones no tiene canciones aparece el msj
