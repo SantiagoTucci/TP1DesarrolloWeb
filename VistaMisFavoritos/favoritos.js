@@ -15,13 +15,7 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
   var arraydecanciones = albumes;
   
-// Si el array de canciones no tiene canciones aparece el msj
-if (cancionesFav.length==0) {
-    const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
 
-    sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
-
-}
 
 function encontrarArtista(array, cancionFav){
     for (let index = 0; index < array.length; index++) {
@@ -132,7 +126,6 @@ cancionesFav.forEach(cancionFav  => {
 agregarAFavoritos();
 
 
- // elimina la estrella  si se hace click 
 
     function eliminarCancion(idCancion) {
     // Elimina la canción del localStorage
@@ -143,8 +136,17 @@ agregarAFavoritos();
     const cancionParaEliminar = document.getElementById(idCancion);
     if (cancionParaEliminar) {
         cancionParaEliminar.parentElement.parentElement.parentElement.remove();
+
+        
+    }
+
+    // Si no hay más canciones favoritas, muestra el mensaje
+    if (nuevasCancionesFav.length === 0) {
+        const sinoHayCanciones = document.querySelector("#siNoTengoCanciones");
+        sinoHayCanciones.innerHTML = `<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`;
     }
 }
+
 
 document.querySelector(".contenedorcancionesfav").addEventListener("click", function(event) {
     if (event.target.classList.contains("star-icon")) {
@@ -154,4 +156,10 @@ document.querySelector(".contenedorcancionesfav").addEventListener("click", func
 });
     
     
-    
+   // Si el array de canciones no tiene canciones aparece el msj
+if (cancionesFav.length==0) {
+    const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
+
+    sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
+
+} 
