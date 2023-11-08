@@ -2,7 +2,7 @@ window.onload = function() {
     var usuario = JSON.parse(localStorage.getItem("usuario"));
     document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
 
-    var albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "albumesFavoritos")) || [];
+    var albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
 
     document.querySelectorAll('.star-icon').forEach(function(estrella) {
         var albumId = estrella.parentElement.getAttribute('data-id');
@@ -27,7 +27,7 @@ window.onload = function() {
                 estrella.style.filter = 'invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%)'; // Amarillo
             }
 
-            localStorage.setItem(usuario.nombreUsuario + "albumesFavoritos", JSON.stringify(albumesFavoritos));
+            localStorage.setItem(usuario.nombreUsuario + "AlbumesFavoritos", JSON.stringify(albumesFavoritos));
         });
     });
 
