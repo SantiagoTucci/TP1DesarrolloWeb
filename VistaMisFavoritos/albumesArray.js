@@ -1,4 +1,5 @@
-ALBUM1= 
+MISALBUMS = [
+    ALBUM1= 
 
     {     
         Nombre:"Abbey road",
@@ -14,7 +15,7 @@ ALBUM1=
             {nombre:"Because",artista:"The Beatles",Id:"cancion04-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
         ]
-    }
+    },
 
     ALBUM2= 
     {   nombre:"Cancion Animal",
@@ -31,7 +32,7 @@ ALBUM1=
         {nombre:"Cancion Animal",artista:"The Beatles",Id:"cancion04-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM3= 
 {   nombre:"Artud",
@@ -48,7 +49,7 @@ ALBUM3=
     {nombre:"Cancion Animal",artista:"Pescado Rabioso",Id:"cancion04-album-03",img:"./Musica\Fotos\Álbumes\Artaud.jpg"
     ,duracion:"3:14",reproducciones:"200"},
 ]
-}
+},
 
 ALBUM4= 
 {   nombre:"Locura",
@@ -65,7 +66,7 @@ ALBUM4=
         {nombre:"Cancion Animal",artista:"Virus",Id:"cancion04-album-04",img:"./Musica\Fotos\Álbumes\Locura.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM5= 
 {   nombre:"Fuerza Natural",
@@ -82,7 +83,7 @@ ALBUM5=
         {nombre:"Cancion Animal",artista:"Gustavo Cerati",Id:"cancion04-album-05",img:"./Musica\Fotos\Álbumes\Fuerza Natural.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM6= 
 {   nombre:"Nevermind",
@@ -99,7 +100,7 @@ ALBUM6=
         {nombre:"Cancion Animal",artista:"Nirvana",Id:"cancion04-album-06",img:"./Musica\Fotos\Álbumes\Nevermind.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM7= 
 {   nombre:"Raro",
@@ -116,7 +117,7 @@ ALBUM7=
         {nombre:"Cancion Animal",artista:"Cuarteto de Nos",Id:"cancion04-album-07",img:"./Musica\Fotos\Álbumes\Raro.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM8= 
 {   nombre:"Whenever You Need Somebody",
@@ -133,7 +134,7 @@ ALBUM8=
         {nombre:"Cancion Animal",artista:"Rick Astley",Id:"cancion04-album-08",img:"./Musica\Fotos\Álbumes\Never Gonna Give You Up.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM9= 
 {   nombre:"Peperina",
@@ -150,7 +151,7 @@ ALBUM9=
         {nombre:"Cancion Animal",artista:"Serú Girán",Id:"cancion04-album-09",img:"./Musica\Fotos\Álbumes\Peperina.webp"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 
 ALBUM10= 
 {   nombre:"Giros",
@@ -167,7 +168,7 @@ ALBUM10=
         {nombre:"Cancion Animal",artista:"Fito Paez",Id:"cancion04-album-10",img:"./Musica\Fotos\Álbumes\Giros.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-}
+},
 ALBUM11= 
 {
     Nombre:"Descubrimiento Semanal",
@@ -184,10 +185,8 @@ ALBUM11=
     ,duracion:"3:14",reproducciones:"200"},]
 }
 
-const misAlbums = [
-    ALBUM1, ALBUM2, ALBUM3, ALBUM4, ALBUM5, ALBUM6, ALBUM7, ALBUM8, ALBUM9, ALBUM10
-]
+];
 
 
 localStorage.setItem("albumes",JSON.stringify(ALBUM1));
-localStorage.setItem("misAlbums", JSON.stringify(misAlbums));
+localStorage.setItem("misAlbums", JSON.stringify(MISALBUMS));
