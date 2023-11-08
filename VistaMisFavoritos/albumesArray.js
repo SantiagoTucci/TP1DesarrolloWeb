@@ -169,6 +169,10 @@ ALBUM10=
     ]
 }
 
+const misAlbums = [
+    ALBUM1, ALBUM2, ALBUM3, ALBUM4, ALBUM5, ALBUM6, ALBUM7, ALBUM8, ALBUM9, ALBUM10
+]
+
 
 localStorage.setItem("ALBUMES",JSON.stringify(ALBUM1));
 localStorage.setItem("ALBUMESsemaa",JSON.stringify(DESCUBRIMIENTOSEMANAL));
