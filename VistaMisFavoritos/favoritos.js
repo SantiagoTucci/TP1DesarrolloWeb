@@ -11,7 +11,7 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   }); 
  
 
-  var albumes = JSON.parse(localStorage.getItem( "ALBUMES"));
+  var albumes = JSON.parse(localStorage.getItem( "ALBUMES","ALBUMESsemaa"));
   var arraydecanciones = albumes.canciones;
 
 
@@ -37,15 +37,16 @@ function transformarElArrayEnObjeto(array){
 
 const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
 let canciones = transformarElArrayEnObjeto(cancionesFav);
+console.log(canciones)
 
-function encontrarArtista(array){
+/*function encontrarArtista(array){
     let element;
 for (let index = 0; index < array.length; index++) {
      element = array[index].artista;
     
 } return element
 
-}
+}*/
 
 function encontrarNombreCancion(array){
     let element;
@@ -82,7 +83,7 @@ function agregarAFavoritos(){
 
                 <div class="textos">
                     <link class="nombre"> <a href="">${element} </a></link>
-                    <p class="artist-name">${encontrarArtista(canciones)}</p>
+                    <p class="artist-name">${element}</p>
                 </div>
             </div>
 

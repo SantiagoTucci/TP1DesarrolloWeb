@@ -11,6 +11,17 @@ ALBUM1=
         ]
     }
 
+    DESCUBRIMIENTOSEMANAL={
+        canciones : [
+            {nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",Id:"cancion01-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            ,duracion:"3:14",reproducciones:"200"},
+            {nombre:"Giros",artista:"Fito Paez",Id:"cancion02-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            ,duracion:"3:14",reproducciones:"200"},
+            {nombre:"Scorpion",artista:"drake",Id:"cancion03-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            ,duracion:"3:14",reproducciones:"200"},
+            {nombre:"Locura",artista:"Virus",Id:"cancion04-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            ,duracion:"3:14",reproducciones:"200"},]
+    }
     ALBUM2= 
     {   nombre:"Cancion Animal",
     artista:"Soda Stereo",
@@ -160,3 +171,4 @@ ALBUM10=
 
 
 localStorage.setItem("ALBUMES",JSON.stringify(ALBUM1));
+localStorage.setItem("ALBUMESsemaa",JSON.stringify(DESCUBRIMIENTOSEMANAL));
