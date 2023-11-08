@@ -14,7 +14,7 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   var albumes = JSON.parse(localStorage.getItem( "misAlbums"));
   const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
   var arraydecanciones = albumes;
-
+  
 
 
 function encontrarArtista(array, cancionFav){
@@ -60,6 +60,12 @@ function encontrarId(array, cancionFav) {
     return null; // Manejar el caso en el que no se encuentra la canción
 }
 
+
+
+
+
+
+
 canciones = transformaIdenArrayDeCanciones();
 function agregarAFavoritos(){
     if (cancionesFav) {
@@ -72,7 +78,6 @@ function agregarAFavoritos(){
             const nombreAlbum = encontrarAlbum(canciones, cancionFav);
             const imagenCancion = encontrarImagenCancion(canciones, cancionFav);
             const idCancion = encontrarId(canciones, cancionFav);
-           console.log(idCancion)
             if (nombreCancion) {
                 const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
                 const etiquetaCancionDOM = `
@@ -83,7 +88,7 @@ function agregarAFavoritos(){
                         <div class="nombre-cancion">
                             <div class="album-container" >
                                 <img src="${imagenCancion}" class="imagen-cancion" alt="">
-                                <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" />
+                                <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" id="${idCancion}" />
                             </div>
                             <div class="textos">
                                 <link class="nombre"><a href="">${nombreCancion}</a></link>
@@ -118,19 +123,74 @@ cancionesFav.forEach(cancionFav  => {
 }); return cancionesFavoritas}
 
 
-  
 agregarAFavoritos();
 
 
-        // Si el array de canciones no tiene canciones aparece el msj
-        if (cancionesFav.length==0) {
-            const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
-    
-            sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
+
+    function eliminarCancion(idCancion) {
+    // Elimina la canción del localStorage
+    const nuevasCancionesFav = cancionesFav.filter(cancion => cancion !== idCancion);
+    localStorage.setItem(`${usuario.nombreUsuario}cancionesFav`, JSON.stringify(nuevasCancionesFav));
+
+    // Elimina la canción de la vista
+    const cancionParaEliminar = document.getElementById(idCancion);
+    if (cancionParaEliminar) {
+        cancionParaEliminar.parentElement.parentElement.parentElement.remove();
+
         
     }
 
+    // Si no hay más canciones favoritas, muestra el mensaje
+    if (nuevasCancionesFav.length === 0) {
+        const sinoHayCanciones = document.querySelector("#siNoTengoCanciones");
+        sinoHayCanciones.innerHTML = `<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`;
+    }
+}
+
+
+document.querySelector(".contenedorcancionesfav").addEventListener("click", function(event) {
+    if (event.target.classList.contains("star-icon")) {
+        const idCancion = event.target.id;
+        eliminarCancion(idCancion);
+    }
+});
     
     
-    
-    
+   // Si el array de canciones no tiene canciones aparece el msj
+if (cancionesFav.length==0) {
+    const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
+
+    sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
+
+} 
+
+
+function obtenerInformacionCancionPorId(idCancion) {
+    // Suponiendo que 'canciones' es una lista de canciones
+    const cancion = canciones.find(c => c.Id === idCancion);
+    return cancion;
+}
+
+// Obtener referencias a los elementos de la interfaz
+const albumImage = document.querySelector('.album-image');
+const albumName = document.querySelector('.album-name');
+const artistName = document.querySelector('.artist-name');
+
+// Función para actualizar la información de la canción
+function actualizarInfoCancion(idCancion) {
+    // Aquí deberías tener un método para obtener la información de la canción a partir de su Id
+    const cancion = obtenerInformacionCancionPorId(idCancion);
+
+    // Actualizar la imagen, el nombre del álbum y el nombre del artista
+    if (cancion) {
+        albumImage.src = cancion.img; // Ruta de la imagen de la canción
+        albumName.textContent = cancion.nombre; // Nombre de la canción
+        artistName.textContent = cancion.artista; // Nombre del artista
+    }
+}
+
+// Event listener para cuando se hace clic en una canción
+document.querySelector('imagen-boton').addEventListener('click', function() {
+    const idCancion = this.getAttribute('id'); // Supongamos que tienes un atributo 'data-id' en tus elementos de canción
+    actualizarInfoCancion(idCancion);
+});
