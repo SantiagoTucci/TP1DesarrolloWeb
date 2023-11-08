@@ -14,8 +14,14 @@ document.getElementById('cerrarSesion').addEventListener('click', function() {
   var albumes = JSON.parse(localStorage.getItem( "misAlbums"));
   const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
   var arraydecanciones = albumes;
+  
+// Si el array de canciones no tiene canciones aparece el msj
+if (cancionesFav.length==0) {
+    const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
 
+    sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
 
+}
 
 function encontrarArtista(array, cancionFav){
     for (let index = 0; index < array.length; index++) {
@@ -60,6 +66,12 @@ function encontrarId(array, cancionFav) {
     return null; // Manejar el caso en el que no se encuentra la canción
 }
 
+
+
+
+
+
+
 canciones = transformaIdenArrayDeCanciones();
 function agregarAFavoritos(){
     if (cancionesFav) {
@@ -72,7 +84,6 @@ function agregarAFavoritos(){
             const nombreAlbum = encontrarAlbum(canciones, cancionFav);
             const imagenCancion = encontrarImagenCancion(canciones, cancionFav);
             const idCancion = encontrarId(canciones, cancionFav);
-           console.log(idCancion)
             if (nombreCancion) {
                 const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
                 const etiquetaCancionDOM = `
@@ -83,7 +94,7 @@ function agregarAFavoritos(){
                         <div class="nombre-cancion">
                             <div class="album-container" >
                                 <img src="${imagenCancion}" class="imagen-cancion" alt="">
-                                <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" />
+                                <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" id="${idCancion}" />
                             </div>
                             <div class="textos">
                                 <link class="nombre"><a href="">${nombreCancion}</a></link>
@@ -118,19 +129,29 @@ cancionesFav.forEach(cancionFav  => {
 }); return cancionesFavoritas}
 
 
-  
 agregarAFavoritos();
 
 
-        // Si el array de canciones no tiene canciones aparece el msj
-        if (cancionesFav.length==0) {
-            const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
-    
-            sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
-        
-    }
+ // elimina la estrella  si se hace click 
 
-    
+    function eliminarCancion(idCancion) {
+    // Elimina la canción del localStorage
+    const nuevasCancionesFav = cancionesFav.filter(cancion => cancion !== idCancion);
+    localStorage.setItem(`${usuario.nombreUsuario}cancionesFav`, JSON.stringify(nuevasCancionesFav));
+
+    // Elimina la canción de la vista
+    const cancionParaEliminar = document.getElementById(idCancion);
+    if (cancionParaEliminar) {
+        cancionParaEliminar.parentElement.parentElement.parentElement.remove();
+    }
+}
+
+document.querySelector(".contenedorcancionesfav").addEventListener("click", function(event) {
+    if (event.target.classList.contains("star-icon")) {
+        const idCancion = event.target.id;
+        eliminarCancion(idCancion);
+    }
+});
     
     
     
