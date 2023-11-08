@@ -73,4 +73,5 @@ window.onload = function() {
           localStorage.setItem(usuario.nombreUsuario + "AlbumesFavoritos", JSON.stringify(albumesFavoritos));
       });
   });
+
 };
