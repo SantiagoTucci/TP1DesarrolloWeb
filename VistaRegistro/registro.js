@@ -30,7 +30,7 @@ function guardarRegistroEnLocalStorage() {
         usuariosLista.push(usuario);
         // Guardar el arreglo usuarios en el localStorage
         localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
-        window.location.href = '..\\Pagina Principal.html'; // Redirige al usuario a la página de inicio de sesión
+        window.location.href = '..\\index.html'; // Redirige al usuario a la página de inicio de sesión
     } else {
         alert("Por favor, complete todos los campos del formulario.");
     }
