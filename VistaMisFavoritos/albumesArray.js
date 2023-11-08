@@ -1,9 +1,5 @@
-const ALBUMES = [
-    {   nombre:"Abbey Road",
-        artista:"The Beatles",
-        Id:"album-01",
-        img:"./Musica\Fotos\Álbumes\Abbey Road.jpg",
-        canciones : [
+ALBUM1= 
+    {       canciones : [
             {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion01-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
             {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion02-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
@@ -13,8 +9,9 @@ const ALBUMES = [
             {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion04-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
         ]
-    },
+    }
 
+    ALBUM2= 
     {   nombre:"Cancion Animal",
     artista:"Soda Stereo",
     Id:"album-02",
@@ -29,7 +26,8 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"The Beatles",Id:"cancion04-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
+}
+ALBUM3= 
 {   nombre:"Artud",
     artista:"Pescado Rabioso",
     Id:"album-03",
@@ -44,8 +42,8 @@ const ALBUMES = [
     {nombre:"Cancion Animal",artista:"Pescado Rabioso",Id:"cancion04-album-03",img:"./Musica\Fotos\Álbumes\Artaud.jpg"
     ,duracion:"3:14",reproducciones:"200"},
 ]
-},
-
+}
+ALBUM4= 
 {   nombre:"Locura",
     artista:"Virus",
     Id:"album-04",
@@ -60,8 +58,8 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"Virus",Id:"cancion04-album-04",img:"./Musica\Fotos\Álbumes\Locura.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
-
+}
+ALBUM5= 
 {   nombre:"Fuerza Natural",
     artista:"Gustavo Cerati",
     Id:"album-05",
@@ -76,8 +74,8 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"Gustavo Cerati",Id:"cancion04-album-05",img:"./Musica\Fotos\Álbumes\Fuerza Natural.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
-
+}
+ALBUM6= 
 {   nombre:"Nevermind",
     artista:"Nirvana",
     Id:"album-06",
@@ -92,8 +90,8 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"Nirvana",Id:"cancion04-album-06",img:"./Musica\Fotos\Álbumes\Nevermind.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
-
+}
+ALBUM7= 
 {   nombre:"Raro",
     artista:"Cuarteto de Nos",
     Id:"album-07",
@@ -108,8 +106,8 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"Cuarteto de Nos",Id:"cancion04-album-07",img:"./Musica\Fotos\Álbumes\Raro.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
-
+}
+ALBUM8= 
 {   nombre:"Whenever You Need Somebody",
     artista:"Rick Astley",
     Id:"album-08",
@@ -124,8 +122,9 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"Rick Astley",Id:"cancion04-album-08",img:"./Musica\Fotos\Álbumes\Never Gonna Give You Up.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
+}
 
+ALBUM9= 
 {   nombre:"Peperina",
     artista:"Serú Girán",
     Id:"album-09",
@@ -140,8 +139,9 @@ const ALBUMES = [
         {nombre:"Cancion Animal",artista:"Serú Girán",Id:"cancion04-album-09",img:"./Musica\Fotos\Álbumes\Peperina.webp"
         ,duracion:"3:14",reproducciones:"200"},
     ]
-},
+}
 
+ALBUM10= 
 {   nombre:"Giros",
     artista:"Fito Paez",
     Id:"album-10",
@@ -157,6 +157,6 @@ const ALBUMES = [
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
-]
 
-localStorage.setItem("ALBUMES",JSON.stringify(ALBUMES));
+
+localStorage.setItem("ALBUMES",JSON.stringify(ALBUM1));

@@ -11,6 +11,16 @@ body {
   color: white;
 }
 
+.sinotengo{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+}
+#siNoTengoCanciones{
+  color: rgb(128, 128, 128);
+  font-size: 20px;
+}
 .container {
   display: grid;
   grid-template-columns: 6% 1fr;
