@@ -5,13 +5,13 @@ ALBUM1=
         artista:"The Beatles",
         Id:"album-01",
         canciones : [
-            {nombre:"Something",artista:"The Beatles",Id:"cancion01-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"Something",artista:"The Beatles",album:"Abbey road",Id:"cancion01-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"The end",artista:"The Beatles",Id:"cancion02-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"The end",artista:"The Beatles",album:"Abbey road",Id:"cancion02-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Sun king",artista:"The Beatles",Id:"cancion03-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"Sun king",artista:"The Beatles",album:"Abbey road",Id:"cancion03-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Because",artista:"The Beatles",Id:"cancion04-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"Because",artista:"The Beatles",album:"Abbey road",Id:"cancion04-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
         ]
     }
@@ -22,13 +22,13 @@ ALBUM1=
     Id:"album-02",
     img:"./Musica\Fotos\Álbumes\Canción Animal.jpg",
     canciones : [
-        {nombre:"Cancion Animal",artista:"The Beatles",Id:"cancion01-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
+        {nombre:"Cancion Animal",artista:"The Beatles",album:"Cancion Animal",Id:"cancion01-album-02",img:"../Musica\Fotos\Álbumes\Canción Animal.jpg"
         ,duracion:"3:14",reproducciones:"200"},
-        {nombre:"Cancion Animal",artista:"The Beatles",Id:"cancion02-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
+        {nombre:"Cancion Animal",artista:"The Beatles",album:"Cancion Animal",Id:"cancion02-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
         ,duracion:"3:14",reproducciones:"200"},
-        {nombre:"Cancion Animal",artista:"The Beatles",Id:"cancion03-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
+        {nombre:"Cancion Animal",artista:"The Beatles",album:"Cancion Animal",Id:"cancion03-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
         ,duracion:"3:14",reproducciones:"200"},
-        {nombre:"Cancion Animal",artista:"The Beatles",Id:"cancion04-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
+        {nombre:"Cancion Animal",artista:"The Beatles",album:"Cancion Animal",Id:"cancion04-album-02",img:"./Musica\Fotos\Álbumes\Canción Animal.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ]
 }
@@ -174,18 +174,18 @@ ALBUM11=
     artista:"Varios",
     Id:"album-11",
     canciones : [
-    {nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",Id:"cancion01-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    {nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",album:"Lagrimas De Ayer",Id:"cancion01-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Eterno Amor.jpg"
     ,duracion:"3:14",reproducciones:"200"},
-    {nombre:"Giros",artista:"Fito Paez",Id:"cancion02-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    {nombre:"Giros",artista:"Fito Paez",album:"Giros",Id:"cancion02-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
     ,duracion:"3:14",reproducciones:"200"},
-    {nombre:"Scorpion",artista:"drake",Id:"cancion03-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    {nombre:"Scorpion",artista:"drake",album:"Scorpion",Id:"cancion03-album-11",img:"..\\Musica\\Fotos\\Álbumes\\drakePortada.jpg"
     ,duracion:"3:14",reproducciones:"200"},
-    {nombre:"Locura",artista:"Virus",Id:"cancion04-album-11",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+    {nombre:"Locura",artista:"Virus",album:"Locura",Id:"cancion04-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
     ,duracion:"3:14",reproducciones:"200"},]
 }
 
 const misAlbums = [
-    ALBUM1, ALBUM2, ALBUM3, ALBUM4, ALBUM5, ALBUM6, ALBUM7, ALBUM8, ALBUM9, ALBUM10
+    ALBUM1, ALBUM2, ALBUM3, ALBUM4, ALBUM5, ALBUM6, ALBUM7, ALBUM8, ALBUM9, ALBUM10,ALBUM11
 ]
 
 
