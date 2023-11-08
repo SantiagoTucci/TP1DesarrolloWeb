@@ -1,12 +1,12 @@
 ALBUM1= 
     {       canciones : [
-            {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion01-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"Something",artista:"The Beatles",Id:"cancion01-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion02-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"The end",artista:"The Beatles",Id:"cancion02-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion03-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"Sun king",artista:"The Beatles",Id:"cancion03-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
-            {nombre:"Abbey Road",artista:"The Beatles",Id:"cancion04-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
+            {nombre:"Because",artista:"The Beatles",Id:"cancion04-album-01",img:"./Musica\Fotos\Álbumes\Abbey Road.jpg"
             ,duracion:"3:14",reproducciones:"200"},
         ]
     }

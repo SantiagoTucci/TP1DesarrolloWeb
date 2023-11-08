@@ -1,5 +1,4 @@
 //NOMBRE DE USUARIO
-const usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosLista"));
 const usuario = JSON.parse(localStorage.getItem("usuario"));
 document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
     
@@ -36,39 +35,67 @@ function transformarElArrayEnObjeto(array){
 
 
 
-const listaCancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
-let canciones = transformarElArrayEnObjeto(listaCancionesFav);
+const cancionesFav = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav"));
+let canciones = transformarElArrayEnObjeto(cancionesFav);
+
+function encontrarArtista(array){
+    let element;
+for (let index = 0; index < array.length; index++) {
+     element = array[index].artista;
+    
+} return element
+
+}
+
+function encontrarNombreCancion(array){
+    let element;
+    
+for (let index = 0; index < array.length; index++) {
+    console.log(array[index].id)
+    if(array[index].id == array[index]){
+     element = array[index].nombre;
+    }
+} return element
+    
+}
+
 
 function agregarAFavoritos(){
     if (canciones) {
 
-        // agrega a la vista favoritos tadas las canciones que contenga el array de canciones que este dentro del objeto Album cuyo nombre coincida 
-        const contenedorcanciones = document.querySelector(".cancion1") 
-        const espacio=document.querySelector(".espacio") 
-        const nombreCancion=document.querySelector(".nombre-cancion") 
-        const album=document.querySelector(".album") 
-        const duracion=document.querySelector(".duracion")
-        const reproduccion=document.querySelector(".reproduccion") 
+        // crea la cancion si se marco como favorita
+        const contenedorcanciones = document.querySelector(".contenedorcancionesfav") 
         
-        
-        listaCancionesFav.forEach(element => {
-            const etiquetaCancionDOM=`<div class="album-container" id=>
-            <img src="..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg" class="imagen-cancion" alt="">
-            <img class="star-icon" src="..\\Musica\\Fotos\\Estrella.avif" id="" alt="">
-            <div class="textos">
-            <link> <a href=""> ${element}</a></link>
-            <p class="artist-name">${canciones.artista}</p>
-            </div>
-           </div>`
-           const etiquetaIconoDOM=`<div class="espacio"> <img class="imagen-boton" src="..\\VistaMisFavoritos\\006-tocar.png" alt="">
-           </div>`
-           const etiquetaTiempo=`<div class="duracion"> <p> 4:23 </p></div>`
-           const etiquetareproduccion=`<div class="reproducciones">9854</div>`
+        cancionesFav.forEach(element => {
+            const etiquetaCancionDOM=
+            `<div class="cancion1">
 
-           nombreCancion.innerHTML+=etiquetaCancionDOM
-           espacio.innerHTML+=etiquetaIconoDOM
-            duracion.innerHTML+=etiquetaTiempo
-            reproduccion.innerHTML+=etiquetareproduccion
+            <div class="espacio">
+                <img src="..\\VistaMisFavoritos\\006-tocar.png" alt="" class="imagen-boton">
+                </div>
+
+            <div class="nombre-cancion">
+                <div class="album-container" >
+                    <img src="..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg" class="imagen-cancion" alt="">
+                    <img src="" alt="Estrella" class="star-icon"  />
+                </div>
+
+                <div class="textos">
+                    <link class="nombre"> <a href="">${element} </a></link>
+                    <p class="artist-name">${encontrarArtista(canciones)}</p>
+                </div>
+            </div>
+
+           <div class="album"><p>Abbey Road</p></div>
+           <div class="duracion"> <p> 4:06 </p></div>
+          <div class="reproduccion">6000</div>
+        </div>`
+            
+          
+     
+
+           contenedorcanciones.innerHTML+=etiquetaCancionDOM
+          
     })
     
        
@@ -81,8 +108,8 @@ agregarAFavoritos();
 
 
 
-        
-        if (listaCancionesFav.length==0) {
+        // Si el array de canciones no tiene canciones aparece el msj
+        if (cancionesFav.length==0) {
             const sinoHayCanciones=document.querySelector("#siNoTengoCanciones")
     
             sinoHayCanciones.innerHTML=`<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
