@@ -170,7 +170,7 @@ ALBUM10=
 }
 ALBUM11= 
 {
-    Nombre:" Descubrimiento Semanal",
+    Nombre:"Descubrimiento Semanal",
     artista:"Varios",
     Id:"album-11",
     canciones : [
@@ -189,4 +189,5 @@ const misAlbums = [
 ]
 
 
-localStorage.setItem("ALBUMES",JSON.stringify(ALBUM1));
+localStorage.setItem("albumes",JSON.stringify(ALBUM1));
+localStorage.setItem("misAlbums", JSON.stringify(misAlbums));

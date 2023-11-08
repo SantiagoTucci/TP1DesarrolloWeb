@@ -90,31 +90,78 @@ window.onload = function(){
     var cancionActual = this.querySelector('source').getAttribute('src');
     localStorage.setItem("cancionActual", cancionActual);
 });
-
-var albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "albumesFavoritos")) || [];
-var arrayAlbums = albums;
-function mostrarAlbumesFavoritos(arrayAlbums, albumesFavoritos) {
-  // Obtiene los elementos DOM de los álbumes
-  const albumContainers = document.querySelectorAll(".album-container");
-
-  // Recorre los elementos DOM de los álbumes
-  for (const albumContainer of albumContainers) {
-    // Obtiene el ID del álbum
-    const albumId = albumContainer.getAttribute("data-id");
-
-    // Si el álbum está en la lista de favoritos, lo muestra
-    if (albumesFavoritos.includes(albumId)) {
-      albumContainer.style.display = "block";
-    } else {
-      albumContainer.style.display = "none";
-    }
-  }
 }
-
-};
 
 
 //------------------------LOS ALBUMES EN HTML---------------------------------------------------------
+
+const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || []
+
+const contenedorAlbums = document.querySelector('.main-flex-albums');
+
+albumsGuardados.forEach(album => {
+  const albumCard = document.createElement('div');
+  albumCard.className = 'main-card-album';
+
+  const albumContainer = document.createElement('div');
+  albumContainer.className = 'album-container';
+  albumContainer.dataset.id = album.Id;
+
+  const albumImagen = document.createElement('img');
+  albumImagen.src = album.img;
+  albumImagen.alt = album.nombre;
+  albumImagen.className = 'main-card-album-image';
+
+  const estrella = document.createElement('img');
+  estrella.src = '../Musica/Fotos/Estrella.avif';
+  estrella.alt = 'Estrella';
+  estrella.className = 'star-icon';
+  estrella.dataset.id = album.Id;
+
+  albumContainer.appendChild(albumImagen);
+  albumContainer.appendChild(estrella);
+
+  const textoAlbum = document.createElement('p');
+  textoAlbum.className = 'main-card-album-text';
+  textoAlbum.textContent = album.nombre;
+
+  const subtextoAlbum = document.createElement('p');
+  subtextoAlbum.className = 'main-card-album-subtext';
+  subtextoAlbum.textContent = album.artista;
+
+  albumCard.appendChild(albumContainer);
+  albumCard.appendChild(textoAlbum);
+  albumCard.appendChild(subtextoAlbum);
+
+  contenedorAlbums.appendChild(albumCard);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
