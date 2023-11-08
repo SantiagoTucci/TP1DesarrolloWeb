@@ -13,7 +13,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 2fr auto; /* Ajusta las proporciones de las columnas */
+  grid-template-columns: 3fr auto; /* Ajusta las proporciones de las columnas */
   grid-template-rows: 80px 1fr 90px; /* Ajusta las proporciones de las filas */
   height: 100vh;
 }
@@ -290,7 +290,6 @@ a {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 2%;
-  
 }
 
 .main-card-album {
