@@ -20,14 +20,15 @@ window.onload = function(){
     localStorage.setItem("cancionActual", cancionActual);
 });
 
-
-
-//------------------------LOS ALBUMES EN HTML---------------------------------------------------------
+//------------------------LOS ALBUMES---------------------------------------------------------
 
 const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || []
 const contenedorAlbums = document.querySelector('.main-flex-albums');
+var albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
 
-albumsGuardados.forEach(album => {
+const albumsSeleccionados = albumsGuardados.filter(album => albumesFavoritos.includes(album.Id));
+
+albumsSeleccionados.forEach(album => {
   const albumCard = document.createElement('div');
   albumCard.className = 'main-card-album';
 
@@ -63,6 +64,29 @@ albumsGuardados.forEach(album => {
 
   contenedorAlbums.appendChild(albumCard);
 });
+
+document.querySelectorAll('.star-icon').forEach(function(estrella) {
+  var albumId = estrella.parentElement.getAttribute('data-id');
+  // Resto del código para aplicar el estilo de la estrella amarilla para los álbumes seleccionados...
+  estrella.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      // Verificar si el álbum ya está en la lista de favoritos
+      var index = albumesFavoritos.indexOf(albumId);
+      if (index !== -1) {
+          // Si el álbum está en la lista, eliminarlo
+          albumesFavoritos.splice(index, 1);
+          estrella.style.filter = ''; // Eliminar el estilo de la estrella amarilla
+      } else {
+          // Si el álbum no está en la lista, agregarlo
+          albumesFavoritos.push(albumId);
+          estrella.style.filter = 'invert(71%) sepia(99%) saturate(1350%) hue-rotate(358deg) brightness(103%) contrast(105%)'; // Establecer el estilo de la estrella amarilla
+      }
+      // Actualizar el localStorage con la nueva lista de favoritos
+      localStorage.setItem(usuario.nombreUsuario + "AlbumesFavoritos", JSON.stringify(albumesFavoritos));
+  });
+});
+
 };
 
 
@@ -72,53 +96,6 @@ albumsGuardados.forEach(album => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function insertarAlbum(albums, albumId) {
-  const album = albums.find((album) => album.id === albumId);
-
-  if (album === undefined) {
-    return null;
-  }
-
-  // Inserta la información del álbum en el DOM
-  const albumContainer = document.querySelector(`.album-container[data-id="${albumId}"]`);
-  albumContainer.querySelector(`img.main-card-album-image`).src = album.imageUrl;
-  albumContainer.querySelector(`p.main-card-album-text`).textContent = album.title;
-  albumContainer.querySelector(`p.main-card-album-subtext`).textContent = album.artist;
-
-  return album;
-}
-*/
-/*document.querySelectorAll('.star-icon').forEach(function(estrella) {
-  var albumId = estrella.parentElement.getAttribute('data-id');
-
-  if (albumesFavoritos.includes(albumId)) {
-      insertarAlbum(albums, albumId);
-  } else {
-    albumesFavoritos.remove();
-  }
-});*/
 
 
   
