@@ -7,7 +7,11 @@
     const fechaNacimientoInput = document.getElementById("fechaNacimiento");
   
     // Cargar la información del usuario desde el localStorage
-    const usuarioIniciado = JSON.parse(localStorage.getItem("usuario")) || [];
+    const usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
+    var usuarioIniciado = JSON.parse(localStorage.getItem("usuario")) || [];
+    const usuarioIndex = usuariosLista.findIndex(user => user.nombreUsuario === usuarioIniciado.nombreUsuario);
+    var usuarioIniciado = usuariosLista[usuarioIndex];
+
   
     nombreUsuarioInput.value = usuarioIniciado.nombreUsuario;
     contraseñaInput.value = usuarioIniciado.contraseña;
@@ -45,7 +49,22 @@
         localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
         localStorage.setItem("usuario", JSON.stringify(usuarioIniciado));
 
-        alert("Cambios guardados correctamente.");
+    });
+
+    document.getElementById("eliminarUsuario").addEventListener('click', function() {
+        
+            // Elimina al usuario actual de la lista de usuarios
+            const usuarioIndex = usuariosLista.findIndex(user => user.nombreUsuario === usuarioIniciado.nombreUsuario);
+            if (usuarioIndex !== -1) {
+                usuariosLista.splice(usuarioIndex, 1);
+            }
+            // Actualiza el localStorage eliminando al usuario
+            localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
+            localStorage.removeItem("usuariosLista") || [usuarioIndex]; // Elimina los datos del usuario actual
+
+            // Redirige al usuario a la página de inicio de sesión
+            window.location.href = 'index.html';
+        
     });
   
     function invertirMitades(contraseña) {
