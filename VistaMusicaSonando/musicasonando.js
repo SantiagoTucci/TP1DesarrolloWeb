@@ -39,10 +39,13 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
                 
             }
 
-            localStorage.setItem(user.nombreUsuario + "cancionesFav", JSON.stringify(cancionesFavoritas));
+            localStorage.setItem(usuario.nombreUsuario + "cancionesFav", JSON.stringify(cancionesFavoritas));
       });
   }); 
 
+
+
+  
   window.onload = function(){
   //MOVIMIENTO DE CANCIONES
   const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];

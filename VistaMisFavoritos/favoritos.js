@@ -106,83 +106,79 @@ function agregarAFavoritos() {
 
 
 
-    }
+    } 
 
 };
 
 function transformaIdenArrayDeCanciones() {
     let cancionesFavoritas = [];
-    cancionesFav.forEach(cancionFav => {
-        albumes.forEach(album => {
-            album.canciones.forEach(cancion => {
-                if (cancion.Id === cancionFav) {
-                    cancionesFavoritas.push(cancion);
-                }
+    
+    // Verificar si cancionesFav es null o no está definido
+    if (cancionesFav !== null && cancionesFav !== undefined) {
+        cancionesFav.forEach(cancionFav => {
+            albumes.forEach(album => {
+                album.canciones.forEach(cancion => {
+                    if (cancion.Id === cancionFav) {
+                        cancionesFavoritas.push(cancion);
+                    }
+                });
             });
         });
-    }); return cancionesFavoritas
+    } 
+    
+    return cancionesFavoritas;
+    
 }
 
 
 agregarAFavoritos();
+actualizarVisibilidadSinCanciones();
 
+function actualizarVisibilidadSinCanciones() {
+    const sinotengoElement = document.getElementById("sinotengo");
+    const cancionesFav = JSON.parse(localStorage.getItem(`${usuario.nombreUsuario}cancionesFav`)) || [];
 
+    if (cancionesFav.length > 0) {
+        sinotengoElement.style.display = "none"; // Oculta el elemento si hay canciones favoritas
+    } else {
+        sinotengoElement.style.display = "block"; // Muestra el elemento si no hay canciones favoritas
+    }
+}
 
 function eliminarCancion(idCancion) {
-    // Elimina la canción del localStorage
+    // Obtiene las canciones favoritas actuales de localStorage
+    let cancionesFav = JSON.parse(localStorage.getItem(`${usuario.nombreUsuario}cancionesFav`)) || [];
+
+    // Filtra las canciones para eliminar la que coincide con el idCancion
     const nuevasCancionesFav = cancionesFav.filter(cancion => cancion !== idCancion);
+
+    // Guarda las canciones actualizadas en localStorage
     localStorage.setItem(`${usuario.nombreUsuario}cancionesFav`, JSON.stringify(nuevasCancionesFav));
 
     // Elimina la canción de la vista
     const cancionParaEliminar = document.getElementById(idCancion);
     if (cancionParaEliminar) {
         cancionParaEliminar.parentElement.parentElement.parentElement.remove();
+    } 
 
-
-    }
-
-    // Si no hay más canciones favoritas, muestra el mensaje
-    if (nuevasCancionesFav.length === 0) {
-        const sinoHayCanciones = document.querySelector("#siNoTengoCanciones");
-        sinoHayCanciones.innerHTML = `<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`;
-    }
 }
-
 
 document.querySelector(".contenedorcancionesfav").addEventListener("click", function (event) {
     if (event.target.classList.contains("star-icon")) {
         const idCancion = event.target.id;
         eliminarCancion(idCancion);
+        actualizarVisibilidadSinCanciones();
     }
 });
 
 
 // Si el array de canciones no tiene canciones aparece el msj
-if (cancionesFav.length == 0) {
-    const sinoHayCanciones = document.querySelector("#siNoTengoCanciones")
+/*if (cancionesFav && cancionesFav.length === 0) {
+    const sinoHayCanciones = document.querySelector("#siNoTengoCanciones");
+    if (sinoHayCanciones) {
+        sinoHayCanciones.innerHTML = `<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`;
+    } else {
+        sinoHayCanciones.innerHTML = `<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`;
+    }
+}*/
 
-    sinoHayCanciones.innerHTML = `<div class="sinotengo"><p id="siNoTengoCanciones">AUN NO TIENES CANCIONES FAVORITAS :( </p></div>`
-
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const canciones = document.querySelectorAll(".cancion1"); // Selecciona todas las canciones
-
-    canciones.forEach(function(cancion) {
-        const espacio = cancion.querySelector(".espacio"); // Selecciona el elemento con la clase "espacio"
-        espacio.addEventListener("click", function() {
-            const albumImage = document.querySelector(".album-image");
-            const albumName = document.querySelector(".album-name");
-            const artistName = document.querySelector(".artist-name");
-
-            const albumContainer = cancion.querySelector(".album-container");
-            const nombreCancion = albumContainer.querySelector(".nombre").textContent;
-            const artistNameCancion = albumContainer.querySelector(".artist-name").textContent;
-
-            albumImage.src = albumContainer.querySelector(".imagen-cancion").src;
-            albumName.textContent = nombreCancion;
-            artistName.textContent = artistNameCancion;
-        });
-    });
-});
