@@ -46,7 +46,7 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
 
 
   
-  window.onload = function(){
+ /* window.onload = function(){
   //MOVIMIENTO DE CANCIONES
   const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];
   
@@ -64,7 +64,7 @@ const cancionesFiltradas = albumsSeleccionados.flatMap(album => {
     });
 });
 
-  albumsSeleccionados.forEach(album => {
+     albumsSeleccionados.forEach(album => {
           album.canciones.forEach(cancion => {
               const cancionDiv = document.createElement('div');
               cancionDiv.className = 'cancion1';
@@ -131,9 +131,40 @@ const cancionesFiltradas = albumsSeleccionados.flatMap(album => {
               contenedorMusicaSonando.appendChild(cancionDiv);
           });
       }); 
-    } 
-  
+    } */
     
+    function agregarAlbums(){
+      album.forEach(album1 => {
+        const nombreCancion = encontrarNombreCancion(canciones, cancionFav);
+        const nombreArtista = encontrarArtista(canciones, cancionFav);
+        const nombreAlbum = encontrarAlbum(canciones, cancionFav);
+        const imagenCancion = encontrarImagenCancion(canciones, cancionFav);
+        const idCancion = encontrarId(canciones, cancionFav);
+        if (nombreCancion) {
+            const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
+            const etiquetaCancionDOM = `
+                <div class="cancion1">
+                    <div class="espacio">
+                        <img src="..\\VistaMisFavoritos\\006-tocar.png" alt="" class="imagen-boton">
+                    </div>
+                    <div class="nombre-cancion">
+                        <div class="album-container" >
+                            <img src="${imagenCancion}" class="imagen-cancion" alt="">
+                            <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" id="${idCancion}" />
+                        </div>
+                        <div class="textos">
+                            <link class="nombre"><a href="">${nombreCancion}</a></link>
+                            <p class="artist-name">${nombreArtista}</p>
+                        </div>
+                    </div>
+                    <div class="album"><p>${nombreAlbum}</p></div>
+                    <div class="duracion"> <p> 4:06 </p></div>
+                    <div class="reproduccion">6000</div>
+                </div>
+            `;
+            contenedorcanciones.innerHTML += etiquetaCancionDOM;
+        }
+    });
+    }
   
   
-
