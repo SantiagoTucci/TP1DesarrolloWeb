@@ -72,7 +72,8 @@
                         <article><a href="..\VistaPremium\vistapremium.html"
                                 class="link-premium">Premium</a></article>
                         <article><a href="..\index.html"
-                                class="link-eliminar">Eliminar
+                                class="link-eliminar"
+                                id="eliminarUsuario">Eliminar
                                 usuario</a></article>
                     </div>
                     <div class="botones-perfil">
@@ -86,6 +87,13 @@
                 </form>
             </main>
 
+            <dialog class="dialog" id="dialog-confirmation">
+                <p>Datos guardados correctamente</p>
+                <div class="modal-actions">
+                    <button class="btn-close">Cerrar</button>
+                    <button class="btn-home">Volver al Home</button>
+                </div>
+            </dialog>
             <footer>
                 <p class="footer"> Diego Uriel Duré 45.286.104, Ignacio Lopez
                     Cabanillas
@@ -94,5 +102,6 @@
             </footer>
         </div>
     <script src="perfil.js"></script>
+    <script src="dialog.js"></script>
     </body>
 </html>

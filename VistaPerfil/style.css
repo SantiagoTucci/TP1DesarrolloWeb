@@ -244,6 +244,19 @@ a {
   top: 1px;
 }
 
+.modal-actions{
+  display: flex;
+  gap: 2.2em;
+}
+
+.modal-actions .btn{
+  padding: 1em;
+}
+
+.dialog{
+  padding: 2em;
+}
+
 @media (min-width: 300px){
 
   .user-info{

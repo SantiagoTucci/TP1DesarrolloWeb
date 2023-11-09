@@ -51,11 +51,18 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
   const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];
   
   const contenedorMusicaSonando = document.querySelector('.contenedorcancionesfav');
-
+  //FILTRAR POR ALBUMS
   const albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
 
   const albumsSeleccionados = albumsGuardados.filter(album => albumesFavoritos.includes(album.Id));
+//FILTRAR POR ALBUM ESPECIFICO
+const criterioAlbum = "Abbey Road"; // Puedes cambiar esto al valor que desees filtrar
 
+const cancionesFiltradas = albumsSeleccionados.flatMap(album => {
+    return album.canciones.filter(cancion => {
+        return cancion.album === criterioAlbum;
+    });
+});
 
   albumsSeleccionados.forEach(album => {
           album.canciones.forEach(cancion => {
@@ -126,6 +133,7 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
       }); 
     } 
   
+    
   
   
 

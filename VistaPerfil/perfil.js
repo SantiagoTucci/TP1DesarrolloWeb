@@ -7,11 +7,11 @@
     const fechaNacimientoInput = document.getElementById("fechaNacimiento");
   
     // Cargar la información del usuario desde el localStorage
-    const usuarioIniciado = JSON.parse(localStorage.getItem("usuario")) || [];
-    //const usuarioActual = usuariosLista[0];
-    
-    //var usuario = JSON.parse(localStorage.getItem("usuario"));
-    //document.getElementById("usuarioLink").textContent = usuario.nombreUsuario;
+    const usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
+    var usuarioIniciado = JSON.parse(localStorage.getItem("usuario")) || [];
+    const usuarioIndex = usuariosLista.findIndex(user => user.nombreUsuario === usuarioIniciado.nombreUsuario);
+    var usuarioIniciado = usuariosLista[usuarioIndex];
+
   
     nombreUsuarioInput.value = usuarioIniciado.nombreUsuario;
     contraseñaInput.value = usuarioIniciado.contraseña;
@@ -21,17 +21,50 @@
   
     formPerfil.addEventListener("submit", function(event) {
         event.preventDefault();
-        
-        // Actualizar la información del usuario con los valores de los campos de entrada
+
+        // Obtener la lista de usuarios del localStorage
+        const usuariosLista = JSON.parse(localStorage.getItem("usuariosLista")) || [];
+
+        // Verificar si el nombre de usuario ha cambiado
+        if (nombreUsuarioInput.value !== usuarioIniciado.nombreUsuario) {
+            // Buscar al usuario actual en la lista de usuarios por el nombre de usuario original
+            const usuarioIndex = usuariosLista.findIndex(user => user.nombreUsuario === usuarioIniciado.nombreUsuario);
+
+            if (usuarioIndex !== -1) {
+                // Actualizar el nombre de usuario en la lista de usuarios
+                usuariosLista[usuarioIndex].nombreUsuario = nombreUsuarioInput.value;
+            } else {
+                alert("El usuario no fue encontrado en la lista de usuarios.");
+                return;
+            }
+        }
+
+        // Actualizar el resto de la información del usuario
         usuarioIniciado.nombreUsuario = nombreUsuarioInput.value;
         usuarioIniciado.contraseña = invertirMitades(contraseñaInput.value);
         usuarioIniciado.email = emailInput.value;
         usuarioIniciado.fechaNacimiento = fechaNacimientoInput.value;
-  
-        // Guardar la información actualizada en el localStorage
+
+        // Guardar la lista actualizada en el localStorage
+        localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
         localStorage.setItem("usuario", JSON.stringify(usuarioIniciado));
-  
-        alert("Cambios guardados correctamente.");
+
+    });
+
+    document.getElementById("eliminarUsuario").addEventListener('click', function() {
+        
+            // Elimina al usuario actual de la lista de usuarios
+            const usuarioIndex = usuariosLista.findIndex(user => user.nombreUsuario === usuarioIniciado.nombreUsuario);
+            if (usuarioIndex !== -1) {
+                usuariosLista.splice(usuarioIndex, 1);
+            }
+            // Actualiza el localStorage eliminando al usuario
+            localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
+            localStorage.removeItem("usuariosLista") || [usuarioIndex]; // Elimina los datos del usuario actual
+
+            // Redirige al usuario a la página de inicio de sesión
+            window.location.href = 'index.html';
+        
     });
   
     function invertirMitades(contraseña) {
@@ -42,11 +75,6 @@
     // Nombre de usuario en el nav
     var usuario = JSON.parse(localStorage.getItem("usuario"));
     document.getElementById("nombreLink").textContent = usuario.nombreUsuario;
-    document.getElementById("nombreUsuario").value = usuario.nombreUsuario;
-    document.getElementById("contraseña").value = usuario.contraseña;
-    document.getElementById("repetirContraseña").value = usuario.contraseña;
-    document.getElementById("email").value = usuario.email;
-    document.getElementById("fechaNacimiento").value = usuario.fechaNacimiento;
 
     //CERRAR SESION
     document.getElementById('cerrarSesion').addEventListener('click', function() {
