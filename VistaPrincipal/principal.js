@@ -45,13 +45,3 @@ window.onload = function() {
 
 var albumsLocal = JSON.parse(localStorage.getItem("misAlbums"));
 
-document.addEventListener('DOMContentLoaded', function() {
-    const imagenesAlbum = document.querySelectorAll('.main-card-album-image');
-
-    imagenesAlbum.forEach(imagen => {
-        imagen.addEventListener('click', function() {
-            const albumId = this.getAttribute('data-id');
-            alert(`Hiciste clic en el álbum con ID ${albumId}`);
-        });
-    });
-});

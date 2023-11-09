@@ -46,7 +46,7 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
 
 
   
- /* window.onload = function(){
+/* window.onload = function(){
   //MOVIMIENTO DE CANCIONES
   const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];
   
@@ -58,14 +58,9 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
 //FILTRAR POR ALBUM ESPECIFICO
 const criterioAlbum = "Abbey Road"; // Puedes cambiar esto al valor que desees filtrar
 
-const cancionesFiltradas = albumsSeleccionados.flatMap(album => {
-    return album.canciones.filter(cancion => {
-        return cancion.album === criterioAlbum;
-    });
-});
 
      albumsSeleccionados.forEach(album => {
-          album.canciones.forEach(cancion => {
+          album.canciones.find(cancion => {
               const cancionDiv = document.createElement('div');
               cancionDiv.className = 'cancion1';
       
@@ -133,7 +128,7 @@ const cancionesFiltradas = albumsSeleccionados.flatMap(album => {
       }); 
     } */
     
-    function agregarAlbums(){
+   function agregarAlbums(){
       album.forEach(album1 => {
         const nombreCancion = encontrarNombreCancion(canciones, cancionFav);
         const nombreArtista = encontrarArtista(canciones, cancionFav);
