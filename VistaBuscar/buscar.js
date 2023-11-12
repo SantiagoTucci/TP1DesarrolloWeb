@@ -1,4 +1,4 @@
-window.onload = function() {
+
     var usuario = JSON.parse(localStorage.getItem("usuario"));
     document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
 
@@ -154,21 +154,16 @@ window.onload = function() {
     };
     
   
-   
-    
-    
-    
-    
-      
-}
-function mostrarCanciones2(album) {
-    // Obtén el array de canciones correspondiente al álbum
-    var canciones = albums[album];
-    // Verifica si el álbum existe
-    if (canciones) {
-        // Codifica las canciones para pasarlas como parámetro en la URL
-        var cancionesParam = encodeURIComponent(JSON.stringify(canciones));
-       
-         window.location.href = '\\VistaMusicaSonando\\thebeatles.html?album=' + encodeURIComponent(album) + '&canciones=' + cancionesParam;
-    } 
-}
+    function mostrarCanciones(album) {
+        // Obtén el array de canciones correspondiente al álbum
+        var canciones = albums[album];
+        // Verifica si el álbum existe
+        if (canciones) {
+            // Codifica las canciones para pasarlas como parámetro en la URL
+            var cancionesParam = encodeURIComponent(JSON.stringify(canciones));
+             // Redirige a thebeatles.html en VistaMusicaSonando
+             window.location.href = '\\VistaMusicaSonando\\thebeatles.html?album=' + encodeURIComponent(album) + '&canciones=' + cancionesParam;
+        } else {
+            alert('Álbum no encontrado');
+        }
+    }

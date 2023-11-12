@@ -20,7 +20,7 @@ window.location.href = 'index.html';
   var albumParam = urlParams.get('album');
   var albums = {
       'album1': [
-          {nombre:"Something",artista:"The Beatles",album:"Abbey Road",Id:"cancion01-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
+            {nombre:"Something",artista:"The Beatles",album:"Abbey Road",Id:"cancion01-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
               ,duracion:"3:14",reproducciones:"200"},
               {nombre:"The end",artista:"The Beatles",album:"Abbey Road",Id:"cancion02-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
               ,duracion:"3:14",reproducciones:"200"},
@@ -130,7 +130,7 @@ window.location.href = 'index.html';
 
 
   // Verifica si el álbum existe
-  if (albumParam && albums.hasOwnProperty(albumParam)) {
+   if (albumParam && albums.hasOwnProperty(albumParam)) {
       var canciones = albums[albumParam];
       // Muestra las canciones en el contenedor
       canciones.forEach(function (cancion, index) {
@@ -141,14 +141,9 @@ window.location.href = 'index.html';
   }
   
 
-  function agregarCancion(cancion, numero) {
-      // Crea el contenedor principal de la canción
-     // var cancionContainer = document.createElement('div');
-     // cancionContainer.classList.add('cancion' + numero);
-  
+ function agregarCancion(cancion) {
       const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
       
-      // Crea la estructura HTML de la canción
       etiquetaCancionDOM= `
       <div class="cancion1">  
           <div class="espacio">
@@ -176,10 +171,34 @@ window.location.href = 'index.html';
       // Agrega el contenedor de la canción al contenedor de canciones
   
       contenedorcanciones.innerHTML += etiquetaCancionDOM;
-     
-       
-    }
+      agregarImagen(canciones); 
+    } 
 
+   
+
+    function agregarImagen(canciones) {
+        const contenedorDelPrincipio = document.querySelector(".principio");
+            var albumInfo = canciones[0]; // Suponiendo que tomas la información del primer elemento del array de canciones
+            // Crea la estructura HTML de la imagen y el título
+            var etiquetaImagenPrincipio = `
+                <img src="${albumInfo.img}" class="imagen" alt="">
+                <div class="titulo">
+                    <h1 class="main-title">${albumInfo.album}</h1>
+                </div>
+            `;
+    
+            // Agrega la estructura al contenedor
+            contenedorDelPrincipio.innerHTML = etiquetaImagenPrincipio;
+        } 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //MARCAR CANCIONES COMO FAVORITAS |
  var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav")) || [];
   

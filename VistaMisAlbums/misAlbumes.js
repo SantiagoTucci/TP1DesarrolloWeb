@@ -17,7 +17,6 @@ window.onload = function() {
   albumsSeleccionados.forEach(album => {
       const albumCard = document.createElement('a');
       albumCard.className = 'main-card-album';
-      albumCard.href = '..\\VistaMusicaSonando\\thebeatles.html';
 
       const albumContainer = document.createElement('div');
       albumContainer.className = 'album-container';
