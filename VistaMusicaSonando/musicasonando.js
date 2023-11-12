@@ -69,7 +69,7 @@ window.location.href = 'index.html';
       {nombre:"Deja vu",artista:"Gustavo Cerati",album:"Fuerza Natural",Id:"cancion04-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
       ,duracion:"3:14",reproducciones:"200"}
     ],
-    'album6': [{nombre:"Nevermind",artista:"Nirvana ",album:"Cancion Animal",Id:"cancion01-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
+    'album6': [{nombre:"Nevermind",artista:"Nirvana ",album:"Nevermind",Id:"cancion01-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"Polly",artista:"Nirvana",album:"Nevermind",Id:"cancion02-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
     ,duracion:"3:14",reproducciones:"200"},
