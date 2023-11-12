@@ -87,6 +87,16 @@ var albums = {
         {nombre:"Cancion Animal",artista:"Pescado Rabioso",album:"Cancion Animal",Id:"cancion04-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
         ,duracion:"3:14",reproducciones:"200"},
     ],
+    'album4': [
+        {nombre:"Artud",artista:"Virus",album:"Locura",Id:"cancion01-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
+        ,duracion:"3:14",reproducciones:"2070"},
+        {nombre:"Cancion Animal",artista:"Virus",album:"Locura",Id:"cancion02-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
+        ,duracion:"3:14",reproducciones:"2008"},
+        {nombre:"Cancion Animal",artista:"Virus",album:"Locura",Id:"cancion03-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
+        ,duracion:"3:14",reproducciones:"2020"},
+        {nombre:"Cancion Animal",artista:"Virus",album:"Locura",Id:"cancion04-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
+        ,duracion:"3:14",reproducciones:"2010"},
+    ],
     'album5': [{nombre:"Cancion Animal",artista:"Gustavo Cerati",album:"Cancion Animal",Id:"cancion01-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"Cancion Animal",artista:"Gustavo Cerati",album:"Cancion Animal",Id:"cancion02-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
