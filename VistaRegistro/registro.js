@@ -22,8 +22,8 @@ function guardarRegistroEnLocalStorage() {
             contraseña : invertirMitades(contraseña),
             email : email,
             fechaNacimiento : fechaNacimiento,
-            albumesFav: [],
-            cancionesFav:[],
+            premium: false
+            
             
         };
         // Agregar el objeto de datos al arreglo de usuarios

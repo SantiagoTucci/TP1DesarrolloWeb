@@ -60,10 +60,10 @@
             }
             // Actualiza el localStorage eliminando al usuario
             localStorage.setItem("usuariosLista", JSON.stringify(usuariosLista));
-            localStorage.removeItem("usuariosLista") || [usuarioIndex]; // Elimina los datos del usuario actual
-
+    
             // Redirige al usuario a la página de inicio de sesión
             window.location.href = 'index.html';
+           
         
     });
   

@@ -10,10 +10,9 @@ const checkBoxG = document.getElementById("checkBox")
 const btnPagar = document.getElementById("btnPagar");
 
 //NOMBRE DE USUARIO
-window.onload = function(){
   var usuario = JSON.parse(localStorage.getItem("usuario"));
     document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
-}
+
 
 //CERRAR SESION
 document.getElementById('cerrarSesion').addEventListener('click', function() {
@@ -89,6 +88,7 @@ function guardarEnLocalStorage() {
     // Convertir el objeto a una cadena JSON y guardarlo en el localStorage
     localStorage.setItem("tarjetaUsuario", JSON.stringify(tarjetaUsuario));
     // Guardar el arreglo usuarios en el localStorage
+    usuario.premium = true;
     localStorage.setItem("usuarios", JSON.stringify(usuario));
         alert("Datos guardados correctamente en el localStorage.");
     } else {

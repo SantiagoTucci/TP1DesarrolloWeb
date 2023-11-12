@@ -2,6 +2,14 @@ window.onload = function() {
     var usuario = JSON.parse(localStorage.getItem("usuario"));
     document.querySelector('.nav-link').textContent = usuario.nombreUsuario;
 
+    //CERRAR SESION
+    document.getElementById('cerrarSesion').addEventListener('click', function() {
+    //autenticación como 'false' en el localStorage
+    localStorage.setItem('estadoCuenta', 'Se cerro sesion');
+    // Redirigir a la página de inicio de sesión
+    window.location.href = 'index.html';
+  });
+
     var albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
 
     document.querySelectorAll('.star-icon').forEach(function(estrella) {
@@ -36,10 +44,7 @@ window.onload = function() {
         localStorage.setItem("cancionActual", cancionActual);
     });
 
-    document.querySelector('.nav-link[href="..\index.html"]').addEventListener('click', function() {
-        localStorage.removeItem("usuario");
-        window.location.replace("..\index.html");
-    });
+    
     
 }
 
