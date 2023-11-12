@@ -13,6 +13,163 @@ window.location.href = 'index.html';
 
 
 
+
+  // Obtén las canciones de la URL
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  var albumParam = urlParams.get('album');
+  var albums = {
+      'album1': [
+          {nombre:"Something",artista:"The Beatles",album:"Abbey Road",Id:"cancion01-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
+              ,duracion:"3:14",reproducciones:"200"},
+              {nombre:"The end",artista:"The Beatles",album:"Abbey Road",Id:"cancion02-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
+              ,duracion:"3:14",reproducciones:"200"},
+              {nombre:"Sun king",artista:"The Beatles",album:"Abbey Road",Id:"cancion03-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
+              ,duracion:"3:14",reproducciones:"200"},
+              {nombre:"Because",artista:"The Beatles",album:"Abbey Road",Id:"cancion04-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
+              ,duracion:"3:14",reproducciones:"200"},
+          
+      ],
+      'album2': [
+          {nombre:"Cancion Animal",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion01-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+          {nombre:"Cancion Animal",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion02-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+          {nombre:"Cancion Animal",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion03-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+          {nombre:"Cancion Animal",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion04-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+      ],
+      'album3': [
+          {nombre:"Artud",artista:"Pescado Rabioso",album:"Cancion Animal",Id:"cancion01-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+          {nombre:"Cancion Animal",artista:"Pescado Rabioso",album:"Cancion Animal",Id:"cancion02-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+          {nombre:"Cancion Animal",artista:"Pescado Rabioso",album:"Cancion Animal",Id:"cancion03-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+          {nombre:"Cancion Animal",artista:"Pescado Rabioso",album:"Cancion Animal",Id:"cancion04-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
+          ,duracion:"3:14",reproducciones:"200"},
+      ],
+      'album5': [{nombre:"Cancion Animal",artista:"Gustavo Cerati",album:"Cancion Animal",Id:"cancion01-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
+      ,duracion:"3:14",reproducciones:"200"},
+      {nombre:"Cancion Animal",artista:"Gustavo Cerati",album:"Cancion Animal",Id:"cancion02-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
+      ,duracion:"3:14",reproducciones:"200"},
+      {nombre:"Cancion Animal",artista:"Gustavo Cerati",album:"Cancion Animal",Id:"cancion03-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
+      ,duracion:"3:14",reproducciones:"200"},
+      {nombre:"Cancion Animal",artista:"Gustavo Cerati",album:"Cancion Animal",Id:"cancion04-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
+      ,duracion:"3:14",reproducciones:"200"}
+    ],
+    'album6': [{nombre:"Cancion Animal",artista:"Nirvana ",album:"Cancion Animal",Id:"cancion01-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
+    ,duracion:"3:14",reproducciones:"200"},
+    {nombre:"Cancion Animal",artista:"Nirvana",album:"Cancion Animal",Id:"cancion02-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
+    ,duracion:"3:14",reproducciones:"200"},
+    {nombre:"Cancion Animal",artista:"Nirvana",album:"Cancion Animal",Id:"cancion03-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
+    ,duracion:"3:14",reproducciones:"200"},
+    {nombre:"Cancion Animal",artista:"Nirvana",album:"Cancion Animal",Id:"cancion04-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
+    ,duracion:"3:14",reproducciones:"200"}
+  ],
+  'album7': [
+    {nombre:"Cancion Animal",artista:"Cuarteto de Nos",album:"Cancion Animal",Id:"cancion01-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Cuarteto de Noss",album:"Cancion Animal",Id:"cancion02-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Cuarteto de Nos",album:"Cancion Animal",Id:"cancion03-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Cuarteto de Nos",album:"Cancion Animal",Id:"cancion04-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
+  ,duracion:"3:14",reproducciones:"200"}
+  ],
+  'album8': [{nombre:"Whenever You Need Somebody",artista:"Rick Astley",album:"Cancion Animal",Id:"cancion01-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Rick Astley",album:"Cancion Animal",Id:"cancion02-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Rick Astley",album:"Cancion Animal",Id:"cancion03-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Rick Astley",album:"Cancion Animal",Id:"cancion04-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
+  ,duracion:"3:14",reproducciones:"200"}
+  ],
+  'album9': [{nombre:"Cancion Animal",artista:"Serú Girán",Id:"cancion01-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Serú Girán",Id:"cancion02-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Serú Girán",Id:"cancion03-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Serú Girán",Id:"cancion04-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
+  ,duracion:"3:14",reproducciones:"200"}
+  ],
+  'album10': [{nombre:"Cancion Animal",artista:"Fito Paez",album:"Cancion Animal",Id:"cancion01-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Fito Paez",album:"Cancion Animal",Id:"cancion02-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Fito Paez",album:"Cancion Animal",Id:"cancion03-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Cancion Animal",artista:"Fito Paez",album:"Cancion Animal",Id:"cancion04-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
+  ,duracion:"3:14",reproducciones:"200"}
+  ],
+  'album11': [{nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",album:"Lagrimas De Ayer",Id:"cancion01-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Eterno Amor.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Giros",artista:"Fito Paez",album:"Giros",Id:"cancion02-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+{nombre:"Scorpion",artista:"drake",album:"Scorpion",Id:"cancion03-album-11",img:"..\\VistaMisAlbums\\img\\drakePortada.jpg"
+  ,duracion:"3:14",reproducciones:"200"},
+  {nombre:"Locura",artista:"Virus",album:"Locura",Id:"cancion04-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
+  ,duracion:"3:14",reproducciones:"200"}
+  ],
+  };
+  
+
+
+
+  // Verifica si el álbum existe
+  if (albumParam && albums.hasOwnProperty(albumParam)) {
+      var canciones = albums[albumParam];
+      // Muestra las canciones en el contenedor
+      canciones.forEach(function (cancion, index) {
+          agregarCancion(cancion, index + 1);
+      });
+  } else {
+      alert('Álbum no encontrado');
+  }
+  
+  
+  function agregarCancion(cancion, numero) {
+      // Crea el contenedor principal de la canción
+     // var cancionContainer = document.createElement('div');
+     // cancionContainer.classList.add('cancion' + numero);
+  
+      const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
+      
+      // Crea la estructura HTML de la canción
+      etiquetaCancionDOM= `
+      <div class="cancion1">  
+          <div class="espacio">
+              <img src="..\\VistaMisFavoritos\\006-tocar.png" alt="" class="imagen-boton" id="${cancion.Id}">
+          </div>
+          <div class="nombre-cancion">
+              <div class="album-container" id="${cancion.Id}">
+                  <img src="${cancion.img}" class="imagen-cancion" alt="">
+                  <img src="..\\Musica\\Fotos\\Estrella.avif" alt="Estrella" class="star-icon" id="${cancion.Id}" />
+              </div>
+              <div class="textos">
+                  <link class="nombre"> <a href="">${cancion.nombre}</a></link>
+                  <p class="artist-name">${cancion.artista}</p>
+              </div>
+          </div>
+          <div class="album">
+              <p>${cancion.album}</p>
+          </div>
+          <div class="duracion">
+              <p>${cancion.duracion}</p>
+          </div>
+          <div class="reproduccion">${cancion.reproducciones}</div>
+      `;
+  
+      // Agrega el contenedor de la canción al contenedor de canciones
+  
+      contenedorcanciones.innerHTML += etiquetaCancionDOM;
+     
+       
+    }
+
 //MARCAR CANCIONES COMO FAVORITAS |
  var cancionesFavoritas = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "cancionesFav")) || [];
   
@@ -44,122 +201,3 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
   }); 
 
 
-
-  
-/* window.onload = function(){
-  //MOVIMIENTO DE CANCIONES
-  const albumsGuardados = JSON.parse(localStorage.getItem('misAlbums')) || [];
-  
-  const contenedorMusicaSonando = document.querySelector('.contenedorcancionesfav');
-  //FILTRAR POR ALBUMS
-  const albumesFavoritos = JSON.parse(localStorage.getItem(usuario.nombreUsuario + "AlbumesFavoritos")) || [];
-
-  const albumsSeleccionados = albumsGuardados.filter(album => albumesFavoritos.includes(album.Id));
-//FILTRAR POR ALBUM ESPECIFICO
-const criterioAlbum = "Abbey Road"; // Puedes cambiar esto al valor que desees filtrar
-
-
-     albumsSeleccionados.forEach(album => {
-          album.canciones.find(cancion => {
-              const cancionDiv = document.createElement('div');
-              cancionDiv.className = 'cancion1';
-      
-              const espacioDiv = document.createElement('div');
-              espacioDiv.className = 'espacio';
-              const imagenBoton = document.createElement('img');
-              imagenBoton.src = '..\\VistaMisFavoritos\\006-tocar.png';
-              imagenBoton.alt = '';
-              imagenBoton.className = 'imagen-boton';
-              espacioDiv.appendChild(imagenBoton);
-      
-              const nombreCancionDiv = document.createElement('div');
-              nombreCancionDiv.className = 'nombre-cancion';
-      
-              const albumContainerDiv = document.createElement('div');
-              albumContainerDiv.className = 'album-container';
-              albumContainerDiv.id = cancion.Id;
-              const imagenCancion = document.createElement('img');
-              imagenCancion.src = cancion.img;
-              imagenCancion.alt = '';
-              imagenCancion.className = 'imagen-cancion';
-              albumContainerDiv.appendChild(imagenCancion);
-      
-              const estrella = document.createElement('img');
-              estrella.src = '..\\Musica\\Fotos\\Estrella.avif';
-              estrella.alt = 'Estrella';
-              estrella.className = 'star-icon';
-              estrella.id = cancion.Id;
-              albumContainerDiv.appendChild(estrella);
-      
-              const textosDiv = document.createElement('div');
-              textosDiv.className = 'textos';
-              const nombreLink = document.createElement('a');
-              nombreLink.href = '';
-              nombreLink.textContent = cancion.nombre;
-              textosDiv.appendChild(nombreLink);
-              const artistaP = document.createElement('p');
-              artistaP.className = 'artist-name';
-              artistaP.textContent = cancion.artista;
-              textosDiv.appendChild(artistaP);
-      
-              nombreCancionDiv.appendChild(albumContainerDiv);
-              nombreCancionDiv.appendChild(textosDiv);
-      
-              const albumDiv = document.createElement('div');
-              albumDiv.className = 'album';
-              albumDiv.textContent = cancion.album;
-      
-              const duracionDiv = document.createElement('div');
-              duracionDiv.className = 'duracion';
-              duracionDiv.textContent = cancion.duracion;
-      
-              const reproduccionDiv = document.createElement('div');
-              reproduccionDiv.className = 'reproduccion';
-              reproduccionDiv.textContent = cancion.reproducciones;
-      
-              cancionDiv.appendChild(espacioDiv);
-              cancionDiv.appendChild(nombreCancionDiv);
-              cancionDiv.appendChild(albumDiv);
-              cancionDiv.appendChild(duracionDiv);
-              cancionDiv.appendChild(reproduccionDiv);
-      
-              contenedorMusicaSonando.appendChild(cancionDiv);
-          });
-      }); 
-    } */
-    
-   function agregarAlbums(){
-      album.forEach(album1 => {
-        const nombreCancion = encontrarNombreCancion(canciones, cancionFav);
-        const nombreArtista = encontrarArtista(canciones, cancionFav);
-        const nombreAlbum = encontrarAlbum(canciones, cancionFav);
-        const imagenCancion = encontrarImagenCancion(canciones, cancionFav);
-        const idCancion = encontrarId(canciones, cancionFav);
-        if (nombreCancion) {
-            const contenedorcanciones = document.querySelector(".contenedorcancionesfav");
-            const etiquetaCancionDOM = `
-                <div class="cancion1">
-                    <div class="espacio">
-                        <img src="..\\VistaMisFavoritos\\006-tocar.png" alt="" class="imagen-boton">
-                    </div>
-                    <div class="nombre-cancion">
-                        <div class="album-container" >
-                            <img src="${imagenCancion}" class="imagen-cancion" alt="">
-                            <img src="..\\VistaMisFavoritos\\estrella.png" alt="Estrella" class="star-icon" id="${idCancion}" />
-                        </div>
-                        <div class="textos">
-                            <link class="nombre"><a href="">${nombreCancion}</a></link>
-                            <p class="artist-name">${nombreArtista}</p>
-                        </div>
-                    </div>
-                    <div class="album"><p>${nombreAlbum}</p></div>
-                    <div class="duracion"> <p> 4:06 </p></div>
-                    <div class="reproduccion">6000</div>
-                </div>
-            `;
-            contenedorcanciones.innerHTML += etiquetaCancionDOM;
-        }
-    });
-    }
-  
-  console.log('hola')
