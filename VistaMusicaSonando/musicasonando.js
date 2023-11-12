@@ -162,4 +162,4 @@ const criterioAlbum = "Abbey Road"; // Puedes cambiar esto al valor que desees f
     });
     }
   
-  
+  console.log('hola')
