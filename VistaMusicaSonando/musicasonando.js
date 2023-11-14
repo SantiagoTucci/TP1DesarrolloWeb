@@ -169,12 +169,19 @@ window.location.href = 'index.html';
       `;
   
       // Agrega el contenedor de la canción al contenedor de canciones
-  
       contenedorcanciones.innerHTML += etiquetaCancionDOM;
       agregarImagen(canciones); 
+      document.querySelector(".contenedorcancionesfav").addEventListener('click', function(event) {
+        if (event.target.classList.contains('imagen-boton')) {
+            // Extraer la información de la canción según el ID del botón
+            var cancionId = event.target.id;
+            var cancion = obtenerCancionPorId(cancionId); // Implementa esta función según tus necesidades
+            // Llamar a la función cambiarCancionBarra con la información de la canción
+            cambiarCancionBarra(cancion);
+        }
+    });
     } 
 
-   
 
     function agregarImagen(canciones) {
         const contenedorDelPrincipio = document.querySelector(".principio");
@@ -190,12 +197,6 @@ window.location.href = 'index.html';
             // Agrega la estructura al contenedor
             contenedorDelPrincipio.innerHTML = etiquetaImagenPrincipio;
         } 
-    
-    
-    
-    
-    
-    
     
     
     
@@ -230,3 +231,57 @@ document.querySelectorAll('.star-icon').forEach(function(estrella) {
   }); 
 
 
+function cambiarCancionBarra(cancion){
+    var albumImage = document.querySelector('.album-image');
+            var albumName = document.querySelector('.album-name');
+            var artistName = document.querySelector('.artist-name');
+            var audioPlayer = document.getElementById('audio-player');
+
+            // Actualizar la información de la canción
+            albumImage.src = cancion.img;
+            albumName.innerText = cancion.nombre;
+            artistName.innerText = cancion.artista;
+
+    localStorage.setItem('cancionSeleccionada', JSON.stringify(cancion));
+}
+
+function obtenerCancionPorId(cancionId) {
+    // Recorre tus datos de canciones y devuelve la canción con el ID proporcionado
+    for (var albumId in albums) {
+        var album = albums[albumId];
+        for (var i = 0; i < album.length; i++) {
+            if (album[i].Id === cancionId) {
+                return album[i];
+            }
+        }
+    }
+    return null; // Devuelve null si no se encuentra ninguna canción con ese ID
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtiene la información de la canción seleccionada
+    var cancionSeleccionada = obtenerCancionSeleccionada();
+
+    // Verifica si hay una canción seleccionada
+    if (cancionSeleccionada) {
+        // Actualiza la interfaz de la barra de música con la información de la canción
+        actualizarBarraDeMusica(cancionSeleccionada);
+    }
+});
+
+function obtenerCancionSeleccionada() {
+    // Obtiene la información de la canción desde localStorage
+    var cancionString = localStorage.getItem('cancionSeleccionada');
+
+    // Parsea la cadena JSON almacenada y devuelve la canción
+    return cancionString ? JSON.parse(cancionString) : null;
+}
+
+function actualizarBarraDeMusica(cancion) {
+    // Actualiza la interfaz de la barra de música con la información de la canción
+    document.querySelector('.album-image').src = cancion.img;
+    
+    document.querySelector('.album-name').innerText = cancion.nombre;
+    document.querySelector('.artist-name').innerText = cancion.artista;
+
+    }

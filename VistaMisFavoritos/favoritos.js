@@ -182,3 +182,29 @@ document.querySelector(".contenedorcancionesfav").addEventListener("click", func
     }
 }*/
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtiene la información de la canción seleccionada
+    var cancionSeleccionada = obtenerCancionSeleccionada();
+
+    // Verifica si hay una canción seleccionada
+    if (cancionSeleccionada) {
+        // Actualiza la interfaz de la barra de música con la información de la canción
+        actualizarBarraDeMusica(cancionSeleccionada);
+    }
+});
+
+function obtenerCancionSeleccionada() {
+    // Obtiene la información de la canción desde localStorage
+    var cancionString = localStorage.getItem('cancionSeleccionada');
+
+    // Parsea la cadena JSON almacenada y devuelve la canción
+    return cancionString ? JSON.parse(cancionString) : null;
+}
+
+function actualizarBarraDeMusica(cancion) {
+    // Actualiza la interfaz de la barra de música con la información de la canción
+    document.querySelector('.album-image').src = cancion.img;
+    document.querySelector('.album-name').innerText = cancion.nombre;
+    document.querySelector('.artist-name').innerText = cancion.artista;}
+
