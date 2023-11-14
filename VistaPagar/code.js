@@ -89,6 +89,7 @@ function guardarEnLocalStorage() {
     } else {
         alert("Por favor, complete todos los campos del formulario.");
     }
+    window.location.href = '..\\VistaPrincipal\\Pagina Principal.html';
 };
 
 //guardarEnLocalStorage al evento click del botón
