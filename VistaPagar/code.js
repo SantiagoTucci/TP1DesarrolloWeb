@@ -88,13 +88,13 @@ function guardarEnLocalStorage() {
     // Convertir el objeto a una cadena JSON y guardarlo en el localStorage
     localStorage.setItem("tarjetaUsuario", JSON.stringify(tarjetaUsuario));
     // Guardar el arreglo usuarios en el localStorage
-    usuario.premium = true;
-    localStorage.setItem("usuarios", JSON.stringify(usuario));
-        alert("Datos guardados correctamente en el localStorage.");
-    } else {
-         alert("Por favor, complete todos los campos del formulario.");
-    }
-};
+      usuario.premium = true;
+      localStorage.setItem("usuarios", JSON.stringify(usuario));
+          alert("Datos guardados correctamente en el localStorage.");
+      } else {
+          alert("Por favor, complete todos los campos del formulario.");
+      }
+  };
 
 //guardarEnLocalStorage al evento click del botón
 btnPagar.addEventListener("click", guardarEnLocalStorage);
