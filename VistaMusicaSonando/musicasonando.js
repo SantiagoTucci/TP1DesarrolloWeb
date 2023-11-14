@@ -280,7 +280,6 @@ function obtenerCancionSeleccionada() {
 function actualizarBarraDeMusica(cancion) {
     // Actualiza la interfaz de la barra de música con la información de la canción
     document.querySelector('.album-image').src = cancion.img;
-    
     document.querySelector('.album-name').innerText = cancion.nombre;
     document.querySelector('.artist-name').innerText = cancion.artista;
 
