@@ -53,7 +53,7 @@
     });
 
     var albums = {
-        'album1': [
+        'album-01': [
             {nombre:"Something",artista:"The Beatles",album:"Abbey Road",Id:"cancion01-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
                 ,duracion:"3:14",reproducciones:"200"},
                 {nombre:"The end",artista:"The Beatles",album:"Abbey Road",Id:"cancion02-album-01",img:"..\\Musica\\Fotos\\Álbumes\\Abbey Road.jpg"
@@ -64,7 +64,7 @@
                 ,duracion:"3:14",reproducciones:"200"},
             
         ],
-        'album2': [
+        'album-02': [
             {nombre:"Cancion Animal",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion01-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
             ,duracion:"3:14",reproducciones:"200"},
             {nombre:"Un Millon De Años Luz",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion02-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
@@ -74,7 +74,7 @@
             {nombre:"Cae el sol",artista:"Soda Stereo",album:"Cancion Animal",Id:"cancion04-album-02",img:"..\\Musica\\Fotos\\Álbumes\\Canción Animal.jpg"
             ,duracion:"3:14",reproducciones:"200"},
         ],
-        'album3': [
+        'album-03': [
             {nombre:"Artud",artista:"Pescado Rabioso",album:"Artaud",Id:"cancion01-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
             ,duracion:"3:14",reproducciones:"200"},
             {nombre:"Bajan",artista:"Pescado Rabioso",album:"Artaud",Id:"cancion02-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
@@ -84,7 +84,7 @@
             {nombre:"Cantata de puentes amarillos",artista:"Pescado Rabioso",album:"Artaud",Id:"cancion04-album-03",img:"..\\Musica\\Fotos\\Álbumes\\Artaud.jpg"
             ,duracion:"3:14",reproducciones:"300"},
         ],
-        'album4': [
+        'album-04': [
           {nombre:"Locura",artista:"Virus",album:"Locura",Id:"cancion01-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
           ,duracion:"3:14",reproducciones:"2070"},
           {nombre:"Tomo lo que encuentro",artista:"Virus",album:"Locura",Id:"cancion02-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
@@ -94,7 +94,7 @@
           {nombre:"Luna de miel en la mano",artista:"Virus",album:"Locura",Id:"cancion04-album-04",img:"..\\Musica\\Fotos\\Álbumes\\Locura"
           ,duracion:"3:14",reproducciones:"2010"},
       ],
-        'album5': [{nombre:"Fuerza Natural",artista:"Gustavo Cerati",album:"Fuerza Natural",Id:"cancion01-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
+        'album-05': [{nombre:"Fuerza Natural",artista:"Gustavo Cerati",album:"Fuerza Natural",Id:"cancion01-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
         ,duracion:"3:14",reproducciones:"200"},
         {nombre:"Magia",artista:"Gustavo Cerati",album:"Fuerza Natural",Id:"cancion02-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
         ,duracion:"3:14",reproducciones:"200"},
@@ -103,7 +103,7 @@
         {nombre:"Deja vu",artista:"Gustavo Cerati",album:"Fuerza Natural",Id:"cancion04-album-05",img:"..\\Musica\\Fotos\\Álbumes\\Fuerza Natural.jpg"
         ,duracion:"3:14",reproducciones:"200"}
       ],
-      'album6': [{nombre:"Nevermind",artista:"Nirvana ",album:"Cancion Animal",Id:"cancion01-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
+      'album-06': [{nombre:"Nevermind",artista:"Nirvana ",album:"Cancion Animal",Id:"cancion01-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
       ,duracion:"3:14",reproducciones:"200"},
       {nombre:"Polly",artista:"Nirvana",album:"Nevermind",Id:"cancion02-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
       ,duracion:"3:14",reproducciones:"200"},
@@ -112,7 +112,7 @@
       {nombre:"something in the way",artista:"Nirvana",album:"Nevermind",Id:"cancion04-album-06",img:"..\\Musica\\Fotos\\Álbumes\\Nevermind.jpg"
       ,duracion:"3:14",reproducciones:"200"}
     ],
-    'album7': [
+    'album-07': [
       {nombre:"Raro",artista:"Cuarteto de Nos",album:"Raro",Id:"cancion01-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"Me hace bien, me hace mal",artista:"Cuarteto de Noss",album:"Raro",Id:"cancion02-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
@@ -122,7 +122,7 @@
     {nombre:"Asi soy yo ",artista:"Cuarteto de Nos",album:"Raro",Id:"cancion04-album-07",img:"..\\Musica\\Fotos\\Álbumes\\Raro.jpg"
     ,duracion:"3:14",reproducciones:"200"}
     ],
-    'album8': [{nombre:"Whenever You Need Somebody",artista:"Rick Astley",album:"Whenever You Need Somebody",Id:"cancion01-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
+    'album-08': [{nombre:"Whenever You Need Somebody",artista:"Rick Astley",album:"Whenever You Need Somebody",Id:"cancion01-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"togheder forever",artista:"Rick Astley",album:"Whenever You Need Somebody",Id:"cancion02-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
     ,duracion:"3:14",reproducciones:"200"},
@@ -131,7 +131,7 @@
     {nombre:"Whenay foll in love",artista:"Rick Astley",album:"Whenever You Need Somebody",Id:"cancion04-album-08",img:"..\\Musica\\Fotos\\Álbumes\\Never Gonna Give You Up.jpg"
     ,duracion:"3:14",reproducciones:"200"}
     ],
-    'album9': [{nombre:"Peperina",artista:"Serú Girán",album:"Peperina",Id:"cancion01-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
+    'album-09': [{nombre:"Peperina",artista:"Serú Girán",album:"Peperina",Id:"cancion01-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"Lo que dice la lluvia",artista:"Serú Girán",album:"Peperina",Id:"cancion02-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
     ,duracion:"3:14",reproducciones:"200"},
@@ -140,7 +140,7 @@
     {nombre:"En la vereda del sol",artista:"Serú Girán",album:"Peperina",Id:"cancion04-album-09",img:"..\\Musica\\Fotos\\Álbumes\\Peperina.webp"
     ,duracion:"3:14",reproducciones:"200"}
     ],
-    'album10': [{nombre:"Giros",artista:"Fito Paez",album:"Giros",Id:"cancion01-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
+    'album-10': [{nombre:"Giros",artista:"Fito Paez",album:"Giros",Id:"cancion01-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"Taquicardia",artista:"Fito Paez",album:"Giros",Id:"cancion02-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
     ,duracion:"3:14",reproducciones:"200"},
@@ -149,7 +149,7 @@
     {nombre:"Alguna vez voy a ser libre",artista:"Fito Paez",album:"Giros",Id:"cancion04-album-10",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
     ,duracion:"3:14",reproducciones:"200"}
     ],
-    'album11': [{nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",album:"Lagrimas De Ayer",Id:"cancion01-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Eterno Amor.jpg"
+    'album-11': [{nombre:"Lagrimas De Ayer",artista:"Los Mansaneros santiaguenos",album:"Lagrimas De Ayer",Id:"cancion01-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Eterno Amor.jpg"
     ,duracion:"3:14",reproducciones:"200"},
     {nombre:"Giros",artista:"Fito Paez",album:"Giros",Id:"cancion02-album-11",img:"..\\Musica\\Fotos\\Álbumes\\Giros.jpg"
     ,duracion:"3:14",reproducciones:"200"},
